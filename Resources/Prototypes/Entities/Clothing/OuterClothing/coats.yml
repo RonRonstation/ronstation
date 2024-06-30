@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingOuterStorageBase
+  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing]
   id: ClothingOuterCoatBomber
   name: bomber jacket
   description: A thick, well-worn WW2 leather bomber jacket.
@@ -303,7 +303,7 @@
   name: research director lab coat
 
 - type: entity
-  parent: ClothingOuterStorageBase
+  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing]
   id: ClothingOuterCoatPirate
   name: pirate garb
   description: Yarr.
@@ -347,7 +347,7 @@
     sprite: Clothing/OuterClothing/Coats/clownpriest.rsi
 
 - type: entity
-  parent: ClothingOuterStorageBase
+  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing] #I think samurais can hold swords on their backs, no?
   id: ClothingOuterDogi
   name: samurai dogi
   description: Dogi is a type of traditional Japanese clothing. The dogi is made of heavy, durable fabric, it is practical in combat and stylish in appearance. It is decorated with intricate patterns and embroidery on the back.
@@ -364,7 +364,7 @@
         Piercing: 0.85
 
 - type: entity
-  parent: ClothingOuterStorageBase
+  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing]
   id: ClothingOuterCoatParamedicWB
   name: paramedic windbreaker
   description: A paramedic's trusty windbreaker, for all the space wind.
@@ -375,7 +375,7 @@
     sprite: Clothing/OuterClothing/Coats/windbreaker_paramedic.rsi
 
 - type: entity
-  parent: ClothingOuterStorageBase
+  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing]
   id: ClothingOuterCoatSyndieCap
   name: syndicate's coat
   description: The syndicate's coat is made of durable fabric, with gilded patterns.
@@ -397,7 +397,7 @@
     sprite: Clothing/OuterClothing/Coats/syndicate/coatsyndiecaparmored.rsi
 
 - type: entity
-  parent: ClothingOuterStorageBase
+  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing]
   id: ClothingOuterCoatAMG
   name: armored medical gown
   description: The version of the medical gown, with elements of a bulletproof vest, looks strange, but your heart is protected.
@@ -446,7 +446,7 @@
         Caustic: 0.75
 
 - type: entity
-  parent: ClothingOuterStorageBase
+  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing]
   id: ClothingOuterCoatSpaceAsshole
   name: the coat of space asshole
   description: And there he was...
