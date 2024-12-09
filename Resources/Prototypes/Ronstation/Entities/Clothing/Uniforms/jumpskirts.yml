@@ -8,3 +8,14 @@
     sprite: Ronstation/Clothing/Uniforms/Jumpskirt/blueshield_grey.rsi
   - type: Clothing
     sprite: Ronstation/Clothing/Uniforms/Jumpskirt/blueshield_grey.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtBlueshield
+  name: blueshield jumpskirt
+  description: A jumpskirt made of strong material, providing robust protection, even for a bodyguard.
+  components:
+  - type: Sprite
+    sprite: Ronstation/Clothing/Uniforms/Jumpskirt/blueshield.rsi
+  - type: Clothing
+    sprite: Ronstation/Clothing/Uniforms/Jumpskirt/blueshield.rsi

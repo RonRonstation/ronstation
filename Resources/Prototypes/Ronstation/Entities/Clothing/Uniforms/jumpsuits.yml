@@ -19,3 +19,14 @@
     sprite: Ronstation/Clothing/Uniforms/Jumpsuit/blueshield_grey.rsi
   - type: Clothing
     sprite: Ronstation/Clothing/Uniforms/Jumpsuit/blueshield_grey.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBlueshield
+  name: blueshield jumpsuit
+  description: A jumpsuit made of strong material, providing robust protection, even for a bodyguard.
+  components:
+  - type: Sprite
+    sprite: Ronstation/Clothing/Uniforms/Jumpsuit/blueshield.rsi
+  - type: Clothing
+    sprite: Ronstation/Clothing/Uniforms/Jumpsuit/blueshield.rsi
