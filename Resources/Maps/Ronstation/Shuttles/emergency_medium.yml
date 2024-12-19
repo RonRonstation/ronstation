@@ -3624,6 +3624,13 @@ entities:
       rot: 3.141592653589793 rad
       pos: 0.5,-5.5
       parent: 1
+- proto: HolopadGeneralEvac
+  entities:
+  - uid: 620
+    components:
+    - type: Transform
+      pos: 4.5,12.5
+      parent: 1
 - proto: IntercomCommand
   entities:
   - uid: 404

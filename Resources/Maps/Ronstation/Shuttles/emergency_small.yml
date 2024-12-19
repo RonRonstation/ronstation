@@ -1443,12 +1443,6 @@ entities:
       parent: 2
 - proto: ChairPilotSeat
   entities:
-  - uid: 311
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -0.5,10.5
-      parent: 2
   - uid: 312
     components:
     - type: Transform
@@ -3433,6 +3427,13 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -1.5,-2.5
+      parent: 2
+- proto: HolopadCentCommEvacShuttle
+  entities:
+  - uid: 277
+    components:
+    - type: Transform
+      pos: -0.5,10.5
       parent: 2
 - proto: LockerEngineerFilledHardsuit
   entities:
