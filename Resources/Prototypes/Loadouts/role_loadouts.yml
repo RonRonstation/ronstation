@@ -373,6 +373,7 @@
   - Trinkets
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
+  - SecurityEye # ronstation
 
 - type: roleLoadout
   id: JobDetective
