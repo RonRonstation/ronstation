@@ -5,5 +5,3 @@
   components:
   - type: Contraband
     severity: Terragov
-    # no one should be carrying this around visibly!
-    allowedDepartments: null
