@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ BasePDA, BaseTerragovContraband ]
+  parent: [ BaseTerragovContraband, BasePDA ]
   id: HeccdiverPDA
   name: heccdiver PDA
   description: Ok, time to be a productive member of- oh cool I'm a heccdiver time to give this world a taste of managed democracy!
