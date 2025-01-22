@@ -1,8 +1,19 @@
 - type: entity
-  parent: AirlockCommand
+  parent: AirlockCentralCommand
   id: AirlockBlueshieldLocked
   suffix: Blueshield, Locked
   components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsBlueshield ]
+  - type: AccessReader
+    access: [["Blueshield"]]
+  - type: Wires
+    layoutId: AirlockCommand
+
+- type: entity
+  parent: AirlockCentralCommandGlass
+  id: AirlockBlueshieldLocked
+  suffix: Blueshield, Locked
+  components:
+  - type: AccessReader
+    access: [["Blueshield"]]
+  - type: Wires
+    layoutId: AirlockCommand

@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingNeckBase
+  parent: [ClothingNeckBase, BaseCentcommCommandContraband]
   id: Dinkyshield
   name: blue shield sticker
   description: A dinky lil blue shield for only the hardest working blueshield officers! It's not even sticky anymore.

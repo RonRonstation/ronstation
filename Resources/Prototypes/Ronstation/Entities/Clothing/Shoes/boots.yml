@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ClothingShoesBaseWinterBoots, ClothingShoesMilitaryBase, BaseCommandContraband]
+  parent: [ClothingShoesBaseWinterBoots, ClothingShoesMilitaryBase, BaseCentcommCommandContraband]
   id: ClothingShoesBootsWinterBlueshield
   name: blueshield winter boots
   components:

@@ -29,7 +29,7 @@
           - Cartridge
 
 - type: entity
-  parent: [ BasePDA, BaseCommandContraband ]
+  parent: [ BasePDA, BaseCentcommCommandContraband ]
   id: BlueshieldPDA
   name: Blueshield PDA
   description: Might allow you to see who to protect through the crew manifest.

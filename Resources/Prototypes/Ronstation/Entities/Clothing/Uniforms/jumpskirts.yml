@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ClothingUniformBase, BaseCommandContraband]
+  parent: [ClothingUniformBase, BaseCentcommCommandContraband]
   id: ClothingUniformJumpskirtBlueshieldGrey
   name: grey blueshield jumpsuit
   description: The main suit of the protector.
@@ -10,7 +10,7 @@
     sprite: Ronstation/Clothing/Uniforms/Jumpskirt/blueshield_grey.rsi
 
 - type: entity
-  parent: ClothingUniformSkirtBase
+  parent: [ClothingUniformSkirtBase, BaseCentcommCommandContraband]
   id: ClothingUniformJumpskirtBlueshield
   name: blueshield jumpskirt
   description: A jumpskirt made of strong material, providing robust protection, even for a bodyguard.
