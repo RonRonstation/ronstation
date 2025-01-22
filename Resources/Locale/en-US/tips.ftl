@@ -135,4 +135,4 @@ tips-dataset-134 = You can tell if an area with firelocks up is spaced by lookin
 tips-dataset-135 = Instead of picking it up, you can alt-click food to eat it. This also works for mice and other creatures without hands.
 tips-dataset-136 = If you're trapped behind an electrified door, disable the APC or throw your ID at the door to avoid getting shocked!
 tips-dataset-137 = If the AI electrifies a door and you have insulated gloves, snip and mend the power wire to reset their electrification!
-tips-dataset-136 = You can get free steel from walls.
+tips-dataset-139 = You can get free steel from walls.
