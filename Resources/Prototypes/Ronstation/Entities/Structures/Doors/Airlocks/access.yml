@@ -10,7 +10,7 @@
 
 - type: entity
   parent: AirlockCentralCommandGlass
-  id: AirlockBlueshieldLocked
+  id: AirlockBlueshieldGlassLocked
   suffix: Blueshield, Locked
   components:
   - type: AccessReader
