@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingEyesGlassesSecurity
+  parent: [ClothingEyesGlassesSecurity, BaseRestrictedContraband]
   id: ClothingEyesGlassesSecurityVisor
   name: security visor
   description: Upgraded sunglasses that provide flash immunity and a security HUD. Looks badass.

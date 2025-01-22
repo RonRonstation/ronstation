@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingHeadBase
+  parent: [ClothingHeadBase, BaseCentcommCommandContraband]
   id: ClothingHeadHatBeretBlueshield
   name: blueshield beret
   description: A stylish clothing option for blueshield officers.
