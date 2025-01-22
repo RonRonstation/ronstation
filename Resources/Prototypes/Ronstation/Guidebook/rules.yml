@@ -1,0 +1,6 @@
+- type: guideEntry
+  id: RonstationStandardRuleset
+  name: guide-entry-rules-ronstation-lrp
+  ruleEntry: true
+  priority: 5
+  text: "/ServerInfo/Ronstation/Guidebook/ServerRules/RonstationLRPRules.xml"
