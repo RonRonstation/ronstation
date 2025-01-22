@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ BasePDA, BaseTerragovContraband ]
+  parent: [ BaseTerragovContraband, BasePDA ]
   id: HeccdiverPDA
   name: heccdiver PDA
   description: Ok, time to be a productive member of- oh cool I'm a heccdiver time to give this world a taste of managed democracy!
@@ -29,7 +29,7 @@
           - Cartridge
 
 - type: entity
-  parent: [ BasePDA, BaseCommandContraband ]
+  parent: [ BasePDA, BaseCentcommCommandContraband ]
   id: BlueshieldPDA
   name: Blueshield PDA
   description: Might allow you to see who to protect through the crew manifest.

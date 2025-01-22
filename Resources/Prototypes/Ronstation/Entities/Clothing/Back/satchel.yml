@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ClothingBackpackSatchel, BaseCommandContraband]
+  parent: [ClothingBackpackSatchel, BaseCentcommCommandContraband]
   id: ClothingBackpackSatchelBlueshield
   name: Blueshield satchel
   description: A robust satchel for blueshield related needs.

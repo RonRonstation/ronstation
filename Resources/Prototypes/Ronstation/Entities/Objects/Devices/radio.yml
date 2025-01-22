@@ -4,11 +4,6 @@
   parent: [ RadioHandheld, BaseTerragovContraband ]
   id: RadioHandheldTerragov
   components:
-  - type: RadioMicrophone
-    broadcastChannel: Handheld #Cannot make a new channel for Terragov.
-  - type: RadioSpeaker
-    channels:
-    - Handheld
   - type: Sprite
     sprite: Ronstation/Objects/Devices/terragovhandy.rsi
   - type: Item

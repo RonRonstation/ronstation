@@ -2,7 +2,7 @@
 #IDs with layers
 
 - type: entity
-  parent: [ IDCardStandard, BaseTerragovContraband ]
+  parent: [ BaseTerragovContraband, IDCardStandard ]
   id: HeccdiverIDCard
   name: heccdiver ID card
   components:
