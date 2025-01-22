@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ UnsensoredClothingUniformBase, BaseTerragovContraband ]
+  parent: [ BaseTerragovContraband, UnsensoredClothingUniformBase ]
   id: ClothingUniformJumpsuitHeccdiver
   name: heccdiver jumpsuit
   description: The very capable wear this, apparently.
