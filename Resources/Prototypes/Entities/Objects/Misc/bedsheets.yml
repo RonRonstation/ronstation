@@ -23,6 +23,17 @@
   - type: Tag
     tags:
     - Bedsheet
+    - ClothMade # Ronstation - Mothpeople should be able to eat these.
+  - type: Food # Ronstation - Mothpeople should be able to eat these.
+    requiresSpecialDigestion: true
+    delay: 2
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 10
 
 - type: entity
   id: BedsheetBlack
