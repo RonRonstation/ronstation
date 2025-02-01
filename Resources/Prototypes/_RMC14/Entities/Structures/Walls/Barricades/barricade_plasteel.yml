@@ -48,10 +48,6 @@
     trackAllDamage: true
     damageOverlay:
       sprite: _RMC14/Structures/Walls/Barricades/plasteel_barricade_cracks.rsi
-  - type: Barbed
-    thornsDamage:
-      types:
-        Slash: 10
   - type: Construction
     graph: BarricadePlasteelGraph
     node: nodePlasteel

@@ -74,10 +74,6 @@
     trackAllDamage: true
     damageOverlay:
       sprite: _RMC14/Structures/Walls/Barricades/metal_barricade_cracks.rsi
-  - type: Barbed
-    thornsDamage:
-      types:
-        Slash: 10
   - type: Construction
     graph: BarricadeMetalGraph
     node: nodeMetal
