@@ -19,7 +19,6 @@
         layer:
         - TableLayer
         - LowImpassable
-        - BarricadeImpassable
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: CMBarricade
@@ -51,7 +50,6 @@
   - type: Repairable
     fuelCost: 10
     doAfterDelay: 4
-    damage: -100
   - type: Destructible
     thresholds:
     - trigger:
@@ -160,7 +158,6 @@
   - type: Repairable
     fuelCost: 10
     doAfterDelay: 4
-    damage: -100
   - type: Destructible
     thresholds:
     - trigger:
