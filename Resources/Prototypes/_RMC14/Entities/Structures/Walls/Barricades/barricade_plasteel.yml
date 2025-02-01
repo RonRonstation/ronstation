@@ -1,0 +1,157 @@
+
+# Plasteel Barricade Tree
+- type: entity
+  parent: CMBarricadeBase
+  id: RMCBarricadePlasteel
+  name: plasteel barricade
+  description: A sturdy and easily assembled barricade made of reinforced plasteel plates, the pinnacle of strongpoints. Use a blowtorch to repair.
+  components:
+  - type: Anchorable
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path:
+          "/Audio/_RMC14/Structures/metalhit.ogg"
+  - type: Sprite
+    sprite: _RMC14/Structures/Walls/Barricades/barricade.rsi
+    layers:
+    - state: plasteel
+    drawdepth: WallTops
+  - type: InteractionPopup
+    interactSuccessString: fence-rattle-success
+    messagePerceivedByOthers: fence-rattle-success
+    interactSuccessSound:
+      collection: FenceRattle
+  - type: Repairable
+    fuelCost: 15
+    doAfterDelay: 5
+    damage: -90
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetPlasteel1:
+            min: 2
+            max: 3
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: DamageVisuals
+    thresholds: [4, 8, 12]
+    damageDivisor: 25
+    trackAllDamage: true
+    damageOverlay:
+      sprite: _RMC14/Structures/Walls/Barricades/plasteel_barricade_cracks.rsi
+  - type: Barbed
+    thornsDamage:
+      types:
+        Slash: 10
+  - type: Construction
+    graph: BarricadePlasteelGraph
+    node: nodePlasteel
+
+# Metal Barricade Upgrades
+
+- type: entity
+  parent: RMCBarricadePlasteel
+  id: RMCBarricadeBrutePlasteel
+  suffix: Reinforced
+  components:
+    - type: Sprite
+      sprite: _RMC14/Structures/Walls/Barricades/barricade.rsi
+      layers:
+      - state: plasteel
+      - state: brute_upgrade
+    - type: Damageable
+      damageContainer: Inorganic
+      damageModifierSet: CMBruteBarricade
+    - type: DamageVisuals
+      thresholds: [4, 8, 12]
+      damageDivisor: 25
+      trackAllDamage: true
+      damageOverlay:
+        sprite: _RMC14/Structures/Walls/Barricades/brute_barricade_cracks.rsi
+
+- type: entity
+  parent: RMCBarricadePlasteel
+  id: RMCBarricadeExplosivePlasteel
+  suffix: Composite
+  components:
+    - type: Sprite
+      sprite: _RMC14/Structures/Walls/Barricades/barricade.rsi
+      layers:
+      - state: plasteel
+      - state: explosive_upgrade
+      - map: [ "acided" ]
+    - type: ExplosionResistance
+      damageCoefficient: 0.5
+    - type: DamageVisuals
+      thresholds: [4, 8, 12]
+      damageDivisor: 25
+      trackAllDamage: true
+      damageOverlay:
+        sprite: _RMC14/Structures/Walls/Barricades/explosive_barricade_cracks.rsi
+
+- type: entity
+  parent: CMBarricadeMetalDoor
+  id: CMBarricadePlasteelDoor
+  name: folding plasteel barricade
+  description: A tough folding plasteel barricade stronger than its metal counterpart. Can be closed and opened at a moment's notice. Repair with a welder.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Structures/Walls/Barricades/barricade.rsi
+    layers:
+    - state: folding_plasteel
+      map: ["enum.DoorVisualLayers.Base"]
+    - map: [ "acided" ]
+    drawdepth: WallTops
+  - type: Repairable
+    fuelCost: 15
+    doAfterDelay: 5
+    damage: -90
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 170
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetPlasteel1:
+            min: 3
+            max: 4
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Door
+    openSpriteState: folding_plasteel_closed
+    closedSpriteState: folding_plasteel
+    canPry: false
+    occludes: false
+    changeAirtight: false
+    bumpOpen: false
+    clickOpen: true
+    canCrush: false
+    closeTimeOne: 0
+    closeTimeTwo: 0
+    openTimeOne: 0
+    openTimeTwo: 0
+    openingAnimationTime: 0
+    closingAnimationTime: 0
+    # Allow you to close barricades while people are standing on them or multiple are wrenched in the same tile
+    performCollisionCheck: false
+    openSound:
+      path: /Audio/Items/ratchet.ogg
+    closeSound:
+      path: /Audio/Items/ratchet.ogg
+  - type: Construction
+    graph: BarricadePlasteelDoorGraph
+    node: nodeBarricadePlasteelDoor

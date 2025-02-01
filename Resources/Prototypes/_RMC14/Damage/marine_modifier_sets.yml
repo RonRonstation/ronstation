@@ -1,0 +1,30 @@
+﻿# RMC-14 Barricade Modifers
+
+# Base Barricade
+- type: damageModifierSet
+  id: CMBarricade
+  coefficients:
+    Structural: 1.5
+
+# Used in anti-Biohazard Barricade
+- type: damageModifierSet
+  id: CMBurnBarricade
+  coefficients:
+    Heat: 0.05 # fuck your esword
+    Shock: 0.05
+    Cold: 0.05
+    Caustic: 0.05
+    Structural: 2 # unfuck your esword
+
+# Used in Reinforced Barricade
+- type: damageModifierSet
+  id: CMBruteBarricade
+  coefficients:
+    Heat: 2 # balance
+    Shock: 2
+    Cold: 2
+    Caustic: 2
+    Blunt: 0.5
+    Slash: 0.5
+    Piercing: 0.5 # bullets wouldnt hit barricades anyway
+    Structural: 1.25
