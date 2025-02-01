@@ -1,5 +1,4 @@
 - type: constructionGraph
-  parent: RMC
   id: BarricadeWoodGraph
   start: start
   graph:
