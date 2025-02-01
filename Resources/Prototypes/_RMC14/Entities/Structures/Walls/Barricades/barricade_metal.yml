@@ -20,8 +20,6 @@
         - TableLayer
         - LowImpassable
         - BarricadeImpassable
-  - type: RotationDrawDepth
-    southDrawDepth: OverMobs
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: CMBarricade

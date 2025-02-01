@@ -23,8 +23,6 @@
         layer:
         - TableLayer
         - LowImpassable
-  - type: RotationDrawDepth
-    southDrawDepth: OverMobs
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Wood
