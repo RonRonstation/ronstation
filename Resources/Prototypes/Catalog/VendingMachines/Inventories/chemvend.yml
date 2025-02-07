@@ -28,6 +28,9 @@
     JugBarium: 1
     JugBromine: 2
     JugHelium: 2
+  contrabandInventory:
+    DrinkLithiumFlask: 1
+    StrangePill: 3
   emaggedInventory:
     ToxinChemistryBottle: 1
 
@@ -62,6 +65,9 @@
     JugBarium: 2
     JugBromine: 2
     JugHelium: 1
+  contrabandInventory:
+    DrinkLithiumFlask: 1
+    StrangePill: 3
   emaggedInventory:
     PaxChemistryBottle: 3
     MuteToxinChemistryBottle: 3
