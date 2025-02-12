@@ -39,8 +39,6 @@ public sealed class GravityWellSystem : SharedGravityWellSystem
     private EntityQuery<MapGridComponent> _gridQuery;
     private EntityQuery<PhysicsComponent> _physicsQuery;
 
-    private HashSet<EntityUid> _entSet = new();
-
     public override void Initialize()
     {
         base.Initialize();
@@ -48,15 +46,10 @@ public sealed class GravityWellSystem : SharedGravityWellSystem
         _mapQuery = GetEntityQuery<MapComponent>();
         _gridQuery = GetEntityQuery<MapGridComponent>();
         _physicsQuery = GetEntityQuery<PhysicsComponent>();
-        SubscribeLocalEvent<GravityWellComponent, MapInitEvent>(OnGravityWellMapInit);
+        SubscribeLocalEvent<GravityWellComponent, ComponentStartup>(OnGravityWellStartup);
 
         var vvHandle = _vvManager.GetTypeHandler<GravityWellComponent>();
         vvHandle.AddPath(nameof(GravityWellComponent.TargetPulsePeriod), (_, comp) => comp.TargetPulsePeriod, SetPulsePeriod);
-    }
-
-    private void OnGravityWellMapInit(Entity<GravityWellComponent> ent, ref MapInitEvent args)
-    {
-        ent.Comp.NextPulseTime = _timing.CurTime + ent.Comp.TargetPulsePeriod;
     }
 
     public override void Shutdown()
@@ -80,7 +73,6 @@ public sealed class GravityWellSystem : SharedGravityWellSystem
         while (query.MoveNext(out var uid, out var gravWell, out var xform))
         {
             var curTime = _timing.CurTime;
-
             if (gravWell.NextPulseTime <= curTime)
                 Update(uid, curTime - gravWell.LastPulseTime, gravWell, xform);
         }
@@ -111,7 +103,8 @@ public sealed class GravityWellSystem : SharedGravityWellSystem
         if(!Resolve(uid, ref gravWell))
             return;
 
-        gravWell.NextPulseTime += gravWell.TargetPulsePeriod;
+        gravWell.LastPulseTime = _timing.CurTime;
+        gravWell.NextPulseTime = gravWell.LastPulseTime + gravWell.TargetPulsePeriod;
         if (gravWell.MaxRange < 0.0f || !Resolve(uid, ref xform))
             return;
 
@@ -202,18 +195,15 @@ public sealed class GravityWellSystem : SharedGravityWellSystem
         if (mapPos == MapCoordinates.Nullspace)
             return; // No gravpulses in nullspace please.
 
-        _entSet.Clear();
         var epicenter = mapPos.Position;
         var minRange2 = MathF.Max(minRange * minRange, MinGravPulseRange); // Cache square value for speed. Also apply a sane minimum value to the minimum value so that div/0s don't happen.
-        _lookup.GetEntitiesInRange(mapPos.MapId,
-            epicenter,
-            maxRange,
-            _entSet,
-            flags: LookupFlags.Dynamic | LookupFlags.Sundries);
+        var bodyQuery = GetEntityQuery<PhysicsComponent>();
+        var xformQuery = GetEntityQuery<TransformComponent>();
 
-        foreach (var entity in _entSet)
+        foreach(var entity in _lookup.GetEntitiesInRange(mapPos.MapId, epicenter, maxRange, flags: LookupFlags.Dynamic | LookupFlags.Sundries))
         {
-            if (!_physicsQuery.TryGetComponent(entity, out var physics))
+            if (!bodyQuery.TryGetComponent(entity, out var physics)
+                || physics.BodyType == BodyType.Static)
             {
                 continue;
             }
@@ -224,7 +214,7 @@ public sealed class GravityWellSystem : SharedGravityWellSystem
             if(!CanGravPulseAffect(entity))
                 continue;
 
-            var displacement = epicenter - _transform.GetWorldPosition(entity);
+            var displacement = epicenter - _transform.GetWorldPosition(entity, xformQuery);
             var distance2 = displacement.LengthSquared();
             if (distance2 < minRange2)
                 continue;
@@ -273,4 +263,20 @@ public sealed class GravityWellSystem : SharedGravityWellSystem
     }
 
     #endregion Getters/Setters
+
+    #region Event Handlers
+
+    /// <summary>
+    /// Resets the pulse timings of the gravity well when the components starts up.
+    /// </summary>
+    /// <param name="uid">The uid of the gravity well to start up.</param>
+    /// <param name="comp">The state of the gravity well to start up.</param>
+    /// <param name="args">The startup prompt arguments.</param>
+    public void OnGravityWellStartup(EntityUid uid, GravityWellComponent comp, ComponentStartup args)
+    {
+        comp.LastPulseTime = _timing.CurTime;
+        comp.NextPulseTime = comp.LastPulseTime + comp.TargetPulsePeriod;
+    }
+
+    #endregion Event Handlers
 }

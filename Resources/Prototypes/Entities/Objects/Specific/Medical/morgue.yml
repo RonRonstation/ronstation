@@ -51,8 +51,8 @@
   - type: EntityStorageLayingDownOverride
   - type: PaperLabel
     labelSlot:
-      insertVerbText: comp-paper-label-insert
-      ejectVerbText: comp-paper-label-eject
+      insertVerbText: Attach Label
+      ejectVerbText: Remove Label
       whitelist:
         components:
         - Paper

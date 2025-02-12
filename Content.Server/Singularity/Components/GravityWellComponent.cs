@@ -7,20 +7,22 @@ namespace Content.Server.Singularity.Components;
 /// The server-side version of <see cref="SharedGravityWellComponent"/>.
 /// Primarily managed by <see cref="GravityWellSystem"/>.
 /// </summary>
-[RegisterComponent, AutoGenerateComponentPause]
+[RegisterComponent]
 public sealed partial class GravityWellComponent : Component
 {
     /// <summary>
     /// The maximum range at which the gravity well can push/pull entities.
     /// </summary>
-    [DataField]
+    [DataField("maxRange")]
+    [ViewVariables(VVAccess.ReadWrite)]
     public float MaxRange;
 
     /// <summary>
     /// The minimum range at which the gravity well can push/pull entities.
     /// This is effectively hardfloored at <see cref="GravityWellSystem.MinGravPulseRange"/>.
     /// </summary>
-    [DataField]
+    [DataField("minRange")]
+    [ViewVariables(VVAccess.ReadWrite)]
     public float MinRange = 0f;
 
     /// <summary>
@@ -28,7 +30,8 @@ public sealed partial class GravityWellComponent : Component
     /// Negative values accelerate entities away from the gravity well.
     /// Actual acceleration scales with the inverse of the distance to the singularity.
     /// </summary>
-    [DataField]
+    [DataField("baseRadialAcceleration")]
+    [ViewVariables(VVAccess.ReadWrite)]
     public float BaseRadialAcceleration = 0.0f;
 
     /// <summary>
@@ -36,7 +39,8 @@ public sealed partial class GravityWellComponent : Component
     /// Positive tangential acceleration is counter-clockwise.
     /// Actual acceleration scales with the inverse of the distance to the singularity.
     /// </summary>
-    [DataField]
+    [DataField("baseTangentialAcceleration")]
+    [ViewVariables(VVAccess.ReadWrite)]
     public float BaseTangentialAcceleration = 0.0f;
 
     #region Update Timing
@@ -52,14 +56,16 @@ public sealed partial class GravityWellComponent : Component
     /// <summary>
     /// The next time at which this gravity well should pulse.
     /// </summary>
-    [DataField, Access(typeof(GravityWellSystem)), AutoPausedField]
+    [ViewVariables(VVAccess.ReadOnly)]
+    [Access(typeof(GravityWellSystem))]
     public TimeSpan NextPulseTime { get; internal set; } = default!;
 
     /// <summary>
     /// The last time this gravity well pulsed.
     /// </summary>
     [ViewVariables(VVAccess.ReadOnly)]
-    public TimeSpan LastPulseTime => NextPulseTime - TargetPulsePeriod;
+    [Access(typeof(GravityWellSystem))]
+    public TimeSpan LastPulseTime { get; internal set; } = default!;
 
     #endregion Update Timing
 }

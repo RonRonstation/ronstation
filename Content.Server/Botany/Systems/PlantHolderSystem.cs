@@ -22,8 +22,6 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
-using Content.Server.Labels.Components;
-using Content.Shared.Containers.ItemSlots;
 
 namespace Content.Server.Botany.Systems;
 
@@ -41,7 +39,6 @@ public sealed class PlantHolderSystem : EntitySystem
     [Dependency] private readonly TagSystem _tagSystem = default!;
     [Dependency] private readonly RandomHelperSystem _randomHelper = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly ItemSlotsSystem _itemSlots = default!;
 
 
     public const float HydroponicsSpeedMultiplier = 1f;
@@ -179,10 +176,6 @@ public sealed class PlantHolderSystem : EntitySystem
                 }
                 component.LastCycle = _gameTiming.CurTime;
 
-                if (TryComp<PaperLabelComponent>(args.Used, out var paperLabel))
-                {
-                    _itemSlots.TryEjectToHands(args.Used, paperLabel.LabelSlot, args.User);
-                }
                 QueueDel(args.Used);
 
                 CheckLevelSanity(uid, component);

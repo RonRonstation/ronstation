@@ -107,12 +107,6 @@
     - ClothingNeckLGBTPin
 
 - type: loadout
-  id: ClothingNeckAllyPin
-  storage:
-    back:
-    - ClothingNeckAllyPin
-
-- type: loadout
   id: ClothingNeckAromanticPin
   storage:
     back:

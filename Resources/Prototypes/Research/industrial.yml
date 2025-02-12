@@ -166,8 +166,6 @@
     - PowerDrill
     - JawsOfLife
     - BorgModuleAdvancedTool
-    - Fulton
-    - FultonBeacon
 
 - type: technology
   id: MassExcavation

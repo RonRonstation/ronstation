@@ -19,11 +19,11 @@
   name: uplink-revolver-python-name
   description: uplink-revolver-python-desc
   productEntity: WeaponRevolverPythonAP
-  discountCategory: rareDiscounts
+  discountCategory: usualDiscounts
   discountDownTo:
-    Telecrystal: 2
+    Telecrystal: 4
   cost:
-    Telecrystal: 4 # Originally was 13 and then 8 TC but was not used due to high cost
+    Telecrystal: 8 # Originally was 13 TC but was not used due to high cost
   categories:
   - UplinkWeaponry
 
@@ -1976,11 +1976,11 @@
   name: uplink-revolver-cap-gun-fake-name
   description: uplink-revolver-cap-gun-fake-desc
   productEntity: RevolverCapGunFake
-  discountCategory: rareDiscounts
+  discountCategory: usualDiscounts
   discountDownTo:
-    Telecrystal: 3
-  cost:
     Telecrystal: 5
+  cost:
+    Telecrystal: 9
   categories:
   - UplinkJob
   conditions:

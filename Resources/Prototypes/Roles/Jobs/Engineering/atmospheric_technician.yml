@@ -15,10 +15,6 @@
   - Engineering
   - External
   - Atmospherics
-  special:
-  - !type:GiveItemOnHolidaySpecial
-    holiday: FirefighterDay
-    prototype: FireAxe
 
 - type: startingGear
   id: AtmosphericTechnicianGear

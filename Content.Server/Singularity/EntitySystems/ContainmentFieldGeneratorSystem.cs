@@ -320,7 +320,7 @@ public sealed class ContainmentFieldGeneratorSystem : EntitySystem
             var newField = Spawn(firstGen.Comp.CreatedField, currentCoords);
 
             var fieldXForm = Transform(newField);
-            _transformSystem.SetParent(newField, fieldXForm, firstGen);
+            fieldXForm.AttachParent(firstGen);
             if (dirVec.GetDir() == Direction.East || dirVec.GetDir() == Direction.West)
             {
                 var angle = fieldXForm.LocalPosition.ToAngle();

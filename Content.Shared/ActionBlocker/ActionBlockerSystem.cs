@@ -199,8 +199,7 @@ namespace Content.Shared.ActionBlocker
             {
                 var containerEv = new CanAttackFromContainerEvent(uid, target);
                 RaiseLocalEvent(uid, containerEv);
-                if (!containerEv.CanAttack)
-                    return false;
+                return containerEv.CanAttack;
             }
 
             var ev = new AttackAttemptEvent(uid, target, weapon, disarm);
