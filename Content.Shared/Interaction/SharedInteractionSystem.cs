@@ -667,8 +667,7 @@ namespace Content.Shared.Interaction
             float range = InteractionRange,
             CollisionGroup collisionMask = InRangeUnobstructedMask,
             Ignored? predicate = null,
-            bool popup = false,
-            bool overlapCheck = true)
+            bool popup = false)
         {
             if (!Resolve(other, ref other.Comp))
                 return false;
@@ -688,8 +687,7 @@ namespace Content.Shared.Interaction
                 range,
                 collisionMask,
                 predicate,
-                popup,
-                overlapCheck);
+                popup);
         }
 
         /// <summary>
@@ -719,7 +717,6 @@ namespace Content.Shared.Interaction
         /// <returns>
         ///     True if the two points are within a given range without being obstructed.
         /// </returns>
-        /// <param name="overlapCheck">If true, if the broadphase query returns an overlap (0f distance) this function will early out true with no raycast made.</param>
         public bool InRangeUnobstructed(
             Entity<TransformComponent?> origin,
             Entity<TransformComponent?> other,
@@ -728,8 +725,7 @@ namespace Content.Shared.Interaction
             float range = InteractionRange,
             CollisionGroup collisionMask = InRangeUnobstructedMask,
             Ignored? predicate = null,
-            bool popup = false,
-            bool overlapCheck = true)
+            bool popup = false)
         {
             Ignored combinedPredicate = e => e == origin.Owner || (predicate?.Invoke(e) ?? false);
             var inRange = true;
@@ -772,7 +768,7 @@ namespace Content.Shared.Interaction
                     inRange = false;
                 }
                 // Overlap, early out and no raycast.
-                else if (overlapCheck && distance.Equals(0f))
+                else if (distance.Equals(0f))
                 {
                     return true;
                 }

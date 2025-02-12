@@ -79,7 +79,7 @@ public abstract partial class SharedProjectileSystem : EntitySystem
         {
             projectile.Shooter = null;
             projectile.Weapon = null;
-            projectile.ProjectileSpent = false;
+            projectile.DamagedEntity = false;
         }
 
         // Land it just coz uhhh yeah

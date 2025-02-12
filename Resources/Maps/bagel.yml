@@ -111143,7 +111143,7 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-- proto: LockerHeadOfSecurityFilledHardsuit
+- proto: LockerHeadOfSecurityFilled
   entities:
   - uid: 5456
     components:

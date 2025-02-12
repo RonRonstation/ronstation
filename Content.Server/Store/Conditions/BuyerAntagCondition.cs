@@ -27,12 +27,13 @@ public sealed partial class BuyerAntagCondition : ListingCondition
     public override bool Condition(ListingConditionArgs args)
     {
         var ent = args.EntityManager;
+        var minds = ent.System<SharedMindSystem>();
 
-        if (!ent.HasComponent<MindComponent>(args.Buyer))
-            return true; // inanimate objects don't have minds
+        if (!minds.TryGetMind(args.Buyer, out var mindId, out var mind))
+            return true;
 
         var roleSystem = ent.System<SharedRoleSystem>();
-        var roles = roleSystem.MindGetAllRoleInfo(args.Buyer);
+        var roles = roleSystem.MindGetAllRoleInfo(mindId);
 
         if (Blacklist != null)
         {

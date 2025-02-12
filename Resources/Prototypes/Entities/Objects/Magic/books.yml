@@ -136,7 +136,7 @@
       - state: overlay_blood
     - type: Spellbook
       spellActions:
-        ActionSmiteNoReq: -1
+        ActionSmite: -1
 
 - type: entity
   id: KnockSpellbook

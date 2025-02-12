@@ -170,7 +170,7 @@ public sealed partial class MeleeWeaponSystem : SharedMeleeWeaponSystem
         var targetCoordinates = xform.Coordinates;
         var targetLocalAngle = xform.LocalRotation;
 
-        return Interaction.InRangeUnobstructed(user, target, targetCoordinates, targetLocalAngle, range, overlapCheck: false);
+        return Interaction.InRangeUnobstructed(user, target, targetCoordinates, targetLocalAngle, range);
     }
 
     protected override void DoDamageEffect(List<EntityUid> targets, EntityUid? user, TransformComponent targetXform)

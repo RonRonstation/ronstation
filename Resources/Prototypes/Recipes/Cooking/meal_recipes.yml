@@ -660,7 +660,8 @@
   reagents:
     Flour: 15
     Egg: 6
-    OilOlive: 5
+  solids:
+    FoodButter: 1
 
 - type: microwaveMealRecipe
   id: RecipePastaTomato

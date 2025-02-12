@@ -37,10 +37,10 @@ public sealed partial class StoreComponent : Component
     public HashSet<ProtoId<CurrencyPrototype>> CurrencyWhitelist = new();
 
     /// <summary>
-    /// The person/mind who "owns" the store/account. Used if you want the listings to be fixed
+    /// The person who "owns" the store/account. Used if you want the listings to be fixed
     /// regardless of who activated it. I.E. role specific items for uplinks.
     /// </summary>
-    [DataField]
+    [ViewVariables(VVAccess.ReadWrite)]
     public EntityUid? AccountOwner = null;
 
     /// <summary>

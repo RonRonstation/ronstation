@@ -118,36 +118,19 @@ public sealed class HealingSystem : EntitySystem
         _audio.PlayPvs(healing.HealingEndSound, entity.Owner, AudioHelpers.WithVariation(0.125f, _random).WithVolume(1f));
 
         // Logic to determine the whether or not to repeat the healing action
-        args.Repeat = (HasDamage(entity, healing) && !dontRepeat);
+        args.Repeat = (HasDamage(entity.Comp, healing) && !dontRepeat);
         if (!args.Repeat && !dontRepeat)
             _popupSystem.PopupEntity(Loc.GetString("medical-item-finished-using", ("item", args.Used)), entity.Owner, args.User);
         args.Handled = true;
     }
 
-    private bool HasDamage(Entity<DamageableComponent> ent, HealingComponent healing)
+    private bool HasDamage(DamageableComponent component, HealingComponent healing)
     {
-        var damageableDict = ent.Comp.Damage.DamageDict;
+        var damageableDict = component.Damage.DamageDict;
         var healingDict = healing.Damage.DamageDict;
         foreach (var type in healingDict)
         {
             if (damageableDict[type.Key].Value > 0)
-            {
-                return true;
-            }
-        }
-
-        if (TryComp<BloodstreamComponent>(ent, out var bloodstream))
-        {
-            // Is ent missing blood that we can restore?
-            if (healing.ModifyBloodLevel > 0
-                && _solutionContainerSystem.ResolveSolution(ent.Owner, bloodstream.BloodSolutionName, ref bloodstream.BloodSolution, out var bloodSolution)
-                && bloodSolution.Volume < bloodSolution.MaxVolume)
-            {
-                return true;
-            }
-
-            // Is ent bleeding and can we stop it?
-            if (healing.BloodlossModifier < 0 && bloodstream.BleedAmount > 0)
             {
                 return true;
             }
@@ -192,7 +175,14 @@ public sealed class HealingSystem : EntitySystem
         if (TryComp<StackComponent>(uid, out var stack) && stack.Count < 1)
             return false;
 
-        if (!HasDamage((target, targetDamage), component))
+        var anythingToDo =
+            HasDamage(targetDamage, component) ||
+            component.ModifyBloodLevel > 0 // Special case if healing item can restore lost blood...
+                && TryComp<BloodstreamComponent>(target, out var bloodstream)
+                && _solutionContainerSystem.ResolveSolution(target, bloodstream.BloodSolutionName, ref bloodstream.BloodSolution, out var bloodSolution)
+                && bloodSolution.Volume < bloodSolution.MaxVolume; // ...and there is lost blood to restore.
+
+        if (!anythingToDo)
         {
             _popupSystem.PopupEntity(Loc.GetString("medical-item-cant-use", ("item", uid)), uid, user);
             return false;

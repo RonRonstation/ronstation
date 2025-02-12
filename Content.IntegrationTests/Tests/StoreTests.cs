@@ -5,7 +5,6 @@ using Content.Server.Store.Systems;
 using Content.Server.Traitor.Uplink;
 using Content.Shared.FixedPoint;
 using Content.Shared.Inventory;
-using Content.Shared.Mind;
 using Content.Shared.Store;
 using Content.Shared.Store.Components;
 using Content.Shared.StoreDiscount.Components;
@@ -65,7 +64,6 @@ public sealed class StoreTests
         await server.WaitAssertion(() =>
         {
             var invSystem = entManager.System<InventorySystem>();
-            var mindSystem = entManager.System<SharedMindSystem>();
 
             human = entManager.SpawnEntity("HumanUniformDummy", coordinates);
             uniform = entManager.SpawnEntity("UniformDummy", coordinates);
@@ -73,9 +71,6 @@ public sealed class StoreTests
 
             Assert.That(invSystem.TryEquip(human, uniform, "jumpsuit"));
             Assert.That(invSystem.TryEquip(human, pda, "id"));
-
-            var mind = mindSystem.CreateMind(null);
-            mindSystem.TransferTo(mind, human, mind: mind);
 
             FixedPoint2 originalBalance = 20;
             uplinkSystem.AddUplink(human, originalBalance, null, true);

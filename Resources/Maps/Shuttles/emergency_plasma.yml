@@ -541,11 +541,7 @@ entities:
         chunkSize: 4
     - type: GasTileOverlay
     - type: RadiationGridResistance
-    - type: DeviceNetwork
-      configurators: []
-      deviceLists: []
-      transmitFrequencyId: ShuttleTimer
-      deviceNetId: Wireless
+    - type: EmergencyShuttle
 - proto: AirAlarm
   entities:
   - uid: 218
