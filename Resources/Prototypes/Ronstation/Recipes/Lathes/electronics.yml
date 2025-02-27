@@ -1,0 +1,25 @@
+# Base prototypes
+
+- type: latheRecipe
+  abstract: true
+  parent: BaseElectronicsRecipe
+  id: BaseElectronicsRecipeBasic
+  completetime: 1
+  materials:
+    Steel: 50
+    Plastic: 150
+
+- type: latheRecipe
+  abstract: true
+  parent: BaseElectronicsRecipe
+  id: BaseBasicCircuitboardRecipe
+  materials:
+     Steel: 50
+     Glass: 150
+
+# Recipes
+
+- type: latheRecipe
+  parent: BaseBasicCircuitboardRecipe
+  id: OreProcessorBasicMachineCircuitboard
+  result: OreProcessorBasicMachineCircuitboard
