@@ -5,9 +5,9 @@
   description: A beret with a command insignia emblazoned on it. It has an aura of authority.
   components:
   - type: Sprite
-    sprite: Clothing/Head/Hats/beret_command.rsi
+    sprite: _Ronstation/Clothing/Head/Hats/beret_command.rsi
   - type: Clothing
-    sprite: Clothing/Head/Hats/beret_command.rsi
+    sprite: _Ronstation/Clothing/Head/Hats/beret_command.rsi
   - type: Tag
     tags:
     - ClothMade

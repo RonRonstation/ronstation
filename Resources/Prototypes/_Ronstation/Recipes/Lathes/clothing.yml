@@ -1,4 +1,23 @@
+## Recipes
+
+# Jumpsuits/skirts
+
+- type: latheRecipe
+  parent: BaseCommandJumpsuitRecipe
+  id: ClothingUniformJumpsuitCommandGeneric
+  result: ClothingUniformJumpsuitCommandGeneric
+
+- type: latheRecipe
+  parent: BaseCommandJumpsuitRecipe
+  id: ClothingUniformJumpskirtCommandGeneric
+  result: ClothingUniformJumpskirtCommandGeneric
+
 # Hats
+- type: latheRecipe
+  parent: BaseCommandHatRecipe
+  id: ClothingHeadHatCommandsoft
+  result: ClothingHeadHatCommandsoft
+
 - type: latheRecipe
   parent: BaseCommandHatRecipe
   id: ClothingHeadHatBeretCommand
