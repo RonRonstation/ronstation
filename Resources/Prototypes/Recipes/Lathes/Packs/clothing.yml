@@ -35,6 +35,8 @@
   - ClothingHeadHatHopcap
   - ClothingUniformJumpsuitHoP
   - ClothingUniformJumpskirtHoP
+  # Generic Command Officer
+  - ClothingHeadHatBeretCommand
 
 - type: latheRecipePack
   id: ClothingEngineering
