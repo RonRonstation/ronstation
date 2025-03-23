@@ -1,0 +1,10 @@
+- type: entity
+  parent: [ClothingUniformSkirtBase, BaseCommandContraband]
+  id: ClothingUniformJumpskirtCommandGeneric
+  name: command jumpskirt
+  description: A generic command colored jumpsuit not associated with any particular department.
+  components:
+  - type: Sprite
+    sprite: _Ronstation/Clothing/Uniforms/Jumpskirt/commandgeneric.rsi
+  - type: Clothing
+    sprite: _Ronstation/Clothing/Uniforms/Jumpskirt/commandgeneric.rsi
