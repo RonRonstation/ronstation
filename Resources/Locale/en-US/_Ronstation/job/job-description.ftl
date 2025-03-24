@@ -1,0 +1,1 @@
+job-description-administrative-assistant = Help heads-of-staff out, check every console for deficiencies, help organize the station in response to incidents.

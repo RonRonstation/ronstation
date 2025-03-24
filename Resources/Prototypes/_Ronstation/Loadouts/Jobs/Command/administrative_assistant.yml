@@ -1,0 +1,22 @@
+
+# Jumpsuit
+- type: loadout
+  id: AdministrativeAssistantJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCommandGeneric
+
+- type: loadout
+  id: AdministrativeAssistantJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtCommandGeneric
+
+# Head
+- type: loadout
+  id: AdministrativeAssistantHead
+  equipment:
+    head: ClothingHeadHatCommandsoft
+
+- type: loadout
+  id: AdministrativeAssistantBeret
+  equipment:
+    head: ClothingHeadHatBeretCommand

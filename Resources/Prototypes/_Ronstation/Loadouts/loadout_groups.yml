@@ -1,0 +1,15 @@
+# Command
+- type: loadoutGroup
+  id: AdministrativeAssistantJumpsuit
+  name: loadout-group-administrative-assistant-jumpsuit
+  loadouts:
+  - AdministrativeAssistantJumpsuit
+  - AdministrativeAssistantJumpskirt
+
+- type: loadoutGroup
+  id: AdministrativeAssistantHead
+  name: loadout-group-administrative-assistant-head
+  minLimit: 0
+  loadouts:
+  - AdministrativeAssistantHead
+  - AdministrativeAssistantBeret

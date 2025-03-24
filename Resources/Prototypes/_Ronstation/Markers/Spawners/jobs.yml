@@ -1,0 +1,13 @@
+# Command
+
+- type: entity
+  id: SpawnPointCaptain
+  parent: SpawnPointJobBase
+  name: administrative assistant
+  components:
+  - type: SpawnPoint
+    job_id: AdministrativeAssistant
+  - type: Sprite
+    layers:
+      - state: green
+      #- state: administrativeassistant # Ronstation - needs RSI file ready.
