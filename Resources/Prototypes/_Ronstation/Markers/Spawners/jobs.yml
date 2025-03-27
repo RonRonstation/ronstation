@@ -1,7 +1,7 @@
 # Command
 
 - type: entity
-  id: SpawnPointCaptain
+  id: SpawnPointAdministrativeAssistant
   parent: SpawnPointJobBase
   name: administrative assistant
   components:
