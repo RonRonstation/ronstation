@@ -1,0 +1,13 @@
+#IDs with layers
+
+- type: entity
+  parent: IDCardStandard
+  id: AdministrativeAssistantIDCard
+  name: administrative assistant ID card
+  components:
+    - type: Sprite
+      layers:
+        - state: default
+        - state: idcentcom
+    - type: PresetIdCard
+      job: AdministrativeAssistant
