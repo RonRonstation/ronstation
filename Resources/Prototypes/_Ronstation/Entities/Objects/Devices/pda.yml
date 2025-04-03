@@ -1,0 +1,23 @@
+- type: entity
+  parent: BasePDA
+  id: AdministrativeAssistantPDA
+  name: administrative assistant PDA
+  description: Smells like books.
+  components:
+  - type: Pda
+    id: AdministrativeAssistantIDCard
+    penSlot:
+      startingItem: LuxuryPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-library
+  - type: PdaBorderColor
+    borderColor: "#858585"
+  - type: Icon
+    state: pda-library

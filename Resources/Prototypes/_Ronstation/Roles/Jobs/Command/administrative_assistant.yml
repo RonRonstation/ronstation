@@ -1,0 +1,31 @@
+- type: job
+  id: AdministrativeAssistant
+  name: job-name-administrative-assistant
+  description: job-description-administrative-assistant
+  playTimeTracker: JobAdministrativeAssistant
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Civilian
+      time: 54000 # 15 hours
+    - !type:OverallPlaytimeRequirement
+      time: 90000 # 25 hrs
+  startingGear: BartenderGear
+  icon: "JobIconNanotrasen"
+  supervisors: job-supervisors-warden
+  canBeAntag: false
+  access:
+  - Command
+  extendedAccess:
+  - Service
+
+- type: startingGear
+  id: AdministrativeAssistantGear
+  equipment:
+    shoes: ClothingShoesColorBlack
+    id: AdministrativeAssistantPDA
+    gloves: ClothingHandsGlovesWhite
+    ears: ClothingHeadsetCommand
+    belt: BoxFolderClipboard
+  #storage:
+    #back:
+    #- Stuff
