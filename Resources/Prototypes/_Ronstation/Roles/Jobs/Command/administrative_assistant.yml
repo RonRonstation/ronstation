@@ -23,7 +23,7 @@
   equipment:
     shoes: ClothingShoesColorBlack
     id: AdministrativeAssistantPDA
-    gloves: ClothingHandsGlovesWhite
+    gloves: ClothingHandsGlovesColorWhite
     ears: ClothingHeadsetCommand
     belt: BoxFolderClipboard
   #storage:
