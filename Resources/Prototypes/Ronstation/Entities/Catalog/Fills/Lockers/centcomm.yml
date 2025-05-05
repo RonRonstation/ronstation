@@ -10,6 +10,7 @@
       - id: WeaponEnergyPistol
       - id: ClothingUniformJumpsuitBlueshieldGrey
         prob: 0.3
+      - id: TelescopicBlueShield
       - id: ClothingHeadHelmetBasic
       - id: ClothingOuterArmorBasic
       - id: ClothingBeltSecurityFilled
