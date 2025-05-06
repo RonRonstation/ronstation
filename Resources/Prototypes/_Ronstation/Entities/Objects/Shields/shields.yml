@@ -1,44 +1,17 @@
 - type: entity
   name: telescopic shield
-  parent: BaseShield
+  parent: TelescopicShield
   id: TelescopicBlueShield
   description: An advanced shield for blueshield officers made of lightweight, composite materials that collapses for easy storage.
   components:
-    - type: ItemToggle
-      soundActivate:
-        path: /Audio/Weapons/telescopicon.ogg
-        params:
-          volume: -5
-      soundDeactivate:
-        path: /Audio/Weapons/telescopicoff.ogg
-        params:
-          volume: -5
-    - type: ComponentToggler
-      components:
-      - type: DisarmMalus
-        malus: 0.6
     - type: ItemToggleSize
       activatedSize: Huge
     - type: Sprite
       sprite: _Ronstation/Objects/Weapons/Melee/teleblue_shield.rsi
-      layers:
-        - state: teleblue-icon
-        - state: teleblue-on
-          visible: false
-          map: [ "shield" ]
     - type: Item
-      size: Small
       sprite: _Ronstation/Objects/Weapons/Melee/teleblue_shield.rsi
-      heldPrefix: teleblue
     - type: UseDelay
       delay: 0.5
-    - type: ToggleableLightVisuals
-      spriteLayer: shield
-      inhandVisuals:
-        left:
-          - state: inhand-left-shield
-        right:
-          - state: inhand-right-shield
     - type: Blocking
       passiveBlockModifier:
         coefficients:
