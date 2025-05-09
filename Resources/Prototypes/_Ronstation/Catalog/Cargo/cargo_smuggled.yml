@@ -4,6 +4,6 @@
     sprite: Structures/Machines/bomb.rsi
     state: training-bomb
   product: ArmorySmuggledWeaponry
-  cost: 25000
+  cost: 15000
   category: cargoproduct-category-name-armory
   group: market
