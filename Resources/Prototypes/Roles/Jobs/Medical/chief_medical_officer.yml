@@ -11,10 +11,10 @@
       time: 9000 #2.5 hrs
     - !type:RoleTimeRequirement
       role: JobMedicalDoctor
-      time: 18000 #5 hrs
+      time: 36000 #10 hrs
     - !type:DepartmentTimeRequirement
       department: Medical
-      time: 36000 #10 hrs
+      time: 72000 # 20 hrs
   startingGear: CMOGear
   icon: "JobIconChiefMedicalOfficer"
   supervisors: job-supervisors-captain
