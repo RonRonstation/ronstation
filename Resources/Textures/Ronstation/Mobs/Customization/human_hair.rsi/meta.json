@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CC0-1.0",
-    "copyright": "Made by welladooom for the Ronstation fork.",
+    "copyright": "fluffyhair, longbangs, and ponytail are made by welladooom for the Ronstation fork.",
     "size": {
         "x": 32,
         "y": 32
@@ -9,6 +9,14 @@
     "states": [
         {
             "name": "fluffyhair",
+            "directions": 4
+        },
+        {
+            "name": "longbangs",
+            "directions": 4
+        },
+        {
+            "name": "ponytailwithbows",
             "directions": 4
         }
     ]
