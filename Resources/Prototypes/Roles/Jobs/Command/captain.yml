@@ -6,16 +6,16 @@
   requirements:
     - !type:DepartmentTimeRequirement
       department: Engineering
-      time: 18000 # 5 hour
+      time: 36000 # 10 hour
     - !type:DepartmentTimeRequirement
       department: Medical
-      time: 18000 # 5 hour
+      time: 36000 # 10 hour
     - !type:DepartmentTimeRequirement
       department: Science
-      time: 18000 # 5 hour
+      time: 36000 # 10 hour
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 18000 # 5 hour
+      time: 36000 # 10 hour
     - !type:DepartmentTimeRequirement
       department: Command
       time: 36000 # 10 hours

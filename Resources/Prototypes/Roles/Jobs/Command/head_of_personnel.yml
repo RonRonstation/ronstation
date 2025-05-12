@@ -6,16 +6,16 @@
   requirements:
     - !type:DepartmentTimeRequirement
       department: Engineering
-      time: 9000 # 2.5 hours
+      time: 9000 # 5 hours
     - !type:DepartmentTimeRequirement
       department: Medical
-      time: 9000 # 2.5 hours
+      time: 9000 # 5 hours
     - !type:DepartmentTimeRequirement
       department: Science
-      time: 9000 # 2.5 hrs
+      time: 9000 # 5 hrs
     - !type:DepartmentTimeRequirement
       department: Civilian # Ronstation - HoP is head of service/civilian department.
-      time: 18000 # 5 hours
+      time: 36000 # 10 hour
     - !type:DepartmentTimeRequirement
       department: Command
       time: 18000 # 5 hours
