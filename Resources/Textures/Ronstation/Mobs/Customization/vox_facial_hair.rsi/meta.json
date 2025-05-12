@@ -1,0 +1,16 @@
+{
+    "version": 1,
+    "license": "CC0-1.0",
+    "copyright": "voxsideburns made by welladooom for the Ronstation fork.",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "voxsideburns",
+            "directions": 4
+
+        }
+    ]
+}
