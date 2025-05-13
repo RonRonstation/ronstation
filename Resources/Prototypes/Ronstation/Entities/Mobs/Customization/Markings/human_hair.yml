@@ -18,7 +18,7 @@
   markingCategory: Hair
   sprites:
     - sprite: Ronstation/Mobs/Customization/human_hair.rsi
-      state: ponytailwithbow
+      state: ponytailwithbows
 - type: marking
   id: HumanHairZebra
   bodyPart: Hair
