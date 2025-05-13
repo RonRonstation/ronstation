@@ -13,7 +13,7 @@
     - sprite: Ronstation/Mobs/Customization/human_hair.rsi
       state: longbangs
 - type: marking
-  id: HumanHairPonyTailWithBow
+  id: HumanHairPonyTailWithBows
   bodyPart: Hair
   markingCategory: Hair
   sprites:
