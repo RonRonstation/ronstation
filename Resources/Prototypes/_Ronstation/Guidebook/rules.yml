@@ -1,0 +1,5 @@
+- type: guideEntry
+  id: RuleR8
+  name: guide-entry-rules-r8
+  ruleEntry: true
+  text: "/ServerInfo/Guidebook/ServerRules/Ronstation/RoleplayRules/RuleR8.xml"
