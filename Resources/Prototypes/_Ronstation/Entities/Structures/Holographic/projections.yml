@@ -1,0 +1,78 @@
+- type: entity
+  id: HolosignBlueshield
+  parent: HolosignSecurity
+  name: blueshield holographic barrier
+  description: A barrier of hard light that blocks movement, and pretty strong.
+  components:
+    - type: Physics
+      bodyType: Static
+      canCollide: true
+    - type: Sprite
+      sprite: _Ronstation/Structures/Holo/blueshield.rsi
+      state: icon
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.3,-0.3,0.3,0.3"
+          mask:
+            - TableMask
+          layer:
+            - TableLayer
+    - type: TimedDespawn
+      lifetime: 180
+    - type: PointLight
+      enabled: true
+      radius: 3
+      color: "#0070b7"
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 100
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+    - type: Climbable
+    - type: Clickable
+
+- type: entity
+  id: HolosignForcefieldBlueshield
+  parent: HolosignWetFloor
+  name: blueshield holographic force field
+  description: A powerful temporal containment field that doesn't let anything through, not even a bullet.
+  components:
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Sprite
+    sprite: _Ronstation/Structures/Holo/field_blueshield.rsi
+    state: icon
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - GlassLayer
+  - type: TimedDespawn
+    lifetime: 180
+  - type: PointLight
+    enabled: true
+    radius: 3
+    color: "#0070b7"
+  - type: Clickable
+  - type: ContainmentField
+    throwForce: 0
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 160
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
