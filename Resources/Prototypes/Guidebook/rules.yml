@@ -34,8 +34,8 @@
   name: guide-entry-rules-role-types
   ruleEntry: true
   priority: 10
-  text: "/ServerInfo/Guidebook/ServerRules/RoleTypes.xml" 
-  
+  text: "/ServerInfo/Guidebook/ServerRules/RoleTypes.xml"
+
 - type: guideEntry
   id: RonstationRules
   name: guide-entry-rules-ronstation-only
@@ -135,6 +135,7 @@
   - RuleR5
   - RuleR6
   - RuleR7
+  - RuleR8 # Ronstation - See in _Ronstation folder.
 
 - type: guideEntry
   id: RuleR1
