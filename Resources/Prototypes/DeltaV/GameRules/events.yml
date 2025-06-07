@@ -1,0 +1,77 @@
+- type: entity
+  id: SlimesInvasionSpawn
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 20
+    minimumPlayers: 15
+    weight: 5
+    duration: 30 # DeltaV: was 60, used as a delay now
+  - type: VentCrittersInvasionRule
+    entries:
+    - id: MobAdultSlimesBlueAngry
+      prob: 0.02
+    - id: MobAdultSlimesGreenAngry
+      prob: 0.02
+    - id: MobAdultSlimesYellowAngry
+      prob: 0.02
+
+- type: entity
+  id: SnakeInvasionInvasionSpawn
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 20
+    minimumPlayers: 15
+    weight: 5
+    duration: 30 # DeltaV: was 60, used as a delay now
+  - type: VentCrittersInvasionRule
+    entries:
+    - id: MobPurpleSnake
+      prob: 0.02
+    - id: MobSmallPurpleSnake
+      prob: 0.02
+    - id: MobCobraSpace
+      prob: 0.02
+
+- type: entity
+  id: SpiderInvasionSpawn
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 20
+    minimumPlayers: 15
+    weight: 5
+    duration: 30 # DeltaV: was 60, used as a delay now
+  - type: VentCrittersInvasionRule
+    entries:
+    - id: MobGiantSpiderAngry
+      prob: 0.05
+
+# Ronstation edit - We don't like clownspiders here
+# - type: entity
+#   id: SpiderClownSpawn
+#   parent: BaseStationEventShortDelay
+#   components:
+#   - type: StationEvent
+#     startAnnouncement: station-event-vent-creatures-start-announcement
+#     startAudio:
+#       path: /Audio/Announcements/attention.ogg
+#     earliestStart: 45 # DeltaV - was 20
+#     minimumPlayers: 30 # DeltaV - was 20
+#     weight: 1 # DeltaV - was 1.5
+#     duration: 30 # DeltaV: was 60, used as a delay now
+#   - type: VentCrittersRule
+#     playerRatio: 35 # DeltaV: Clown spiders are very robust
+#     entries:
+#     - id: MobClownSpider
+#       prob: 0.03 # DeltaV - was 0.05

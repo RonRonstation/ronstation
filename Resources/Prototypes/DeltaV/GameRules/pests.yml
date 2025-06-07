@@ -1,0 +1,124 @@
+- type: entityTable
+  id: CalmPestInvasionEventsTable
+  table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
+    children:
+    - id: SnailInvasionMigrationLowPop
+    - id: CockroachInvasionMigration
+    - id: MouseInvasionMigration
+
+- type: entityTable
+  id: SpicyPestInvasionEventsTable
+  table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
+    children:
+    #- id: KingRatMigration # DeltaV - disable rat king
+    - id: SnailInvasionMigrationLowPop
+
+# events
+
+- type: entity
+  id: MouseInvasionMigration
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 15
+    weight: 6
+    duration: 30 # DeltaV: was 50, used as a delay now
+  - type: VentCrittersInvasionRule
+    entries:
+    - id: MobMouse
+      prob: 0.02
+    - id: MobMouse1
+      prob: 0.02
+    - id: MobMouse2
+      prob: 0.02
+    #- id: MobMouseCancer # DeltaV - no
+      #prob: 0.001
+# Events always spawn a critter regardless of Probability https://github.com/space-wizards/space-station-14/issues/28480 I added the Rat King to their own event with a player cap.
+
+# - type: entity
+#   id: KingRatMigration
+#   parent: BaseStationEventShortDelay
+#   components:
+#   - type: StationEvent
+#     startAnnouncement: station-event-vent-creatures-start-announcement
+#     startAudio:
+#       path: /Audio/Announcements/attention.ogg
+#     earliestStart: 15
+#     weight: 6
+#     duration: 30 # DeltaV: was 50, used as a delay now
+#     minimumPlayers: 30 # Hopefully this is enough for the Rat King's potential Army (it was not, raised from 15 -> 30)
+#   - type: VentCrittersInvasionRule
+#     entries:
+#     - id: MobMouse
+#       prob: 0.02
+#     - id: MobMouse1
+#       prob: 0.02
+#     - id: MobMouse2
+#       prob: 0.02
+#     #- id: MobMouseCancer # DeltaV - no
+#       #prob: 0.001
+#     specialEntries:
+#     - id: SpawnPointGhostRatKing
+#       prob: 0.001
+
+- type: entity
+  id: CockroachInvasionMigration
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    weight: 6
+    duration: 30 # DeltaV: was 50, used as a delay now
+  - type: VentCrittersInvasionRule
+    entries:
+    - id: MobCockroach
+      prob: 0.03
+    - id: MobMothroach
+      prob: 0.008
+
+- type: entity
+  id: SnailMigrationInvasionLowPop
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    weight: 6
+    duration: 30 # DeltaV: was 50, used as a delay now
+  - type: VentCrittersInvasionRule
+    entries:
+    - id: MobSnail
+      prob: 0.02
+    - id: MobSnailSpeed
+      prob: 0.002
+    - id: MobSnailMoth
+      prob: 0.002
+
+- type: entity
+  id: SnailInvasionMigrationLowPop
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 15
+    weight: 6
+    duration: 30 # DeltaV: was 50, used as a delay now
+    minimumPlayers: 30
+  - type: VentCrittersInvasionRule
+    entries:
+    - id: MobSnail
+      prob: 0.02
+    - id: MobSnailSpeed
+      prob: 0.002
+    - id: MobSnailMoth
+      prob: 0.002
+    #- id: MobSnailInstantDeath # DeltaV - no
+      #prob: 0.00001 #  ~ 1:2000 snails
