@@ -1,0 +1,32 @@
+- type: entity
+  id: HoloprojectorBlueshield
+  parent: RCD
+  name: blueshield holobarrier projector
+  description: A device used to create holobarriers and holoforcefields. It appears to use Compressed Matter to recharge.
+  components:
+  - type: RCD
+    availablePrototypes:
+    - HolosignBlueshield
+    - HolosignForcefieldBlueshield
+  - type: LimitedCharges
+    maxCharges: 20
+  - type: UseDelay
+  - type: Sprite
+    sprite: _Ronstation/Objects/Devices/Holoprojectors/blueshield.rsi
+    state: icon
+  - type: Item
+    size: Small
+    storedRotation: -90
+  - type: Clothing
+    sprite: _Ronstation/Objects/Devices/Holoprojectors/blueshield.rsi
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 600
+      Plastic: 100
+  - type: UserInterface
+    interfaces:
+      enum.RcdUiKey.Key:
+        type: RCDMenuBoundUserInterface
+  - type: ActivatableUI
+    inHandsOnly: true
+    key: enum.RcdUiKey.Key

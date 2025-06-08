@@ -1,0 +1,25 @@
+- type: rcd
+  id: HolosignBlueshield
+  category: Main
+  sprite: /Textures/_Ronstation/Interface/Radial/HoloprojectorBlueshield/holobarrier.png
+  mode: ConstructObject
+  prototype: HolosignBlueshield
+  cost: 1
+  delay: 0
+  rules:
+  - IsWindow
+  rotation: Fixed
+  fx: EffectRCDConstruct0
+
+- type: rcd
+  id: HolosignForcefieldBlueshield
+  category: Main
+  sprite: /Textures/_Ronstation/Interface/Radial/HoloprojectorBlueshield/holoforcefield.png
+  mode: ConstructObject
+  prototype: HolosignForcefieldBlueshield
+  cost: 3
+  delay: 0
+  rules:
+  - IsWindow
+  rotation: Fixed
+  fx: EffectRCDConstruct0
