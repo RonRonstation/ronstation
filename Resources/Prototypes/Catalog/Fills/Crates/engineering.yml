@@ -219,6 +219,7 @@
     - id: CellRechargerCircuitboard
     - id: SpaceVillainArcadeComputerCircuitboard
     - id: BlockGameArcadeComputerCircuitboard
+    - id: RecyclerMachineCircuitboard
 
 - type: entity
   id: CrateTechBoardRandom
