@@ -4,9 +4,9 @@
   parent: BaseItem
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Basic/kinetic_accelerator.rsi
+    sprite: _Ronstation/Objects/Weapons/Guns/Basic/kinetic_accelerator.rsi
   - type: Item
-    sprite: Objects/Weapons/Guns/Basic/kinetic_accelerator.rsi
+    sprite: _Ronstation/Objects/Weapons/Guns/Basic/kinetic_accelerator.rsi
     size: Normal
   - type: GunWieldBonus
     minAngle: -43
@@ -40,7 +40,7 @@
     capacity: 1
     count: 1
   - type: Clothing
-    sprite: Objects/Weapons/Guns/Basic/kinetic_accelerator.rsi
+    sprite: _Ronstation/Objects/Weapons/Guns/Basic/kinetic_accelerator.rsi
     quickEquip: false
     slots:
     - suitStorage
