@@ -277,7 +277,7 @@
       prob: 0.05
       orGroup: Pizza
     - id: KnifePlastic
-  
+
 - type: entity
   name: pizza box
   parent: FoodBoxPizzaFilled
@@ -494,7 +494,6 @@
   - type: Item
     sprite: Objects/Consumable/Food/Baked/donkpocket.rsi
   - type: StorageFill
-    contents:
     - id: FoodDonkpocketMoth
       amount: 6
 
@@ -510,6 +509,9 @@
     state: box
     layers:
     - state: box
+      map: ["closeLayer"]
+    - state: box-open
+      map: ["openLayer"]
   - type: Item
     sprite: Objects/Storage/Happyhonk/clown.rsi
     heldPrefix: box
