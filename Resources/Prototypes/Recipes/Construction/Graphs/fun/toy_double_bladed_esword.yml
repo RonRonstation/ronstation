@@ -1,0 +1,25 @@
+- type: constructionGraph
+  id: ToyDoubleBladedEsword
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: toydoublebladedesword
+          steps:
+            - tag: ToySword
+              name: construction-graph-tag-toy-sword
+              icon:
+                sprite: Objects/Weapons/Melee/e_sword.rsi
+                state: icon
+              doAfter: 5
+            - tag: ToySword
+              name: construction-graph-tag-toy-sword
+              icon:
+                sprite: Objects/Weapons/Melee/e_sword.rsi
+                state: icon
+              doAfter: 5
+            - material: Cable
+              amount: 5
+              doAfter: 5
+    - node: toydoublebladedesword
+      entity: EnergySwordDoubleToy

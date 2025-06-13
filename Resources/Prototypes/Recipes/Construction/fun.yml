@@ -5,3 +5,11 @@
   targetNode: bananiumHorn
   category: construction-category-weapons
   objectType: Item
+
+- type: construction
+  id: ToyDoubleBladedEsword
+  graph: ToyDoubleBladedEsword
+  startNode: start
+  targetNode: toydoublebladedesword
+  category: construction-category-weapons
+  objectType: Item
