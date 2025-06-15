@@ -1,0 +1,16 @@
+﻿- type: entity
+  id: OreProcessorBasicMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: basic ore processor machine board
+  components:
+    - type: Sprite
+      state: supply
+    - type: MachineBoard
+      prototype: OreProcessorBasic
+      stackRequirements:
+        Manipulator: 2
+    - type: PhysicalComposition
+      materialComposition:
+        Glass: 125
+      chemicalComposition:
+        Silicon: 20

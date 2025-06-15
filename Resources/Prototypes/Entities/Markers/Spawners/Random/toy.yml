@@ -69,6 +69,7 @@
         - ToyDurand
         - ToySkeleton
         - MysteryFigureBox
+        - CardBoxPokerFilled
       chance: 0.5
       offset: 0.2
 

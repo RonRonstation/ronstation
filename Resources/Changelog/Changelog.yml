@@ -2721,6 +2721,33 @@
   url: https://github.com/space-wizards/space-station-14/pull/37069
 - author: ScarKy0
   changes:
+  - message: Added Stelloxadone! A cryochemical used to treat poison and radiation
+      damage in living patients as well as corpses, though it comes at a cost of genetic
+      damage.
+    type: Add
+  id: 8520
+  time: '2025-05-18T09:11:23.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/37131
+- author: ScarKy0
+  changes:
+  - message: Cryoxadone now works on the dead.
+    type: Tweak
+  - message: Cryoxadone has been reworked. It no longer heals basic damage types.
+      Instead it heals asphyxiation, bloodloss and increases blood level.
+    type: Tweak
+  id: 8521
+  time: '2025-05-18T09:11:51.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/37132
+- author: ScarKy0
+  changes:
+  - message: Added Traumoxadone! A cryochemical used to treat brute damage in living
+      patients as well as corpses.
+    type: Add
+  id: 8522
+  time: '2025-05-18T09:11:59.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/37236
+- author: ScarKy0
+  changes:
   - message: Aloxadone has been tweaked. The recipe has been altered to be simplier
       to make and the healing values have been increased.
     type: Tweak
@@ -3852,3 +3879,53 @@
   id: 8672
   time: '2025-06-14T09:07:48.0000000+00:00'
   url: https://github.com/space-wizards/space-station-14/pull/37951
+- author: Sparlight
+  changes:
+  - message: A pet bag for smart corgis to wear and a construction option for them.  Not
+      actually wearable by normal pets at this time.
+    type: Add
+  id: 8673
+  time: '2025-06-14T16:09:06.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/37440
+- author: Nikitosych
+  changes:
+  - message: Fixed the ability for holoparasite to kill the host through the mech
+    type: Fix
+  id: 8674
+  time: '2025-06-14T17:22:45.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/36659
+- author: ScarKy0
+  changes:
+  - message: Using glue on an unremoveable item will no longer make it removeable.
+    type: Fix
+  id: 8675
+  time: '2025-06-14T18:29:06.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/38150
+- author: FungiFellow
+  changes:
+  - message: Syndie-Cats now have Syndicate ID access.
+    type: Fix
+  id: 8676
+  time: '2025-06-15T08:27:32.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/38318
+- author: SlamBamActionman
+  changes:
+  - message: Crates on conveyor belts can now go around tight corners again!
+    type: Fix
+  id: 8677
+  time: '2025-06-15T09:36:18.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/37466
+- author: SlamBamActionman
+  changes:
+  - message: A new station, Exo, has been added to the map pool.
+    type: Add
+  id: 8678
+  time: '2025-06-15T19:10:22.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/33144
+- author: widgetbeck
+  changes:
+  - message: Randomized characters will now roll markings.
+    type: Add
+  id: 8679
+  time: '2025-06-15T21:11:52.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/34765

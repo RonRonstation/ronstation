@@ -9,6 +9,7 @@
   - TargetClown
   - TargetHuman
   - TargetSyndicate
+  - Tourniquet
   - Zipties
 
 # Practice ammo/mags and practice weapons
@@ -62,6 +63,11 @@
   - Stunbaton
   - CombatKnife
   - RiotShield
+  # armor in the weapons pack? more likely than you think
+  - ClothingHeadHelmetRiot
+  - ClothingOuterArmorRiot
+  - ClothingOuterArmorBulletproof
+  - ClothingOuterArmorReflective
 
 ## Dynamic recipes
 
