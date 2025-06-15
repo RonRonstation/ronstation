@@ -194,6 +194,16 @@
     Heat: 1.3
 
 - type: damageModifierSet
+  id: Resomi # a specie import from monolith, by Tony Hussain. 
+  coefficients: # Goobstation - natural cold resistance should reduce damage, but higher intolerance to heat should take more damage.
+   # Heat: 1.1
+    Cold: 0.7
+    Blunt: 1.5
+    Slash: 1
+    Piercing: 1
+   # it comes from goob?, interesting, never saw this coming to my mind or asking someone about it.
+
+- type: damageModifierSet
   id: Vox
   coefficients: # To be decided
     Poison: 1

@@ -39,6 +39,183 @@
 		{"name": "LLeg_Brute_100", "directions": 4},
 		{"name": "RArm_Brute_100", "directions": 4},
 		{"name": "RLeg_Brute_100", "directions": 4},
-		{"name": "Chest_Brute_100", "directions": 4}
+		{"name": "Chest_Brute_100", "directions": 4},
+
+        {
+            "name": "RHead_Brute_10",
+            "directions": 4
+        },
+        {
+            "name": "RLArm_Brute_10",
+            "directions": 4
+        },
+        {
+            "name": "RLLeg_Brute_10",
+            "directions": 4
+        },
+        {
+            "name": "ERArm_Brute_10",
+            "directions": 4
+        },
+        {
+            "name": "ERLeg_Brute_10",
+            "directions": 4
+        },
+        {
+            "name": "RChest_Brute_10",
+            "directions": 4
+        },
+        {
+            "name": "RHead_Brute_30",
+            "directions": 4
+        },
+        {
+            "name": "RLArm_Brute_30",
+            "directions": 4
+        },
+        {
+            "name": "RLLeg_Brute_30",
+            "directions": 4
+        },
+        {
+            "name": "ERArm_Brute_30",
+            "directions": 4
+        },
+        {
+            "name": "ERLeg_Brute_30",
+            "directions": 4
+        },
+        {
+            "name": "RChest_Brute_30",
+            "directions": 4
+        },
+        {
+            "name": "RHead_Brute_50",
+            "directions": 4
+        },
+        {
+            "name": "RLArm_Brute_50",
+            "directions": 4
+        },
+        {
+            "name": "RLLeg_Brute_50",
+            "directions": 4
+        },
+        {
+            "name": "ERArm_Brute_50",
+            "directions": 4
+        },
+        {
+            "name": "ERLeg_Brute_50",
+            "directions": 4
+        },
+        {
+            "name": "RChest_Brute_50",
+            "directions": 4
+        },
+        {
+            "name": "RHead_Brute_70",
+            "directions": 4
+        },
+        {
+            "name": "RLArm_Brute_70",
+            "directions": 4
+        },
+        {
+            "name": "RLLeg_Brute_70",
+            "directions": 4
+        },
+        {
+            "name": "ERArm_Brute_70",
+            "directions": 4
+        },
+        {
+            "name": "ERLeg_Brute_70",
+            "directions": 4
+        },
+        {
+            "name": "RChest_Brute_70",
+            "directions": 4
+        },
+        {
+            "name": "RLHand_Brute_10",
+            "directions": 4
+        },
+        {
+            "name": "RLHand_Brute_30",
+            "directions": 4
+        },
+        {
+            "name": "RLHand_Brute_50",
+            "directions": 4
+        },
+        {
+            "name": "RLHand_Brute_70",
+            "directions": 4
+        },
+        {
+            "name": "RLFoot_Brute_10",
+            "directions": 4
+        },
+        {
+            "name": "RLFoot_Brute_30",
+            "directions": 4
+        },
+        {
+            "name": "RLFoot_Brute_50",
+            "directions": 4
+        },
+        {
+            "name": "RLFoot_Brute_70",
+            "directions": 4
+        },
+        {
+            "name": "ERHand_Brute_10",
+            "directions": 4
+        },
+        {
+            "name": "ERHand_Brute_30",
+            "directions": 4
+        },
+        {
+            "name": "ERHand_Brute_50",
+            "directions": 4
+        },
+        {
+            "name": "ERHand_Brute_70",
+            "directions": 4
+        },
+        {
+            "name": "ERFoot_Brute_10",
+            "directions": 4
+        },
+        {
+            "name": "ERFoot_Brute_30",
+            "directions": 4
+        },
+        {
+            "name": "ERFoot_Brute_50",
+            "directions": 4
+        },
+        {
+            "name": "ERFoot_Brute_70",
+            "directions": 4
+        },
+        {
+            "name": "ETail_Brute_10",
+            "directions": 4
+        },
+        {
+            "name": "ETail_Brute_30",
+            "directions": 4
+        },
+        {
+            "name": "ETail_Brute_50",
+            "directions": 4
+        },
+        {
+            "name": "ETail_Brute_70",
+            "directions": 4
+        }
 	]
 }

@@ -18,6 +18,7 @@
     - Human
     - Moth
     - Reptilian
+    - Resomi
 
 - type: loadoutEffectGroup
   id: EffectSpeciesVox

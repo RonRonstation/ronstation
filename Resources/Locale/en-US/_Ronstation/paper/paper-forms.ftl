@@ -1,4 +1,4 @@
-#General
+# General
 
 book-text-form-general-letter = 'N. Letter
     --------------------------------------
@@ -122,7 +122,7 @@ book-text-form-general-formal-complaint = 'N. Formal Complaint Form
 
     After you are done filling out this form, please either submit it to the Captain, the HoP, another relevant command head, or to central command via fax for review. Please refrain from involving multiple commanding officers unless it is absolutely nessecary.
 
-#Security
+# Security
 
 book-text-form-security-arrest-warrant = 'N. Arrest Warrant
     --------------------------------------
