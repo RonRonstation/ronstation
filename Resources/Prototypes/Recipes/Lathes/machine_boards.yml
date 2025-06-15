@@ -346,6 +346,11 @@
   result: ReagentGrinderIndustrialMachineCircuitboard
 
 - type: latheRecipe
+  parent: [BaseCircuitboardRecipe, BaseGeneralMachineRecipeCategory ]
+  id: RecyclerMachineCircuitboard
+  result: RecyclerMachineCircuitboard
+
+- type: latheRecipe
   parent: [ BaseGoldCircuitboardRecipe, BaseGeneralMachineRecipeCategory ]
   id: FlatpackerMachineCircuitboard
   result: FlatpackerMachineCircuitboard
