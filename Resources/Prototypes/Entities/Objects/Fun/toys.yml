@@ -578,6 +578,9 @@
   - type: Item
     size: Small
     sprite: Objects/Weapons/Melee/e_sword-inhands.rsi
+  - type: Tag
+    tags:
+      - ToySword
   - type: UseDelay
     delay: 1.0
   - type: PointLight
@@ -619,6 +622,54 @@
       path: /Audio/Weapons/eblademiss.ogg
       params:
         variation: 0.125
+
+- type: entity
+  name: toy double-bladed energy sword
+  parent: ToySword
+  id: EnergySwordDoubleToy
+  description: Sandy-Cat might have discontinued the 'official' toy version of the twin-blade, but that won't stop you from tying two toy swords together and having a blast!
+  components:
+  - type: ItemToggle
+    predictable: false # audio prediction bugged with some energy weapons
+    onUse: false # wielding events control it instead
+    onActivate: false # prevents the weapon from being able to be turned on when it is on the ground
+    soundActivate:
+      path: /Audio/Weapons/ebladeon.ogg
+      params:
+        volume: 3
+    soundDeactivate:
+      path: /Audio/Weapons/ebladeoff.ogg
+      params:
+        volume: 3
+  - type: ItemToggleActiveSound
+    activeSound:
+      path: /Audio/Weapons/ebladehum.ogg
+      params:
+        volume: 3
+  - type: Wieldable
+    wieldSound: null # esword light sound instead
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    attackRate: 1.5
+    angle: 100
+    damage:
+      types:
+        Blunt: 0
+  - type: Sprite
+    sprite: Objects/Weapons/Melee/e_sword_double.rsi
+    layers:
+      - state: e_sword_double
+      - state: e_sword_double_blade
+        color: "#FFFFFF"
+        visible: false
+        shader: unshaded
+        map: [ "blade" ]
+  - type: Item
+    size: Small
+    sprite: Objects/Weapons/Melee/e_sword_double-inhands.rsi
+  - type: Construction
+    graph: ToyDoubleBladedEsword
+    node: toydoublebladedesword
 
 - type: entity
   parent: BasePlushie

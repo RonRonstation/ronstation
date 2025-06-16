@@ -1390,6 +1390,9 @@
   id: ToySidearm
 
 - type: Tag
+  id: ToySword
+
+- type: Tag
   id: Trash
 
 - type: Tag
