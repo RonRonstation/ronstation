@@ -26,6 +26,7 @@ COMMENT_STYLES = {
     ".cs": ("//", None),
     ".yaml": ("#", None),
     ".yml": ("#", None),
+    ".ftl": ("#", None),
     ".xaml": ("<!--", "-->"),
     ".xml": ("<!--", "-->"),
 }

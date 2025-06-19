@@ -13,7 +13,7 @@ import re
 CUTOFF_COMMIT_HASH = "83f48ef436792b73b0355675c08ac7d83e7eb0b6"
 LICENSE_BEFORE = "MIT"
 LICENSE_AFTER = "AGPL-3.0-or-later"
-FILE_PATTERNS = ["*.xaml", "*.xml"]
+FILE_PATTERNS = ["*.cs", "*.yml", ".yaml", "*.xaml", "*.xml", ".ftl"]
 REPO_PATH = "."
 MAX_WORKERS = os.cpu_count() or 4
 
@@ -24,6 +24,7 @@ COMMENT_STYLES = {
     ".cs": ("//", None),
     ".yaml": ("#", None),
     ".yml": ("#", None),
+    ".ftl": ("#", None),
     ".xaml": ("<!--", "-->"),
     ".xml": ("<!--", "-->"),
 }
