@@ -10,7 +10,7 @@ import threading
 import re
 
 # --- Configuration ---
-CUTOFF_COMMIT_HASH = "8270907bdc509a3fb5ecfecde8cc14e5845ede36"
+CUTOFF_COMMIT_HASH = "83f48ef436792b73b0355675c08ac7d83e7eb0b6"
 LICENSE_BEFORE = "MIT"
 LICENSE_AFTER = "AGPL-3.0-or-later"
 FILE_PATTERNS = ["*.cs", "*.yaml", "*.yml"]
