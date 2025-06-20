@@ -1,0 +1,13 @@
+version = 1
+
+[[annotations]]
+path = ["Resources/Audio/**", "Resources/Textures/**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "None"
+SPDX-License-Identifier = "MIT"
+
+[[annotations]]
+path = ["**.txt", "**.json"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "None"
+SPDX-License-Identifier = "MIT"
