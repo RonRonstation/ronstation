@@ -22,6 +22,10 @@
       "directions": 4
     },
     {
+      "name": "equipped-OUTERCLOTHING-resomi",
+      "directions": 4
+    },
+    {
       "name": "inhand-left",
       "directions": 4
     },
@@ -35,6 +39,10 @@
     },
     {
       "name": "open-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "open-equipped-OUTERCLOTHING-resomi",
       "directions": 4
     }
   ]
