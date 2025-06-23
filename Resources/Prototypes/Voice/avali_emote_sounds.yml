@@ -1,7 +1,7 @@
 - type: soundCollection
   id: AvaliScreams
   files:
-    - /Audio/Voice/Avali/avali_scream.ogg
+    - /Audio/Voice/_Monolith/Voice/Avali/avali_scream.ogg
 
 - type: emoteSounds
   id: MaleAvali
