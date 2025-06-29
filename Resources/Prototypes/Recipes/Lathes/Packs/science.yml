@@ -9,6 +9,7 @@
   - ExosuitFabricatorMachineCircuitboard
   - CutterMachineCircuitboard
   - BorgChargerCircuitboard
+  - RecyclerMachineCircuitboard
 
 - type: latheRecipePack
   id: CircuitFloorsStatic
