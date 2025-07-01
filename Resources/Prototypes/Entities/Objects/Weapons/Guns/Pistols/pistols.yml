@@ -255,3 +255,41 @@
         whitelist:
           tags:
             - CartridgeMagnum
+
+- type: entity
+  name: negotiator
+  parent: [BaseWeaponPistol, BaseGrandTheftContraband]
+  id: WeaponPistolNegotiator
+  description: A luxury, gold plated handgun with an attached flashlight. Loads 7 + 1 rounds of .45 Caliber ammo. You'd think the syndicate could afford a few lightbulbs?
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Pistols/negotiator.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+      - type: Clothing
+        sprite: Objects/Weapons/Guns/Pistols/negotiator.rsi
+      - type: Gun
+        fireRate: 4
+        availableModes:
+          - SemiAuto
+        soundGunshot:
+          path: /Resources/Audio/Weapons/Guns/Gunshots/mateba.ogg
+  - type: Battery
+    maxCharge: 50
+    currentCharge: 50
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 1
+  - type: HandheldLight
+  - type: PointLight
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+  - type: Sprite
+    sprite: /Resources/Textures/Objects/Weapons/Guns/Pistols/negotiator.rsi/light-on.png
+    autoRot: true
+    radius: 8
+    color: "#FFFF99"
+    energy: 0.8

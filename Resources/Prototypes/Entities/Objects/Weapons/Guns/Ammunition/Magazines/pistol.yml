@@ -458,3 +458,22 @@
       - state: inhand-right-stripe
         color: "#ff6e52"
 
+- type: entity
+  id: MagazineNegotiator
+  name: negotiator magazine
+  parent: BaseMagazinePistol
+  description: 7 shot .45 Caliber magazine with golden plating. Dole out justice in a ball of fire.
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeMagnum
+    whitelist:
+      tags:
+        - CartridgeMagnum
+    capacity: 7
+
+- type: entity
+  id: MagazineNegotiatorEmpty
+  parent: MagazineNegotiator
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
