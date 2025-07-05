@@ -277,6 +277,7 @@
           - SemiAuto
         soundGunshot:
           path: /Resources/Audio/Weapons/Guns/Gunshots/mateba.ogg
+
   - type: Battery
     maxCharge: 50
     currentCharge: 50
