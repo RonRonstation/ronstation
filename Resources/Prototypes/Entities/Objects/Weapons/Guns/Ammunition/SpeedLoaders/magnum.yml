@@ -180,3 +180,26 @@
       - state: inhand-right-ammo
       - state: inhand-right-stripe
         color: "#00cd42"
+
+- type: entity
+  id: SpeedLoaderDeckard
+  name: Deckard speed loader
+  parent: SpeedLoaderMagnum
+  description: A unique speed loader made for the Deckard revolver.
+  components:
+  - type: Tag
+    tags:
+      - SpeedLoaderDeckard
+  - type: MagazineVisuals
+    steps: 6
+  - type: BallisticAmmoProvider
+    capacity: 5
+    proto: null
+
+- type: entity
+  id: SpeedLoaderDeckardFilled
+  suffix: Filled
+  parent: SpeedLoaderDeckard
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeMagnumAP
