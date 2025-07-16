@@ -189,6 +189,14 @@
         !type:DamageTrigger
         damage: 300
       behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 10
+            max: 16
+          ShardGlass:
+            min: 1
+            max: 2
       - !type:PlaySoundBehavior
         sound:
           collection: MetalBreak
