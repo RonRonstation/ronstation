@@ -29,4 +29,5 @@
     - AutolatheMachineCircuitboard
     - ProtolatheMachineCircuitboard
     - SalvageMagnetMachineCircuitboard
+    - RecyclerMachineCircuitboard
     rareChance: 0.05
