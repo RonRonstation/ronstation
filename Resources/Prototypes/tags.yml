@@ -1287,6 +1287,9 @@
   id: SpeedLoaderCap
 
 - type: Tag
+  id: SpeedLoaderDeckard
+
+- type: Tag
   id: SpeedLoaderMagnum
 
 - type: Tag
