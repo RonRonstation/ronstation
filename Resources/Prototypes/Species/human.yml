@@ -1,3 +1,5 @@
+# Modifications ported by Ronstation from Goobstation, therefore this file is licensed as MIT sublicensed with AGPL-v3.0
+
 - type: species
   id: Human
   name: species-name-human
@@ -35,6 +37,7 @@
     RLeg: MobHumanRLeg
     LFoot: MobHumanLFoot
     RFoot: MobHumanRFoot
+    Tail: MobHumanoidAnyMarking # Goobstation - Tajaran
 
 - type: markingPoints
   id: MobHumanMarkingLimits
@@ -52,7 +55,7 @@
       points: 1
       required: false
     Tail: # the cat tail joke
-      points: 0
+      points: 1
       required: false
     HeadTop:
       points: 1

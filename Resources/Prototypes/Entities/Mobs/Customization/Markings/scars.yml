@@ -1,8 +1,9 @@
+# Modifications ported by Ronstation from Goobstation, therefore this file is licensed as MIT sublicensed with AGPL-v3.0
 - type: marking
   id: ScarEyeRight
   bodyPart: Head
   markingCategory: Head
-  speciesRestriction: [Human, Dwarf, SlimePerson]
+  speciesRestriction: [Human, Dwarf, SlimePerson, Tajaran] # Goobstation - Tajaran
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/scars.rsi
@@ -12,7 +13,7 @@
   id: ScarEyeLeft
   bodyPart: Head
   markingCategory: Head
-  speciesRestriction: [Human, Dwarf, SlimePerson]
+  speciesRestriction: [Human, Dwarf, SlimePerson, Tajaran] # Goobstation - Tajaran
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/scars.rsi

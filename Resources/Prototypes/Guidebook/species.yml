@@ -1,3 +1,4 @@
+# Modifications ported by Ronstation from Goobstation, therefore this file is licensed as MIT sublicensed with AGPL-v3.0
 - type: guideEntry
   id: Species
   name: guide-entry-species
@@ -11,6 +12,7 @@
     - Reptilian
     - SlimePerson
     - Vox
+    - Tajaran # Goobstation - Tajaran
 
 - type: guideEntry
   id: Arachnid
@@ -51,3 +53,10 @@
   id: Vox
   name: species-name-vox
   text: "/ServerInfo/Guidebook/Mobs/Vox.xml"
+
+# Start of modifications - Goobstation Tajaran
+- type: guideEntry
+  id: Tajaran
+  name: species-name-tajaran
+  text: "/ServerInfo/Guidebook/Mobs/Tajaran.xml"
+# End of modifications - Goobstation Tajaran

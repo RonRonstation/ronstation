@@ -1,3 +1,4 @@
+# Modifications ported by Ronstation from Goobstation, therefore this file is licensed as MIT sublicensed with AGPL-v3.0
 - type: marking
   id: TattooHiveChest
   bodyPart: Chest
@@ -114,7 +115,7 @@
   id: TattooEyeRight
   bodyPart: Eyes
   markingCategory: Head
-  speciesRestriction: [Human, SlimePerson, Reptilian, Dwarf]
+  speciesRestriction: [Human, SlimePerson, Reptilian, Dwarf, Tajaran] # Goobstation - Tajaran
   coloring:
     default:
       type:
@@ -128,7 +129,7 @@
   id: TattooEyeLeft
   bodyPart: Eyes
   markingCategory: Head
-  speciesRestriction: [Human, SlimePerson, Reptilian, Dwarf]
+  speciesRestriction: [Human, SlimePerson, Reptilian, Dwarf, Tajaran] # Goobstation - Tajaran
   coloring:
     default:
       type:

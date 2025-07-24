@@ -1,3 +1,4 @@
+# Modifications ported by Ronstation from Goobstation, therefore this file is licensed as MIT sublicensed with AGPL-v3.0
 # Species
 - type: loadoutEffectGroup
   id: NitrogenBreather
@@ -18,6 +19,7 @@
     - Human
     - Moth
     - Reptilian
+    - Tajaran # Goobstation - Tajaran
 
 - type: loadoutEffectGroup
   id: EffectSpeciesVox
