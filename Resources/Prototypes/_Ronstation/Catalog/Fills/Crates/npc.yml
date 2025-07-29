@@ -1,0 +1,21 @@
+- type: entity
+  id: BulkCrateNPCMonkeyCube
+  parent: CrateGenericSteel
+  name: bulk monkey cube crate
+  description: 10 boxes of monkey cubes for the price of 9!
+  components:
+  - type: StorageFill
+    contents:
+      - id: MonkeyCubeBox
+        amount: 10
+
+- type: entity
+  id: BulkCrateNPCKoboldCube
+  parent: CrateGenericSteel
+  name: bulk kobold cube crate
+  description: 10 boxes of kobold cubes for the price of 9!
+  components:
+  - type: StorageFill
+    contents:
+      - id: KoboldCubeBox
+        amount: 10

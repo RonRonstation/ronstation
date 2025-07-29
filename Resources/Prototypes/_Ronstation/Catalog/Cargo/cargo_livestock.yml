@@ -1,0 +1,19 @@
+- type: cargoProduct
+  id: BulkLivestockMonkeyCube
+  icon:
+    sprite: Objects/Misc/monkeycube.rsi
+    state: box
+  product: BulkCrateNPCMonkeyCube
+  cost: 18000
+  category: cargoproduct-category-name-livestock
+  group: market
+
+- type: cargoProduct
+  id: BulkLivestockKoboldCube
+  icon:
+    sprite: Objects/Misc/monkeycube.rsi
+    state: box_kobold
+  product: BulkCrateNPCKoboldCube
+  cost: 18000
+  category: cargoproduct-category-name-livestock
+  group: market
