@@ -1,5 +1,20 @@
 - type: loadout
+  id: PlushieLizard
+  storage:
+    back:
+    - PlushieLizard
+  groupBy: "plushies"
+
+- type: loadout
+  id: PlushieSpaceLizard
+  storage:
+    back:
+    - PlushieSpaceLizard
+  groupBy: "plushies"
+
+- type: loadout
   id: CardBoxPokerFilled
   storage:
     back:
     - CardBoxPokerFilled
+  groupBy: "toys"
