@@ -5,8 +5,6 @@
   name: bottle of everything
   description: A bottle filled with everything.
   components:
-  - type: Label
-    currentLabel: Bottle of Everything
   - type: Sprite
     sprite: Objects/Consumable/Drinks/bottleofnothing.rsi
   - type: Sealable
