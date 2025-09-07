@@ -1,3 +1,4 @@
+// Modified by Ronstation contributor(s), therefore this file is licensed as MIT sublicensed with AGPL-v3.0.
 using System.Threading;
 using Content.Server.Administration.Components;
 using Content.Server.Atmos.EntitySystems;
@@ -506,6 +507,53 @@ public sealed partial class AdminVerbSystem
             Message = string.Join(": ", mouseName, Loc.GetString("admin-smite-become-mouse-description"))
         };
         args.Verbs.Add(mouse);
+
+        // Ronstation - start of modifications.
+        var scurretName = Loc.GetString("admin-smite-become-scurret-name").ToLowerInvariant();
+        Verb scurret = new()
+        {
+            Text = scurretName,
+            Category = VerbCategory.Smite,
+            Icon = new SpriteSpecifier.Rsi(new ("/Textures/Mobs/Animals/scurret/scurret.rsi"), "scurret"),
+            Act = () =>
+            {
+                _polymorphSystem.PolymorphEntity(args.Target, "AdminScurretSmite");
+            },
+            Impact = LogImpact.Extreme,
+            Message = string.Join(": ", scurretName, Loc.GetString("admin-smite-become-scurret-description"))
+        };
+        args.Verbs.Add(scurret);
+
+        var mothroachName = Loc.GetString("admin-smite-become-mothroach-name").ToLowerInvariant();
+        Verb mothroach = new()
+        {
+            Text = mothroachName,
+            Category = VerbCategory.Smite,
+            Icon = new SpriteSpecifier.Rsi(new ("/Textures/Mobs/Animals/mothroach/mothroach.rsi"), "icon"),
+            Act = () =>
+            {
+                _polymorphSystem.PolymorphEntity(args.Target, "AdminMothroachSmite");
+            },
+            Impact = LogImpact.Extreme,
+            Message = string.Join(": ", mothroachName, Loc.GetString("admin-smite-become-mothroach-description"))
+        };
+        args.Verbs.Add(mothroach);
+        
+        var moproachName = Loc.GetString("admin-smite-become-moproach-name").ToLowerInvariant();
+        Verb moproach = new()
+        {
+            Text = moproachName,
+            Category = VerbCategory.Smite,
+            Icon = new SpriteSpecifier.Rsi(new ("/Textures/Mobs/Animals/mothroach/moproach.rsi"), "icon"),
+            Act = () =>
+            {
+                _polymorphSystem.PolymorphEntity(args.Target, "AdminMoproachSmite");
+            },
+            Impact = LogImpact.Extreme,
+            Message = string.Join(": ", moproachName, Loc.GetString("admin-smite-become-moproach-description"))
+        };
+        args.Verbs.Add(moproach);
+        // Ronstation - end of modifications.
 
         if (TryComp<ActorComponent>(args.Target, out var actorComponent))
         {
