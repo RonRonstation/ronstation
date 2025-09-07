@@ -17,3 +17,25 @@
         - MobMask
         layer:
         - MobLayer
+  - type: NpcFactionMember
+    factions:
+    - Passive
+  - type: Spider
+    spawnsWebsAsNonPlayer: false
+  - type: CanEscapeInventory
+  - type: Item
+    size: Tiny
+  - type: GhostTakeoverAvailable
+  - type: MindContainer
+  - type: Tag
+    tags:
+    - CannotSuicide
+  - type: GhostRole
+    makeSentient: true
+    name: ghost-role-information-baby-spider-name
+    description: ghost-role-information-giant-spider-description
+    rules: ghost-role-information-giant-spider-rules
+    mindRoles:
+    - MindRoleGhostRoleFreeAgent
+    raffle:
+      settings: short
