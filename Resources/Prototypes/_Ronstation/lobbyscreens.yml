@@ -1,11 +1,11 @@
 - type: lobbyBackground
   id: InTheMiddle
-  background: /Textures/_Ronstation/LobbyScreens/inthemiddle.webp
+  background: /Textures/_Ronstation/LobbyScreens/inthemiddle.png
 
 - type: lobbyBackground
   id: NukiesAtTheTEG
-  background: /Textures/_Ronstation/LobbyScreens/nukiesattheteg.webp
+  background: /Textures/_Ronstation/LobbyScreens/nukiesattheteg.png
 
 - type: lobbyBackground
   id: Station
-  background: /Textures/_Ronstation/LobbyScreens/station.webp
+  background: /Textures/_Ronstation/LobbyScreens/station.png
