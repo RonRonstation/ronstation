@@ -1,3 +1,4 @@
+# Modified by Ronstation contributor(s), therefore this file is licensed as MIT sublicensed with AGPL-v3.0.
 - type: job
   id: SecurityCadet
   name: job-name-cadet
@@ -24,6 +25,11 @@
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
+  # Ronstation - start of modifications.
+  - !type:AddComponentSpecial
+    components:
+      - type: TraitorTargetImmune
+  # Ronstation - end of modifications.
 
 - type: startingGear
   id: SecurityCadetGear
