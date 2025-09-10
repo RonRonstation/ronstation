@@ -30,6 +30,12 @@
       reagents:
         - ReagentId: Water
           Quantity: 30
+  - type: WarpPoint
+    follow: true
+    location: overclocked cleanbot
+    blacklist:
+      tags:
+      - GhostOnlyWarp
 
 - type: entity
   parent: MobCleanBot
@@ -65,3 +71,9 @@
     size: Ginormous
   - type: CanEscapeInventory
   - type: MultiHandedItem
+  - type: WarpPoint
+    follow: true
+    location: space roomba
+    blacklist:
+      tags:
+      - GhostOnlyWarp
