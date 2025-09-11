@@ -71,6 +71,7 @@ namespace Content.IntegrationTests.Tests
             "Saltern",
             "Reach",
             "Oasis",
+			"Oasis2", // Ronstation - Modification
             "Amber",
             "Plasma",
             "Elkridge",
