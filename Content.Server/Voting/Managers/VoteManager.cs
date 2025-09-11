@@ -1,3 +1,4 @@
+// Modified by Ronstation contributor(s), therefore this file is licensed as MIT sublicensed with AGPL-v3.0.
 using System.Collections;
 using System.Collections.Immutable;
 using System.Diagnostics.CodeAnalysis;
@@ -430,6 +431,11 @@ namespace Content.Server.Voting.Managers
             if (eligibility == VoterEligibility.All)
                 return true;
 
+            // Ronstation - start of modifications.
+            if (eligibility == VoterEligibility.NotGhost)
+                return !_entityManager.TryGetComponent(player.AttachedEntity, out GhostComponent? ghostComp);
+            // Ronstation - end of modifications.
+
             if (eligibility == VoterEligibility.Ghost || eligibility == VoterEligibility.GhostMinimumPlaytime)
             {
                 if (!_entityManager.TryGetComponent(player.AttachedEntity, out GhostComponent? ghostComp))
@@ -548,6 +554,7 @@ namespace Content.Server.Voting.Managers
         public enum VoterEligibility
         {
             All,
+            NotGhost, // Player needs to be not a ghost // Ronstation - modification.
             Ghost, // Player needs to be a ghost
             GhostMinimumPlaytime, // Player needs to be a ghost, with a minimum playtime and deathtime as defined by votekick CCvars.
             MinimumPlaytime //Player needs to have a minimum playtime and deathtime as defined by votekick CCvars.
