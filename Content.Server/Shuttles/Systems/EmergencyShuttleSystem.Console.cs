@@ -228,7 +228,7 @@ public sealed partial class EmergencyShuttleSystem
             {
                 Title = Loc.GetString("ui-vote-eorg-title"),
                 Duration = TimeSpan.FromSeconds(TransitTime),
-                VoterEligibility = VoteManager.VoterEligibility.NotGhost,
+                VoterEligibility = VoteManager.VoterEligibility.OnEvac,
                 Options =
                 {
                     (Loc.GetString("ui-vote-eorg-yes"), "yes"),
