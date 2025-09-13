@@ -7,9 +7,11 @@ using Content.Server.Voting; // Ronstation - modification.
 using Content.Server.Voting.Managers; // Ronstation - modification.
 using Content.Shared.Access;
 using Content.Shared.CCVar;
+using Content.Shared.CombatMode.Pacification; // Ronstation - modification.
 using Content.Shared.Database;
 using Content.Shared.DeviceNetwork;
 using Content.Shared.DeviceNetwork.Components;
+using Content.Shared.Mind.Components; // Ronstation - modification.
 using Content.Shared.Popups;
 using Content.Shared.Shuttles.BUIStates;
 using Content.Shared.Shuttles.Events;
@@ -255,7 +257,15 @@ public sealed partial class EmergencyShuttleSystem
                 {
                     _logger.Add(LogType.Vote, LogImpact.Medium, $"EORG vote failed: {votesYes}/{votesNo}");
                     _chatManager.DispatchServerAnnouncement(Loc.GetString("ui-vote-eorg-failed", ("ratio", ratioRequired)));
-                    // TODO: Cancel EORG
+
+                    var entities = AllEntityQuery<MindContainerComponent>();
+                    while (entities.MoveNext(out var mind))
+                    {
+                        if (mind.Owner == null)
+                            continue;
+
+                        EnsureComp<PacifiedComponent>(mind.Owner);
+                    }
                 }
             };
             // Ronstation - end of modifications.
