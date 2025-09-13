@@ -1,0 +1,841 @@
+- type: entity
+  parent: [DrinkBottleVisualsOpenable, DrinkBottleGlassBaseFull]
+  id: DrinkBottleOfEverythingFull
+  suffix: Admeme
+  name: bottle of everything
+  description: A bottle filled with everything.
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/bottleofnothing.rsi
+  - type: Sealable
+  # So it cant be refilled
+  - type: RefillableSolution
+    maxRefill: 0
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 41.1
+        canReact: false
+        reagents:
+        - ReagentId: Caffeine
+          Quantity: 0.1
+        - ReagentId: Saltpetre
+          Quantity: 0.1
+        - ReagentId: Bromine
+          Quantity: 0.1
+        - ReagentId: PenteticAcid
+          Quantity: 0.1
+        - ReagentId: HexeticAcid
+          Quantity: 0.1
+        - ReagentId: Rezamine
+          Quantity: 0.1
+        - ReagentId: Tetracordrazine
+          Quantity: 0.1
+        - ReagentId: Spessacillin
+          Quantity: 0.1
+        - ReagentId: Arcticine
+          Quantity: 0.1
+        - ReagentId: KronkusExtract
+          Quantity: 0.1
+        - ReagentId: Kronkaine
+          Quantity: 0.1
+        - ReagentId: Absinthe
+          Quantity: 0.1
+        - ReagentId: Ale
+          Quantity: 0.1
+        - ReagentId: Beer
+          Quantity: 0.1
+        - ReagentId: BlueCuracao
+          Quantity: 0.1
+        - ReagentId: Cognac
+          Quantity: 0.1
+        - ReagentId: DeadRum
+          Quantity: 0.1
+        - ReagentId: Ethanol
+          Quantity: 0.1
+        - ReagentId: Gin
+          Quantity: 0.1
+        - ReagentId: CoffeeLiqueur
+          Quantity: 0.1
+        - ReagentId: MelonLiquor
+          Quantity: 0.1
+        - ReagentId: NTCahors
+          Quantity: 0.1
+        - ReagentId: PoisonWine
+          Quantity: 0.1
+        - ReagentId: Rum
+          Quantity: 0.1
+        - ReagentId: Sake
+          Quantity: 0.1
+        - ReagentId: Tequila
+          Quantity: 0.1
+        - ReagentId: Vermouth
+          Quantity: 0.1
+        - ReagentId: Vodka
+          Quantity: 0.1
+        - ReagentId: Whiskey
+          Quantity: 0.1
+        - ReagentId: Wine
+          Quantity: 0.1
+        - ReagentId: Champagne
+          Quantity: 0.1
+        - ReagentId: AcidSpit
+          Quantity: 0.1
+        - ReagentId: AlienBrainHemorrhage
+          Quantity: 0.1
+        - ReagentId: AlliesCocktail
+          Quantity: 0.1
+        - ReagentId: Aloe
+          Quantity: 0.1
+        - ReagentId: Amasec
+          Quantity: 0.1
+        - ReagentId: Andalusia
+          Quantity: 0.1
+        - ReagentId: Antifreeze
+          Quantity: 0.1
+        - ReagentId: AtomicBomb
+          Quantity: 0.1
+        - ReagentId: B52
+          Quantity: 0.1
+        - ReagentId: BahamaMama
+          Quantity: 0.1
+        - ReagentId: BananaHonk
+          Quantity: 0.1
+        - ReagentId: Barefoot
+          Quantity: 0.1
+        - ReagentId: BeepskySmash
+          Quantity: 0.1
+        - ReagentId: BlackRussian
+          Quantity: 0.1
+        - ReagentId: BloodyMary
+          Quantity: 0.1
+        - ReagentId: Booger
+          Quantity: 0.1
+        - ReagentId: BraveBull
+          Quantity: 0.1
+        - ReagentId: Bronx
+          Quantity: 0.1
+        - ReagentId: CoconutRum
+          Quantity: 0.1
+        - ReagentId: Cosmopolitan
+          Quantity: 0.1
+        - ReagentId: CrushDepth
+          Quantity: 0.1
+        - ReagentId: CubaLibre
+          Quantity: 0.1
+        - ReagentId: DarkandStormy
+          Quantity: 0.1
+        - ReagentId: DemonsBlood
+          Quantity: 0.1
+        - ReagentId: DevilsKiss
+          Quantity: 0.1
+        - ReagentId: DoctorsDelight
+          Quantity: 0.1
+        - ReagentId: DriestMartini
+          Quantity: 0.1
+        - ReagentId: Eggnog
+          Quantity: 0.1
+        - ReagentId: ElectricShark
+          Quantity: 0.1
+        - ReagentId: ErikaSurprise
+          Quantity: 0.1
+        - ReagentId: GargleBlaster
+          Quantity: 0.1
+        - ReagentId: GinFizz
+          Quantity: 0.1
+        - ReagentId: GinTonic
+          Quantity: 0.1
+        - ReagentId: Gildlager
+          Quantity: 0.1
+        - ReagentId: Grog
+          Quantity: 0.1
+        - ReagentId: HippiesDelight
+          Quantity: 0.1
+        - ReagentId: Hooch
+          Quantity: 0.1
+        - ReagentId: IcedBeer
+          Quantity: 0.1
+        - ReagentId: IrishSlammer
+          Quantity: 0.1
+        - ReagentId: IrishCream
+          Quantity: 0.1
+        - ReagentId: IrishCoffee
+          Quantity: 0.1
+        - ReagentId: JackRose
+          Quantity: 0.1
+        - ReagentId: JungleBird
+          Quantity: 0.1
+        - ReagentId: Kalimotxo
+          Quantity: 0.1
+        - ReagentId: LongIslandIcedTea
+          Quantity: 0.1
+        - ReagentId: Manhattan
+          Quantity: 0.1
+        - ReagentId: ManhattanProject
+          Quantity: 0.1
+        - ReagentId: ManlyDorf
+          Quantity: 0.1
+        - ReagentId: Margarita
+          Quantity: 0.1
+        - ReagentId: Martini
+          Quantity: 0.1
+        - ReagentId: Mead
+          Quantity: 0.1
+        - ReagentId: Mojito
+          Quantity: 0.1
+        - ReagentId: MonkeyBusiness
+          Quantity: 0.1
+        - ReagentId: Moonshine
+          Quantity: 0.1
+        - ReagentId: Neurotoxin
+          Quantity: 0.1
+        - ReagentId: Painkiller
+          Quantity: 0.1
+        - ReagentId: Patron
+          Quantity: 0.1
+        - ReagentId: RedMead
+          Quantity: 0.1
+        - ReagentId: PinaColada
+          Quantity: 0.1
+        - ReagentId: Radler
+          Quantity: 0.1
+        - ReagentId: Sbiten
+          Quantity: 0.1
+        - ReagentId: ScrewdriverCocktail
+          Quantity: 0.1
+        - ReagentId: CogChamp
+          Quantity: 0.1
+        - ReagentId: Silencer
+          Quantity: 0.1
+        - ReagentId: Singulo
+          Quantity: 0.1
+        - ReagentId: SnowWhite
+          Quantity: 0.1
+        - ReagentId: SuiDream
+          Quantity: 0.1
+        - ReagentId: SyndicateBomb
+          Quantity: 0.1
+        - ReagentId: TequilaSunrise
+          Quantity: 0.1
+        - ReagentId: TheMartinez
+          Quantity: 0.1
+        - ReagentId: ThreeMileIsland
+          Quantity: 0.1
+        - ReagentId: ToxinsSpecial
+          Quantity: 0.1
+        - ReagentId: Vampiro
+          Quantity: 0.1
+        - ReagentId: VodkaMartini
+          Quantity: 0.1
+        - ReagentId: VodkaTonic
+          Quantity: 0.1
+        - ReagentId: WhiskeyCola
+          Quantity: 0.1
+        - ReagentId: WhiskeySoda
+          Quantity: 0.1
+        - ReagentId: WhiteGilgamesh
+          Quantity: 0.1
+        - ReagentId: WhiteRussian
+          Quantity: 0.1
+        - ReagentId: VodkaRedBool
+          Quantity: 0.1
+        - ReagentId: XenoBasher
+          Quantity: 0.1
+        - ReagentId: IrishBool
+          Quantity: 0.1
+        - ReagentId: BudgetInsulsDrink
+          Quantity: 0.1
+        - ReagentId: WatermelonWakeup
+          Quantity: 0.1
+        - ReagentId: Rubberneck
+          Quantity: 0.1
+        - ReagentId: BlueHawaiian
+          Quantity: 0.1
+        - ReagentId: Caipirinha
+          Quantity: 0.1
+        - ReagentId: MoscowMule
+          Quantity: 0.1
+        - ReagentId: Mimeosa
+          Quantity: 0.1
+        - ReagentId: Mimosa
+          Quantity: 0.1
+        - ReagentId: Mayojito
+          Quantity: 0.1
+        - ReagentId: DeathInTheAfternoon
+          Quantity: 0.1
+        - ReagentId: Empress75
+          Quantity: 0.1
+        - ReagentId: EspressoMartini
+          Quantity: 0.1
+        - ReagentId: Daiquiri
+          Quantity: 0.1
+        - ReagentId: TheSunAlsoRises
+          Quantity: 0.1
+        - ReagentId: WhiskeySour
+          Quantity: 0.1
+        - ReagentId: ZombieCocktail
+          Quantity: 0.1
+        - ReagentId: BacchusBlessing
+          Quantity: 0.1
+        - ReagentId: Blood
+          Quantity: 0.1
+        - ReagentId: InsectBlood
+          Quantity: 0.1
+        - ReagentId: Slime
+          Quantity: 0.1
+        - ReagentId: Sap
+          Quantity: 0.1
+        - ReagentId: CopperBlood
+          Quantity: 0.1
+        - ReagentId: AmmoniaBlood
+          Quantity: 0.1
+        - ReagentId: ZombieBlood
+          Quantity: 0.1
+        - ReagentId: Ichor
+          Quantity: 0.1
+        - ReagentId: Fat
+          Quantity: 0.1
+        - ReagentId: Vomit
+          Quantity: 0.1
+        - ReagentId: GreyMatter
+          Quantity: 0.1
+        - ReagentId: EZNutrient
+          Quantity: 0.1
+        - ReagentId: Left4Zed
+          Quantity: 0.1
+        - ReagentId: PestKiller
+          Quantity: 0.1
+        - ReagentId: PlantBGone
+          Quantity: 0.1
+        - ReagentId: RobustHarvest
+          Quantity: 0.1
+        - ReagentId: Sedin
+          Quantity: 0.1
+        - ReagentId: WeedKiller
+          Quantity: 0.1
+        - ReagentId: Ammonia
+          Quantity: 0.1
+        - ReagentId: Diethylamine
+          Quantity: 0.1
+        - ReagentId: Acetone
+          Quantity: 0.1
+        - ReagentId: Phenol
+          Quantity: 0.1
+        - ReagentId: Charcoal
+          Quantity: 0.1
+        - ReagentId: Ash
+          Quantity: 0.1
+        - ReagentId: Lye
+          Quantity: 0.1
+        - ReagentId: SodiumCarbonate
+          Quantity: 0.1
+        - ReagentId: Artifexium
+          Quantity: 0.1
+        - ReagentId: ArtifactGlue
+          Quantity: 0.1
+        - ReagentId: Benzene
+          Quantity: 0.1
+        - ReagentId: Hydroxide
+          Quantity: 0.1
+        - ReagentId: SodiumHydroxide
+          Quantity: 0.1
+        - ReagentId: Fersilicite
+          Quantity: 0.1
+        - ReagentId: SodiumPolyacrylate
+          Quantity: 0.1
+        - ReagentId: Cellulose
+          Quantity: 0.1
+        - ReagentId: Rororium
+          Quantity: 0.1
+        - ReagentId: Bleach
+          Quantity: 0.1
+        - ReagentId: SpaceCleaner
+          Quantity: 0.1
+        - ReagentId: SoapReagent
+          Quantity: 0.1
+        - ReagentId: SpaceLube
+          Quantity: 0.1
+        - ReagentId: SpaceGlue
+          Quantity: 0.1
+        - ReagentId: Astrotame
+          Quantity: 0.1
+        - ReagentId: BbqSauce
+          Quantity: 0.1
+        - ReagentId: Coldsauce
+          Quantity: 0.1
+        - ReagentId: Cornoil
+          Quantity: 0.1
+        - ReagentId: HorseradishSauce
+          Quantity: 0.1
+        - ReagentId: Hotsauce
+          Quantity: 0.1
+        - ReagentId: Ketchup
+          Quantity: 0.1
+        - ReagentId: Ketchunaise
+          Quantity: 0.1
+        - ReagentId: LaughinSyrup
+          Quantity: 0.1
+        - ReagentId: Mayo
+          Quantity: 0.1
+        - ReagentId: Mustard
+          Quantity: 0.1
+        - ReagentId: Vinaigrette
+          Quantity: 0.1
+        - ReagentId: Soysauce
+          Quantity: 0.1
+        - ReagentId: TableSalt
+          Quantity: 0.1
+        - ReagentId: Syrup
+          Quantity: 0.1
+        - ReagentId: Coffee
+          Quantity: 0.1
+        - ReagentId: HotCocoa
+          Quantity: 0.1
+        - ReagentId: Cream
+          Quantity: 0.1
+        - ReagentId: CoconutWater
+          Quantity: 0.1
+        - ReagentId: CreamOfCoconut
+          Quantity: 0.1
+        - ReagentId: CafeLatte
+          Quantity: 0.1
+        - ReagentId: GreenTea
+          Quantity: 0.1
+        - ReagentId: Grenadine
+          Quantity: 0.1
+        - ReagentId: IcedCoffee
+          Quantity: 0.1
+        - ReagentId: IcedGreenTea
+          Quantity: 0.1
+        - ReagentId: IcedTea
+          Quantity: 0.1
+        - ReagentId: JuiceBerryPoison
+          Quantity: 0.1
+        - ReagentId: Lemonade
+          Quantity: 0.1
+        - ReagentId: Milk
+          Quantity: 0.1
+        - ReagentId: MilkGoat
+          Quantity: 0.1
+        - ReagentId: MilkOat
+          Quantity: 0.1
+        - ReagentId: MilkSoy
+          Quantity: 0.1
+        - ReagentId: MilkSpoiled
+          Quantity: 0.1
+        - ReagentId: Nothing
+          Quantity: 0.1
+        - ReagentId: NuclearCola
+          Quantity: 0.1
+        - ReagentId: SodaWater
+          Quantity: 0.1
+        - ReagentId: SoyLatte
+          Quantity: 0.1
+        - ReagentId: Tea
+          Quantity: 0.1
+        - ReagentId: TonicWater
+          Quantity: 0.1
+        - ReagentId: Water
+          Quantity: 0.1
+        - ReagentId: Ice
+          Quantity: 0.1
+        - ReagentId: DryRamen
+          Quantity: 0.1
+        - ReagentId: HotRamen
+          Quantity: 0.1
+        - ReagentId: ArnoldPalmer
+          Quantity: 0.1
+        - ReagentId: Pilk
+          Quantity: 0.1
+        - ReagentId: Posca
+          Quantity: 0.1
+        - ReagentId: KiraSpecial
+          Quantity: 0.1
+        - ReagentId: Rewriter
+          Quantity: 0.1
+        - ReagentId: Mopwata
+          Quantity: 0.1
+        - ReagentId: Tortuga
+          Quantity: 0.1
+        - ReagentId: Aluminium
+          Quantity: 0.1
+        - ReagentId: Carbon
+          Quantity: 0.1
+        - ReagentId: Chlorine
+          Quantity: 0.1
+        - ReagentId: Copper
+          Quantity: 0.1
+        - ReagentId: Fluorine
+          Quantity: 0.1
+        - ReagentId: Gold
+          Quantity: 0.1
+        - ReagentId: Hydrogen
+          Quantity: 0.1
+        - ReagentId: Iodine
+          Quantity: 0.1
+        - ReagentId: Iron
+          Quantity: 0.1
+        - ReagentId: Lithium
+          Quantity: 0.1
+        - ReagentId: Mercury
+          Quantity: 0.1
+        - ReagentId: Potassium
+          Quantity: 0.1
+        - ReagentId: Phosphorus
+          Quantity: 0.1
+        - ReagentId: Radium
+          Quantity: 0.1
+        - ReagentId: Silicon
+          Quantity: 0.1
+        - ReagentId: Silver
+          Quantity: 0.1
+        - ReagentId: Sulfur
+          Quantity: 0.1
+        - ReagentId: Sodium
+          Quantity: 0.1
+        - ReagentId: Uranium
+          Quantity: 0.1
+        - ReagentId: Zinc
+          Quantity: 0.1
+        - ReagentId: Nutriment
+          Quantity: 0.1
+        - ReagentId: Vitamin
+          Quantity: 0.1
+        - ReagentId: Sugar
+          Quantity: 0.1
+        - ReagentId: PumpkinFlesh
+          Quantity: 0.1
+        - ReagentId: Carpetium
+          Quantity: 0.1
+        - ReagentId: Fiber
+          Quantity: 0.1
+        - ReagentId: BuzzochloricBees
+          Quantity: 0.1
+        - ReagentId: GroundBee
+          Quantity: 0.1
+        - ReagentId: Saxoite
+          Quantity: 0.1
+        - ReagentId: Licoxide
+          Quantity: 0.1
+        - ReagentId: Razorium
+          Quantity: 0.1
+        - ReagentId: Laughter
+          Quantity: 0.1
+        - ReagentId: JuiceThatMakesYouWeh
+          Quantity: 0.1
+        - ReagentId: JuiceThatMakesYouHew
+          Quantity: 0.1
+        - ReagentId: CorgiJuice
+          Quantity: 0.1
+        - ReagentId: Oxygen
+          Quantity: 0.1
+        - ReagentId: Plasma
+          Quantity: 0.1
+        - ReagentId: Tritium
+          Quantity: 0.1
+        - ReagentId: CarbonDioxide
+          Quantity: 0.1
+        - ReagentId: Nitrogen
+          Quantity: 0.1
+        - ReagentId: NitrousOxide
+          Quantity: 0.1
+        - ReagentId: Frezon
+          Quantity: 0.1
+        - ReagentId: Flour
+          Quantity: 0.1
+        - ReagentId: Cornmeal
+          Quantity: 0.1
+        - ReagentId: Oats
+          Quantity: 0.1
+        - ReagentId: Enzyme
+          Quantity: 0.1
+        - ReagentId: Egg
+          Quantity: 0.1
+        - ReagentId: EggCooked
+          Quantity: 0.1
+        - ReagentId: Blackpepper
+          Quantity: 0.1
+        - ReagentId: Vinegar
+          Quantity: 0.1
+        - ReagentId: Rice
+          Quantity: 0.1
+        - ReagentId: OilOlive
+          Quantity: 0.1
+        - ReagentId: Oil
+          Quantity: 0.1
+        - ReagentId: CapsaicinOil
+          Quantity: 0.1
+        - ReagentId: CocoaPowder
+          Quantity: 0.1
+        - ReagentId: Butter
+          Quantity: 0.1
+        - ReagentId: TeaPowder
+          Quantity: 0.1
+        - ReagentId: FrostOil
+          Quantity: 0.1
+        - ReagentId: JuiceApple
+          Quantity: 0.1
+        - ReagentId: JuiceBanana
+          Quantity: 0.1
+        - ReagentId: JuiceBerry
+          Quantity: 0.1
+        - ReagentId: JuiceBluePumpkin
+          Quantity: 0.1
+        - ReagentId: JuiceBungo
+          Quantity: 0.1
+        - ReagentId: JuiceCarrot
+          Quantity: 0.1
+        - ReagentId: JuiceGrape
+          Quantity: 0.1
+        - ReagentId: JuiceLemon
+          Quantity: 0.1
+        - ReagentId: JuiceLime
+          Quantity: 0.1
+        - ReagentId: JuiceOrange
+          Quantity: 0.1
+        - ReagentId: JuicePineapple
+          Quantity: 0.1
+        - ReagentId: JuicePotato
+          Quantity: 0.1
+        - ReagentId: JuiceTomato
+          Quantity: 0.1
+        - ReagentId: JuiceWatermelon
+          Quantity: 0.1
+        - ReagentId: JuiceCherry
+          Quantity: 0.1
+        - ReagentId: Cryptobiolin
+          Quantity: 0.1
+        - ReagentId: Dylovene
+          Quantity: 0.1
+        - ReagentId: Diphenhydramine
+          Quantity: 0.1
+        - ReagentId: Ethylredoxrazine
+          Quantity: 0.1
+        - ReagentId: Arithrazine
+          Quantity: 0.1
+        - ReagentId: Bicaridine
+          Quantity: 0.1
+        - ReagentId: Cryoxadone
+          Quantity: 0.1
+        - ReagentId: Doxarubixadone
+          Quantity: 0.1
+        - ReagentId: Dermaline
+          Quantity: 0.1
+        - ReagentId: Dexalin
+          Quantity: 0.1
+        - ReagentId: DexalinPlus
+          Quantity: 0.1
+        - ReagentId: Epinephrine
+          Quantity: 0.1
+        - ReagentId: Hyronalin
+          Quantity: 0.1
+        - ReagentId: Ipecac
+          Quantity: 0.1
+        - ReagentId: Inaprovaline
+          Quantity: 0.1
+        - ReagentId: Kelotane
+          Quantity: 0.1
+        - ReagentId: Leporazine
+          Quantity: 0.1
+        - ReagentId: Barozine
+          Quantity: 0.1
+        - ReagentId: Phalanximine
+          Quantity: 0.1
+        - ReagentId: PolypyryliumOligomers
+          Quantity: 0.1
+        - ReagentId: Ambuzol
+          Quantity: 0.1
+        - ReagentId: AmbuzolPlus
+          Quantity: 0.1
+        - ReagentId: PulpedBananaPeel
+          Quantity: 0.1
+        - ReagentId: Saline
+          Quantity: 0.1
+        - ReagentId: Siderlac
+          Quantity: 0.1
+        - ReagentId: Stellibinin
+          Quantity: 0.1
+        - ReagentId: TranexamicAcid
+          Quantity: 0.1
+        - ReagentId: Tricordrazine
+          Quantity: 0.1
+        - ReagentId: Lipozine
+          Quantity: 0.1
+        - ReagentId: Omnizine
+          Quantity: 0.1
+        - ReagentId: Ultravasculine
+          Quantity: 0.1
+        - ReagentId: Oculine
+          Quantity: 0.1
+        - ReagentId: Cognizine
+          Quantity: 0.1
+        - ReagentId: Ethyloxyephedrine
+          Quantity: 0.1
+        - ReagentId: Diphenylmethylamine
+          Quantity: 0.1
+        - ReagentId: Sigynate
+          Quantity: 0.1
+        - ReagentId: Lacerinol
+          Quantity: 0.1
+        - ReagentId: Puncturase
+          Quantity: 0.1
+        - ReagentId: Bruizine
+          Quantity: 0.1
+        - ReagentId: Holywater
+          Quantity: 0.1
+        - ReagentId: Pyrazine
+          Quantity: 0.1
+        - ReagentId: Insuzine
+          Quantity: 0.1
+        - ReagentId: Opporozidone
+          Quantity: 0.1
+        - ReagentId: Necrosol
+          Quantity: 0.1
+        - ReagentId: Traumoxadone
+          Quantity: 0.1
+        - ReagentId: Psicodine
+          Quantity: 0.1
+        - ReagentId: PotassiumIodide
+          Quantity: 0.1
+        - ReagentId: Haloperidol
+          Quantity: 0.1
+        - ReagentId: Stelloxadone
+          Quantity: 0.1
+        - ReagentId: Desoxyephedrine
+          Quantity: 0.1
+        - ReagentId: Ephedrine
+          Quantity: 0.1
+        - ReagentId: Synaptizine
+          Quantity: 0.1
+        - ReagentId: Stimulants
+          Quantity: 0.1
+        - ReagentId: THC
+          Quantity: 0.1
+        - ReagentId: Nicotine
+          Quantity: 0.1
+        - ReagentId: Impedrezene
+          Quantity: 0.1
+        - ReagentId: SpaceDrugs
+          Quantity: 0.1
+        - ReagentId: Bananadine
+          Quantity: 0.1
+        - ReagentId: Nocturine
+          Quantity: 0.1
+        - ReagentId: MuteToxin
+          Quantity: 0.1
+        - ReagentId: NorepinephricAcid
+          Quantity: 0.1
+        - ReagentId: TearGas
+          Quantity: 0.1
+        - ReagentId: Happiness
+          Quantity: 0.1
+        - ReagentId: Thermite
+          Quantity: 0.1
+        - ReagentId: Napalm
+          Quantity: 0.1
+        - ReagentId: Phlogiston
+          Quantity: 0.1
+        - ReagentId: ChlorineTrifluoride
+          Quantity: 0.1
+        - ReagentId: FoamingAgent
+          Quantity: 0.1
+        - ReagentId: WeldingFuel
+          Quantity: 0.1
+        - ReagentId: Fluorosurfactant
+          Quantity: 0.1
+        - ReagentId: Cola
+          Quantity: 0.1
+        - ReagentId: RoyRogers
+          Quantity: 0.1
+        - ReagentId: ChangelingSting
+          Quantity: 0.1
+        - ReagentId: DrGibb
+          Quantity: 0.1
+        - ReagentId: EnergyDrink
+          Quantity: 0.1
+        - ReagentId: GrapeSoda
+          Quantity: 0.1
+        - ReagentId: IceCream
+          Quantity: 0.1
+        - ReagentId: LemonLime
+          Quantity: 0.1
+        - ReagentId: LemonLimeCranberry
+          Quantity: 0.1
+        - ReagentId: PwrGame
+          Quantity: 0.1
+        - ReagentId: RootBeer
+          Quantity: 0.1
+        - ReagentId: RootBeerFloat
+          Quantity: 0.1
+        - ReagentId: SolDry
+          Quantity: 0.1
+        - ReagentId: ShirleyTemple
+          Quantity: 0.1
+        - ReagentId: SpaceMountainWind
+          Quantity: 0.1
+        - ReagentId: SpaceUp
+          Quantity: 0.1
+        - ReagentId: Starkist
+          Quantity: 0.1
+        - ReagentId: FourteenLoko
+          Quantity: 0.1
+        - ReagentId: ShamblersJuice
+          Quantity: 0.1
+        - ReagentId: Toxin
+          Quantity: 0.1
+        - ReagentId: CarpoToxin
+          Quantity: 0.1
+        - ReagentId: ChloralHydrate
+          Quantity: 0.1
+        - ReagentId: GastroToxin
+          Quantity: 0.1
+        - ReagentId: Mold
+          Quantity: 0.1
+        - ReagentId: PolytrinicAcid
+          Quantity: 0.1
+        - ReagentId: FerrochromicAcid
+          Quantity: 0.1
+        - ReagentId: FluorosulfuricAcid
+          Quantity: 0.1
+        - ReagentId: SulfuricAcid
+          Quantity: 0.1
+        - ReagentId: UnstableMutagen
+          Quantity: 0.1
+        - ReagentId: HeartbreakerToxin
+          Quantity: 0.1
+        - ReagentId: Lexorin
+          Quantity: 0.1
+        - ReagentId: MindbreakerToxin
+          Quantity: 0.1
+        - ReagentId: Histamine
+          Quantity: 0.1
+        - ReagentId: Theobromine
+          Quantity: 0.1
+        - ReagentId: Amatoxin
+          Quantity: 0.1
+        - ReagentId: VentCrud
+          Quantity: 0.1
+        - ReagentId: Romerol
+          Quantity: 0.1
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 0.1
+        - ReagentId: Allicin
+          Quantity: 0.1
+        - ReagentId: Pax
+          Quantity: 0.1
+        - ReagentId: Honk
+          Quantity: 0.1
+        - ReagentId: Lead
+          Quantity: 0.1
+        - ReagentId: Bungotoxin
+          Quantity: 0.1
+        - ReagentId: Vestine
+          Quantity: 0.1
+        - ReagentId: Tazinide
+          Quantity: 0.1
+        - ReagentId: Lipolicide
+          Quantity: 0.1
+        - ReagentId: Mechanotoxin
+          Quantity: 0.1
+        - ReagentId: ToxinTrash
+          Quantity: 0.1
