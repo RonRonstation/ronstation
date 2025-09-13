@@ -443,25 +443,20 @@ namespace Content.Server.Voting.Managers
                 if (!_entityManager.TryGetComponent(player.AttachedEntity, out TransformComponent? transform))
                     return false;
 
-                _adminLogger.Add(LogType.Action, LogImpact.Medium, $"miau3");
                 if (transform == null)
                     return false;
 
-                _adminLogger.Add(LogType.Action, LogImpact.Medium, $"miau4");
                 // Check if player is on the shuttle
                 if (!_entityManager.HasComponent<EmergencyShuttleComponent>(transform.GridUid))
                     return false;
 
-                _adminLogger.Add(LogType.Action, LogImpact.Medium, $"miau5");
                 if (!_entityManager.TryGetComponent(player.AttachedEntity, out MobStateComponent? mobState))
                     return false;
 
-                _adminLogger.Add(LogType.Action, LogImpact.Medium, $"miau6");
                 // Player is gibbed
                 if (mobState == null)
                     return false;
 
-                _adminLogger.Add(LogType.Action, LogImpact.Medium, $"miau7");
                 return mobState.CurrentState != MobState.Invalid;
             }
             // Ronstation - end of modifications.
