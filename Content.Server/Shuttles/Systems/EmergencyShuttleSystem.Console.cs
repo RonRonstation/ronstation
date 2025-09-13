@@ -1,7 +1,10 @@
+// Modified by Ronstation contributor(s), therefore this file is licensed as MIT sublicensed with AGPL-v3.0.
 using System.Threading;
 using Content.Server.Screens.Components;
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Events;
+using Content.Server.Voting; // Ronstation - modification.
+using Content.Server.Voting.Managers; // Ronstation - modification.
 using Content.Shared.Access;
 using Content.Shared.CCVar;
 using Content.Shared.Database;
@@ -219,6 +222,43 @@ public sealed partial class EmergencyShuttleSystem
         {
             ShuttlesLeft = true;
             _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("emergency-shuttle-left", ("transitTime", $"{TransitTime:0}")));
+
+            // Ronstation - start of modifications.
+            var options = new VoteOptions
+            {
+                Title = Loc.GetString("ui-vote-eorg-title"),
+                Duration = TimeSpan.FromSeconds(TransitTime),
+                VoterEligibility = VoteManager.VoterEligibility.NotGhost,
+                Options =
+                {
+                    (Loc.GetString("ui-vote-eorg-yes"), "yes"),
+                    (Loc.GetString("ui-vote-eorg-no"), "no"),
+                    (Loc.GetString("ui-vote-eorg-abstain"), "abstain")
+                }
+            };
+            var vote = _voteManager.CreateVote(options);
+
+
+            vote.OnFinished += (_, _) =>
+            {
+                var votesYes = vote.VotesPerOption["yes"];
+                var votesNo = vote.VotesPerOption["no"];
+                var total = votesYes + votesNo;
+
+                var ratioRequired = _configManager.GetCVar(CCVars.VoteRestartRequiredRatio);
+                if (total > 0 && votesYes / (float) total >= ratioRequired)
+                {
+                    _logger.Add(LogType.Vote, LogImpact.Medium, $"EORG vote succeeded: {votesYes}/{votesNo}");
+                    _chatManager.DispatchServerAnnouncement(Loc.GetString("ui-vote-eorg-succeeded"));
+                }
+                else
+                {
+                    _logger.Add(LogType.Vote, LogImpact.Medium, $"EORG vote failed: {votesYes}/{votesNo}");
+                    _chatManager.DispatchServerAnnouncement(Loc.GetString("ui-vote-eorg-failed", ("ratio", ratioRequired)));
+                    // TODO: Cancel EORG
+                }
+            };
+            // Ronstation - end of modifications.
 
             Timer.Spawn((int)(TransitTime * 1000) + _bufferTime.Milliseconds, () => _roundEnd.EndRound(), _roundEndCancelToken?.Token ?? default);
         }
