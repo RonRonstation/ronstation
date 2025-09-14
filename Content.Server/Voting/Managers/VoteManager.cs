@@ -1,3 +1,4 @@
+// Modified by Ronstation contributor(s), therefore this file is licensed as MIT sublicensed with AGPL-v3.0.
 using System.Collections;
 using System.Collections.Immutable;
 using System.Diagnostics.CodeAnalysis;
@@ -8,15 +9,20 @@ using Content.Server.Administration.Managers;
 using Content.Server.Chat.Managers;
 using Content.Server.GameTicking;
 using Content.Server.Maps;
+using Content.Server.Shuttles.Components; // Ronstation - modification.
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
 using Content.Shared.Database;
 using Content.Shared.Ghost;
+using Content.Shared.Mind; // Ronstation - modification.
+using Content.Shared.Mobs; // Ronstation - modification.
+using Content.Shared.Mobs.Components; // Ronstation - modification.
 using Content.Shared.Players.PlayTimeTracking;
 using Content.Shared.Voting;
 using Robust.Server.Player;
 using Robust.Shared.Configuration;
 using Robust.Shared.Enums;
+using Robust.Shared.GameObjects; // Ronstation - modification.
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
@@ -430,6 +436,31 @@ namespace Content.Server.Voting.Managers
             if (eligibility == VoterEligibility.All)
                 return true;
 
+            // Ronstation - start of modifications.
+            if (eligibility == VoterEligibility.OnEvac)
+            {
+                // Get player's transform
+                if (!_entityManager.TryGetComponent(player.AttachedEntity, out TransformComponent? transform))
+                    return false;
+
+                if (transform == null)
+                    return false;
+
+                // Check if player is on the shuttle
+                if (!_entityManager.HasComponent<EmergencyShuttleComponent>(transform.GridUid))
+                    return false;
+
+                if (!_entityManager.TryGetComponent(player.AttachedEntity, out MobStateComponent? mobState))
+                    return false;
+
+                // Player is gibbed
+                if (mobState == null)
+                    return false;
+
+                return mobState.CurrentState != MobState.Invalid;
+            }
+            // Ronstation - end of modifications.
+
             if (eligibility == VoterEligibility.Ghost || eligibility == VoterEligibility.GhostMinimumPlaytime)
             {
                 if (!_entityManager.TryGetComponent(player.AttachedEntity, out GhostComponent? ghostComp))
@@ -548,6 +579,7 @@ namespace Content.Server.Voting.Managers
         public enum VoterEligibility
         {
             All,
+            OnEvac, // Player needs to be on evac // Ronstation - modification.
             Ghost, // Player needs to be a ghost
             GhostMinimumPlaytime, // Player needs to be a ghost, with a minimum playtime and deathtime as defined by votekick CCvars.
             MinimumPlaytime //Player needs to have a minimum playtime and deathtime as defined by votekick CCvars.
