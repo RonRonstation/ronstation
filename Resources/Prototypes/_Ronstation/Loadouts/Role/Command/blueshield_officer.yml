@@ -2,7 +2,7 @@
   id: JobBlueshieldOfficer
   groups:
   - BlueshieldHead
-  # - Glasses
+  - BlueshieldGlasses
   # - Mask
   - BlueshieldNeck
   # - Gloves
