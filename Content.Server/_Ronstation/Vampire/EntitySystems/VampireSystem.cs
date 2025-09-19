@@ -4,6 +4,7 @@ using Content.Shared.Actions;
 using Content.Shared.Alert;
 using Content.Shared.Antag;
 using Content.Shared.FixedPoint;
+using Content.Shared.Prying.Components;
 using Robust.Shared.GameStates;
 using Robust.Shared.Player;
 
@@ -49,8 +50,30 @@ public sealed partial class VampireSystem : SharedVampireSystem
 
         component.CurseLevel += 1;
         component.VitaeRegenCap += component.VitaeCapUpgradeAmount;
+        ChangeCompOnLevel(uid, component);
         Dirty(uid, component);
 
+        return true;
+    }
+
+    // This is ugly and stupid hardcoded bullshit but I cannot be fucked to figure out a better solution right now
+    public bool ChangeCompOnLevel(EntityUid uid, VampireComponent? component = null)
+    {
+        if (!Resolve(uid, ref component))
+            return false;
+        switch (component.CurseLevel)
+        {
+            case 2:
+                var pryComp = EnsureComp<PryingComponent>(uid);
+                pryComp.SpeedModifier = 0.75f;
+                pryComp.PryPowered = true;
+                pryComp.Force = true;
+
+                Dirty(uid, pryComp);
+                break;
+            default:
+                break;
+        }
         return true;
     }
 

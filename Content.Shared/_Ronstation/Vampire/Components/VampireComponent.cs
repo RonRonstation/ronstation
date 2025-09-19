@@ -54,7 +54,7 @@ public sealed partial class VampireComponent : Component
     /// Higher level = more abilities unlock.
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite), DataField("curseLevel")]
-    public FixedPoint2 CurseLevel = 1f;
+    public int CurseLevel = 1;
 
     /// <summary>
     /// How much stolen vitae is required before you can 'levelup'.
