@@ -1,0 +1,24 @@
+- type: polymorph
+  id: AdminScurretSmite
+  configuration:
+    entity: MobScurret
+    forced: true
+    transferName: true
+    inventory: Drop
+    ignoreAllowRepeatedMorphs: true
+
+- type: polymorph
+  id: AdminMothroachSmite
+  configuration:
+    entity: MobMothroach
+    forced: true
+    inventory: Drop
+    ignoreAllowRepeatedMorphs: true
+
+- type: polymorph
+  id: AdminMoproachSmite
+  configuration:
+    entity: MobMoproach
+    forced: true
+    inventory: Drop
+    ignoreAllowRepeatedMorphs: true
