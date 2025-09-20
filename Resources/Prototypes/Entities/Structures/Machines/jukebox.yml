@@ -1,8 +1,9 @@
+## Contains modifications made by Ronstation contributors, therefore this file is subject to MIT sublicensed with AGPL v3.0.
 - type: entity
   id: Jukebox
-  name: jukebox
+  name: broken jukebox # Ronstation - Moddificaiton
   parent: [ BaseMachinePowered, ConstructibleMachine ]
-  description: A machine capable of playing a wide variety of tunes. Enjoyment not guaranteed.
+  description: A broken jukebox, riddled with knife marks and bulletholes. Probably destroyed in a barfight. # Ronstation - Modification
   components:
   - type: StationAiWhitelist
   - type: Sprite
@@ -12,10 +13,10 @@
       map: ["enum.JukeboxVisualLayers.Base"]
   - type: Transform
     anchored: true
-  - type: Jukebox
-    onState: on
-    offState: off
-    selectState: select
+  # - type: Jukebox
+  #   onState: on
+  #   offState: off
+  #   selectState: select
   - type: Machine
     board: JukeboxCircuitBoard
   - type: Appearance
@@ -25,14 +26,14 @@
   - type: ActivatableUI
     key: enum.JukeboxUiKey.Key
   - type: ActivatableUIRequiresPower
-  - type: UserInterface
-    interfaces:
-        enum.JukeboxUiKey.Key:
-          type: JukeboxBoundUserInterface
-        enum.WiresUiKey.Key:
-          type: WiresBoundUserInterface
-  - type: WiresPanel
-  - type: Wires
+  # - type: UserInterface
+  #   interfaces:
+  #       enum.JukeboxUiKey.Key:
+  #         type: JukeboxBoundUserInterface
+  #       enum.WiresUiKey.Key:
+  #         type: WiresBoundUserInterface
+  # - type: WiresPanel
+  # - type: Wires
     boardName: wires-board-name-jukebox
     layoutId: Jukebox
   - type: Damageable
