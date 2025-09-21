@@ -9,5 +9,5 @@ public sealed partial class CellularSmiteSpellEvent : EntityTargetActionEvent
     // Damage that the smite spell will do.
     //</summary>
     [DataField]
-    public DamageSpecifier smiteDamage = new();
+    public DamageSpecifier SmiteDamage = new();
 }

@@ -89,6 +89,7 @@ public abstract class SharedMagicSystem : EntitySystem
         SubscribeLocalEvent<ChangeComponentsSpellEvent>(OnChangeComponentsSpell);
         SubscribeLocalEvent<SmiteSpellEvent>(OnSmiteSpell);
         SubscribeLocalEvent<CellularSmiteSpellEvent>(OnCellularSmiteSpell);
+        SubscribeLocalEvent<TransformSpellEvent>(OnTransformSpell);
         SubscribeLocalEvent<KnockSpellEvent>(OnKnockSpell);
         SubscribeLocalEvent<ChargeSpellEvent>(OnChargeSpell);
         SubscribeLocalEvent<RandomGlobalSpawnSpellEvent>(OnRandomGlobalSpawnSpell);
@@ -414,7 +415,7 @@ public abstract class SharedMagicSystem : EntitySystem
         _body.GibBody(ev.Target, true, body);
     }
 
-// start of modifications
+    // start of modifications
     private void OnCellularSmiteSpell(CellularSmiteSpellEvent ev)
     {
         //Stacking genetic damage on people who are already downed or dead is cringe
@@ -444,9 +445,29 @@ public abstract class SharedMagicSystem : EntitySystem
         //_physics.ApplyLinearImpulse(ev.Target, impulseVector);
 
         _jittering.DoJitter(ev.Target, TimeSpan.FromSeconds(1f), false, 80f, 8f, true);
-        _damageableSystem.TryChangeDamage(ev.Target, ev.smiteDamage, true);
+        _damageableSystem.TryChangeDamage(ev.Target, ev.SmiteDamage, true);
     }
-// end of modifications
+
+    public virtual void OnTransformSpell(TransformSpellEvent ev)
+    {
+        if (ev.Handled || !PassesSpellPrerequisites(ev.Action, ev.Performer))
+        {
+            ev.Cancelled = true;
+            return;
+        }
+        if (TryComp<WizardTransformationComponent>(ev.Target, out var clumsy))
+        {
+            _popup.PopupClient(Loc.GetString(ev.FailureMessage), ev.Performer, ev.Performer);
+            ev.Cancelled = true;
+            return;
+        }
+
+        ev.Cancelled = false;
+        ev.Handled = true;
+        AddComponents(ev.Target, ev.ToAdd);
+        RemoveComponents(ev.Target, ev.ToRemove);
+    }
+    // end of modifications
 
     // End Touch Spells
     #endregion
@@ -549,7 +570,7 @@ public abstract class SharedMagicSystem : EntitySystem
             return;
 
         ev.Handled = true;
-        
+
         // start of modifications
         // Chaplain immunity check
         if (HasComp<BibleUserComponent>(ev.Target))
