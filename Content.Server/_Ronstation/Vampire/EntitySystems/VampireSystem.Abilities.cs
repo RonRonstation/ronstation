@@ -13,10 +13,13 @@ using Content.Shared.Database;
 using Content.Shared.DoAfter;
 using Content.Shared.Forensics;
 using Content.Shared.IdentityManagement;
+using Content.Shared.Magic.Events;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Popups;
+using Content.Shared.StatusEffectNew;
+using Content.Shared.StatusEffectNew.Components;
 using Content.Shared.Whitelist;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
@@ -41,12 +44,14 @@ public sealed partial class VampireSystem
     [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
+    [Dependency] private readonly StatusEffectsSystem _statusEffects = default!;
     public void InitializeAbilities()
     {
 
         SubscribeLocalEvent<VampireFeedComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<VampireFeedComponent, VampireFeedActionEvent>(OnFeedAction);
         SubscribeLocalEvent<VampireFeedComponent, VampireFeedDoAfterEvent>(OnFeedDoAfter);
+        SubscribeLocalEvent<ChangeStatusEffectEvent>(OnAddStatusEffectAction);
     }
 
     private void OnMapInit(Entity<VampireFeedComponent> ent, ref MapInitEvent args)
@@ -192,5 +197,10 @@ public sealed partial class VampireSystem
 
         // Check if we can still feed, if so, repeat
         args.Repeat = IsTargetValid(args.Target.Value, ent);
+    }
+
+    private void OnAddStatusEffectAction(ChangeStatusEffectEvent args)
+    {
+        _statusEffects.TryAddStatusEffectDuration(args.Target, args.StatusEffect, TimeSpan.FromSeconds(args.Duration));
     }
 }

@@ -12,3 +12,25 @@
   - type: TargetAction
   - type: EntityTargetAction
     event: !type:VampireFeedActionEvent
+
+- type: entity
+  parent: BaseEntitySpellAction
+  id: ActionVampireHalt
+  name: Halt
+  description: Renders your target unconscious.
+  components:
+  - type: Action
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/staff_animation.ogg
+    icon:
+      sprite: Objects/Magic/magicactions.rsi
+      state: spell_default
+    useDelay: 0
+  - type: EntityTargetAction
+    whitelist:
+      components:
+      - MobState
+    canTargetSelf: false
+    event: !type:ChangeStatusEffectEvent
+      statusEffect: "StatusEffectForcedSleeping"
+      duration: 60

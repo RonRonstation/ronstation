@@ -68,7 +68,7 @@ public sealed partial class VampireSystem : SharedVampireSystem
                 pryComp.SpeedModifier = 0.75f;
                 pryComp.PryPowered = true;
                 pryComp.Force = true;
-
+                _actionsSystem.AddAction(uid, ref component.VampireHaltActionEntity, component.VampireHaltAction);
                 Dirty(uid, pryComp);
                 break;
             default:

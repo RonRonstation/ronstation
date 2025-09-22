@@ -68,4 +68,16 @@ public sealed partial class VampireComponent : Component
     [DataField]
     public ProtoId<AlertPrototype> VitaeAlert = "Vitae";
 
+    /// <summary>
+    /// The Action for vampire's feeding
+    /// </summary>
+    [DataField]
+    public EntProtoId? VampireHaltAction = "ActionVampireHalt";
+
+    /// <summary>
+    /// The action entity associated with feeding
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public EntityUid? VampireHaltActionEntity;
+
 }
