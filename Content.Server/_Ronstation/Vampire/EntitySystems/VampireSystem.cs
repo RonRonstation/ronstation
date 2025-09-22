@@ -24,6 +24,8 @@ public sealed partial class VampireSystem : SharedVampireSystem
     {
         //update the icon
         ChangeVitaeAmount(uid, 0, component);
+        _actionsSystem.AddAction(uid, ref component.VampireHaltActionEntity, component.VampireHaltAction);
+
     }
 
     public bool ChangeVitaeAmount(EntityUid uid, FixedPoint2 amount, VampireComponent? component = null, bool regenCap = false)
@@ -68,7 +70,6 @@ public sealed partial class VampireSystem : SharedVampireSystem
                 pryComp.SpeedModifier = 0.75f;
                 pryComp.PryPowered = true;
                 pryComp.Force = true;
-                _actionsSystem.AddAction(uid, ref component.VampireHaltActionEntity, component.VampireHaltAction);
                 Dirty(uid, pryComp);
                 break;
             default:

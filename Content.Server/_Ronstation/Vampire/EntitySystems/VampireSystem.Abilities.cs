@@ -201,6 +201,11 @@ public sealed partial class VampireSystem
 
     private void OnAddStatusEffectAction(ChangeStatusEffectEvent args)
     {
+        if (args.Handled)
+            return;
+
+        args.Handled = true;
+
         _statusEffects.TryAddStatusEffectDuration(args.Target, args.StatusEffect, TimeSpan.FromSeconds(args.Duration));
     }
 }
