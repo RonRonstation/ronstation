@@ -77,3 +77,4 @@
       - BlockMovement
       - Item
       - MeleeRequiresWield
+      - Damageable # Ronstation - modification.
