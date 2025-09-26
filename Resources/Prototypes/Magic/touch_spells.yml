@@ -97,6 +97,33 @@
     sentence: action-speech-spell-cluwne
   - type: Magic
     requiresClothes: true
+# Start of modifications
+- type: entity
+  parent: BaseSmiteAction
+  id: ActionClown
+  name: Banana Touch
+  description: Turns someone into a Clown!
+  components:
+  - type: Action
+    useDelay: 120
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Items/bikehorn.ogg
+    icon:
+      sprite: Clothing/Mask/clown.rsi
+      state: icon
+  - type: EntityTargetAction
+    event: !type:TransformSpellEvent
+      toAdd:
+      - type: Clumsy
+        clumsyDefib: false
+      - type: WizardTransformation
+      loadout: ClownGear
+      failureMessage: "They're already clown enough!"
+  - type: SpeakOnAction
+    sentence: action-speech-spell-clown
+  - type: Magic
+    requiresClothes: true
+# End of modifications
 
 - type: entity
   parent: BaseSmiteAction
