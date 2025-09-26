@@ -3,7 +3,10 @@
   table: !type:AllSelector
     children:
     - id: ClothingBeltBlueshieldFilled
-    - id: ClothingEyesGlassesCommand
+    - !type:GroupSelector
+      children:
+      - id: ClothingEyesGlassesCommand
+      - id: ClothingEyesVisorCommand
     - id: ClothingHandsGlovesCombat
     - id: ClothingShoesBootsJack
     - id: ClothingHeadHelmetSwat

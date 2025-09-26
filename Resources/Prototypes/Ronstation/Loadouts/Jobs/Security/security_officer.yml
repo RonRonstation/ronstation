@@ -12,9 +12,9 @@
 - type: loadout
   id: GlassesSecurityVisor
   equipment:
-    eyes: ClothingEyesGlassesSecurityVisor
+    eyes: ClothingEyesVisorSecurity
 
 - type: startingGear
-  id: ClothingEyesGlassesSecurityVisor
+  id: ClothingEyesVisorSecurity
   equipment:
-    head: ClothingEyesGlassesSecurityVisor
+    head: ClothingEyesVisorSecurity
