@@ -1,6 +1,6 @@
 ﻿- type: entity
   id: Recycler
-  parent: BaseMachinePowered
+  parent: [ BaseMachinePowered, ConstructibleMachine ]
   name: recycler
   description: A large crushing machine used to recycle small items inefficiently. There are lights on the side.
   components:
@@ -47,6 +47,8 @@
       - Reverse
       - Forward
       - Off
+  - type: Machine
+    board: RecyclerMachineCircuitboard
   - type: Transform
     anchored: true
     noRot: false
@@ -58,7 +60,6 @@
       map: ["enum.RecyclerVisualLayers.Main"]
   - type: Appearance
   - type: RecyclerVisuals
-
   - type: CollideMaterialReclaimer
   - type: MaterialReclaimer
     enabled: false
@@ -89,19 +90,20 @@
   - type: Conveyor
   - type: Rotatable
   - type: Repairable
-    doAfterDelay: 5
+    doAfterDelay: 10
     fuelCost: 25
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 100
       behaviors:
       - !type:DoActsBehavior
         acts: ["Breakage"]
       - !type:PlaySoundBehavior
         sound:
           collection: MetalBreak
+            #    - trigger:
   - type: InteractionPopup
     successChance: 1.0
     interactSuccessString: petting-success-recycler
@@ -115,3 +117,16 @@
   - type: Speech
     speechVerb: Robotic
     speechSounds: SyndieBorg
+
+- type: entity
+  id: RecyclerMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: recycler machine board
+  components:
+    - type: MachineBoard
+      prototype: Recycler
+      stackRequirements:
+        Manipulator: 8
+        Cable: 10
+        Plasteel: 2
+  
