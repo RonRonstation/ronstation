@@ -1,3 +1,4 @@
+## Modified by Ronstation contributor(s), therefore this file is licensed as MIT sublicensed with AGPL-v3.0.
 #default species weights used for randomly selected species
 - type: weightedRandomSpecies
   id: SpeciesWeights
@@ -6,4 +7,4 @@
     Reptilian: 4
     SlimePerson: 4
     Diona: 2
-    Vulpkanin: 4
+    # Vulpkanin: 4 # Ronstation - Modification

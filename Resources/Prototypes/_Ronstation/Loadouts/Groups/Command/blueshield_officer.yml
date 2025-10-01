@@ -6,6 +6,14 @@
   - BlueshieldCap
 
 - type: loadoutGroup
+  id: BlueshieldGlasses
+  parent: BaseGlasses
+  minLimit: 1 # not optional
+  loadouts:
+  - BlueshieldGlasses
+  - BlueshieldVisor
+
+- type: loadoutGroup
   id: BlueshieldNeck
   parent: BaseNeck
   loadouts:

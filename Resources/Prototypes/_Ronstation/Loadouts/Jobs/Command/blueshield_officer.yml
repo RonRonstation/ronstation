@@ -19,6 +19,17 @@
   equipment:
     head: ClothingHeadHatBeretBlueshield
 
+# Glasses
+- type: loadout
+  id: BlueshieldGlasses
+  equipment:
+    eyes: ClothingEyesGlassesCommand
+
+- type: loadout
+  id: BlueshieldVisor
+  equipment:
+    eyes: ClothingEyesVisorCommand
+
 # Jumpsuit
 - type: loadout
   id: BlueshieldJumpsuit
