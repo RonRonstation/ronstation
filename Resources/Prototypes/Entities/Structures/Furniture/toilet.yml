@@ -1,3 +1,5 @@
+# Modified by Ronstation contributor(s), therefore this file is licensed as MIT sublicensed with AGPL-v3.0.
+
 - type: entity
   abstract: true
   parent: [ DisposalUnitBase, SeatBase ]
@@ -100,11 +102,11 @@
   - type: ReagentTank
   - type: DumpableSolution
     solution: drainBuffer
-  - type: Edible
-    edible: Drink
-    solution: tank
-    destroyOnEmpty: false
-    utensil: Spoon
+  # - type: Edible # Ronstation - Modification
+  #   edible: Drink
+  #   solution: tank
+  #   destroyOnEmpty: false
+  #   utensil: Spoon
   - type: GenericVisualizer
     visuals:
       enum.ToolOpenableVisuals.ToolOpenableVisualState:
