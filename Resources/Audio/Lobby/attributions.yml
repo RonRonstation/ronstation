@@ -75,3 +75,13 @@
   license: "CC-BY-NC-SA-3.0"
   copyright: "every light is blinking at once by Sunbeamstress/Lauren Loveless."
   source: "https://soundcloud.com/sunbeamstress/every-light-is-blinking-at-once"
+
+- files: ["re_your_brains.ogg"]
+  license: "CC-BY-NC-SA-3.0"
+  copyright: "RE: Your Brains by Jonathan Coulton."
+  source: "https://www.youtube.com/watch?v=8tmzjaN2DWc"
+
+- files: ["the_future_soon.ogg"]
+  license: "CC-BY-NC-SA-3.0"
+  copyright: "The Future Soon by Jonathan Coulton."
+  source: "https://youtu.be/l5PEz3kGbp4"

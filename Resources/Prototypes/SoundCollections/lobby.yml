@@ -1,3 +1,4 @@
+# Contains modifications made by Ronstation contributors, therefore this file is subject to MIT sublicensed with AGPL v3.0.
 - type: soundCollection
   id: LobbyMusic
   files:
@@ -16,3 +17,5 @@
     - /Audio/Lobby/lasers_rip_apart_the_bulkhead.ogg
     - /Audio/Lobby/every_light_is_blinking_at_once.ogg
     - /Audio/Lobby/atomicamnesiammx.ogg
+    - /Audio/Lobby/re_your_brains.ogg # Ronstation - Modification
+    - /Audio/Lobby/the_future_soon.ogg # Ronstation - Modification
