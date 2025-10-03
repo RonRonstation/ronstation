@@ -4,6 +4,7 @@
   group: Narcotics
   desc: reagent-desc-kronkus-extract
   physicalDesc: reagent-physical-desc-clumpy
+  contrabandSeverity: HighlyIllegal
   flavor: bitter
   color: "#228f63"
   metabolisms:
@@ -25,6 +26,7 @@
   group: Narcotics
   desc: reagent-desc-kronkaine
   physicalDesc: reagent-physical-desc-powdery
+  contrabandSeverity: HighlyIllegal
   flavor: bitter
   color: "#2cc98a"
   metabolisms:

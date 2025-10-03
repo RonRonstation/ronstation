@@ -1,6 +1,6 @@
 - type: entity
   name: kronkus vine segment
-  parent: ProduceBase
+  parent: [ProduceBase, BaseHighlyIllegalContraband]
   id: KronkusVineSegment
   description: "A piece of mature kronkus vine. It exudes a sharp and noxious odor."
   components:
