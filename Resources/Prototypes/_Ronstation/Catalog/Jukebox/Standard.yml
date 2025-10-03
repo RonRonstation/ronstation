@@ -75,3 +75,15 @@
   name: Alexander Divine - Every Light is Blinking at Once
   path:
     path: /Audio/_Ronstation/Jukebox/every_light_is_blinking_at_once.ogg
+
+- type: jukebox
+  id: the_future_soon
+  name: Jonathan Coulton - The Future Soon
+  path:
+    path: /Audio/Lobby/the_future_soon.ogg
+
+- type: jukebox
+  id: re_your_brains
+  name: Jonathan Coulton - RE Your Brains
+  path:
+    path: /Audio/Lobby/re_your_brains.ogg
