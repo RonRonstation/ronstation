@@ -1,3 +1,4 @@
+# Contains modifications made by Ronstation contributors, therefore this file is subject to MIT sublicensed with AGPL v3.0.
 - type: skinColoration
   id: Hues
   strategy: !type:ClampedHsvColoration
@@ -22,6 +23,7 @@
 
 - type: skinColoration
   id: VulpkaninColors
-  strategy: !type:ClampedHslColoration
-    saturation: [0.0, 0.60]
-    lightness: [0.2, 0.9]
+  strategy: !type:ClampedHsvColoration # Ronstation - modifications
+    hue: [0.02, 0.12] # Ronstation - modifications
+    saturation: [0, 0.8] # Ronstation - modifications
+    value: [0.2, 0.78] # Ronstation - modifications
