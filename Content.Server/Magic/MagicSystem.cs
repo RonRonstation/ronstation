@@ -1,4 +1,6 @@
+// Modified by Ronstation contributor(s), therefore this file is licensed as MIT sublicensed with AGPL-v3.0.
 using Content.Server.Chat.Systems;
+using Content.Server.Clothing.Systems; // Modification
 using Content.Server.GameTicking;
 using Content.Server.GameTicking.Rules.Components;
 using Content.Shared.Magic;
@@ -15,6 +17,7 @@ public sealed class MagicSystem : SharedMagicSystem
     [Dependency] private readonly GameTicker _gameTicker = default!;
     [Dependency] private readonly TagSystem _tag = default!;
     [Dependency] private readonly SharedMindSystem _mind = default!;
+    [Dependency] private readonly OutfitSystem _outfitSystem = default!; // Modification
 
     private static readonly ProtoId<TagPrototype> InvalidForSurvivorAntagTag = "InvalidForSurvivorAntag";
 
@@ -51,4 +54,13 @@ public sealed class MagicSystem : SharedMagicSystem
         if (!_gameTicker.IsGameRuleActive<SurvivorRuleComponent>())
             _gameTicker.StartGameRule(survivorRule);
     }
+    // Start of modifications
+    public override void OnTransformSpell(TransformSpellEvent ev)
+    {
+        base.OnTransformSpell(ev);
+
+        if (!ev.Cancelled)
+            _outfitSystem.SetOutfit(ev.Target, ev.Loadout);
+    }
+    // End of modifications
 }
