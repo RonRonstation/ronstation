@@ -56,7 +56,7 @@ public sealed class JukeboxSystem : SharedJukeboxSystem
                 return;
             }
 
-            component.AudioStream = Audio.PlayPvs(jukeboxProto.Path, uid, AudioParams.Default.WithMaxDistance(10f))?.Entity;
+            component.AudioStream = Audio.PlayPvs(jukeboxProto.Path, uid, AudioParams.Default.WithVolume(-4f).WithMaxDistance(10f))?.Entity;
             Dirty(uid, component);
         }
     }
