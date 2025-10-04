@@ -836,6 +836,8 @@
   - type: Appearance
   - type: Clothing
     sprite: Objects/Weapons/Guns/Battery/energy_shotgun.rsi
+  - type: Contraband # Ronstation
+    allowedDepartments: [Security] # Ronstation
   - type: Gun
     fireRate: 2
     soundGunshot:
