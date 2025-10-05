@@ -13,8 +13,9 @@
   # - PDA
   # - Belt
   # - Outer Clothing
-  # - Shoes
+  - LaceupShoes
   # Backpack fills
   - Survival
   - GroupSpeciesBreathTool
   - Trinkets
+  - CommonPets

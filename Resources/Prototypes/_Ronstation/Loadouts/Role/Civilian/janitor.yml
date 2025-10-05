@@ -12,9 +12,10 @@
   # - PDA
   # - Belt
   - JanitorOuterClothing
-  # - Shoes
+  - JanitorShoes
   # Backpack fills
   - Survival
   - GroupSpeciesBreathTool
   - JanitorPlunger
   - Trinkets
+  - CommonPets

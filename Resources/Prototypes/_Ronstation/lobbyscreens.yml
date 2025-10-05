@@ -9,3 +9,10 @@
 - type: lobbyBackground
   id: Station
   background: /Textures/_Ronstation/LobbyScreens/station.png
+
+  id: BERGENTRUCK
+  background: /Textures/_Ronstation/LobbyScreens/BERGENTRUCK.png
+  
+- type: lobbyBackground
+  id: FINALSWEEP
+  background: /Textures/_Ronstation/LobbyScreens/FINALSWEEP.png

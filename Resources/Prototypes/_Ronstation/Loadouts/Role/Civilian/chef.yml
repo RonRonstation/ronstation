@@ -12,8 +12,9 @@
   # - PDA
   # - Belt
   - ChefOuterClothing
-  # - Shoes
+  - BlackShoes
   # Backpack fills
   - Survival
   - GroupSpeciesBreathTool
   - Trinkets
+  - CommonPets

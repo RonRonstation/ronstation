@@ -25,9 +25,6 @@
       - TegGenerator
       - TegCirculator
       - XenoArtifact
-      # start of modifications
-      - ResistLocker # Ronstation edit - Lockers have very janky interactions with this spell. Never forget the Locker Tide
-      # end of modifications
     event: !type:ChangeComponentsSpellEvent
       toAdd:
       - type: Animate
@@ -77,3 +74,4 @@
       - BlockMovement
       - Item
       - MeleeRequiresWield
+      - Damageable # Ronstation - modification.

@@ -12,8 +12,9 @@
   # - PDA
   # - Belt
   - BotanistOuterClothing
-  # - Shoes
+  - BrownShoes
   # Backpack fills
   - Survival
   - GroupSpeciesBreathTool
   - Trinkets
+  - CommonPets

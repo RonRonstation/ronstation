@@ -2,17 +2,16 @@
   id: JobBlueshieldOfficer
   groups:
   - BlueshieldHead
-  # - Glasses
+  - BlueshieldGlasses
   # - Mask
   - BlueshieldNeck
   # - Gloves
   - BlueshieldJumpsuit
   - BlueshieldBackpack
-  - BlueshieldPDA
-  - SecurityBelt
   - BlueshieldOuterClothing
   - BlueshieldShoes
   # Backpack fills
   - SurvivalSecurity
   - GroupSpeciesBreathToolSecurity
   - Trinkets
+  - CommandPets

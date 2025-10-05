@@ -1,3 +1,4 @@
+// Contains modifications made by Ronstation contributors, therefore this file is subject to MIT sublicensed with AGPL v3.0.
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Shared.Administration.Logs;
@@ -140,7 +141,7 @@ public abstract class SharedRoleSystem : EntitySystem
             return;
         }
 
-        if (!_prototypes.TryIndex(protoId, out var protoEnt))
+        if (!_prototypes.Resolve(protoId, out var protoEnt))
         {
             Log.Error($"Failed to add role {protoId} to {ToPrettyString(mindId)} : Role prototype does not exist");
             return;
@@ -587,6 +588,7 @@ public abstract class SharedRoleSystem : EntitySystem
                 prototype = comp.AntagPrototype;
                 if (_prototypes.TryIndex(comp.AntagPrototype, out var antag))
                 {
+                    playTimeTracker = antag.PlayTimeTracker; // Ronstation - modification.
                     name = antag.Name;
                     valid = true;
                 }
@@ -667,10 +669,13 @@ public abstract class SharedRoleSystem : EntitySystem
             _audio.PlayGlobal(sound, session);
     }
 
-    // TODO ROLES Change to readonly.
+    // TODO ROLES Change to readonly?
     // Passing around a reference to a prototype's hashset makes me uncomfortable because it might be accidentally
     // mutated.
-    public HashSet<JobRequirement>? GetJobRequirement(JobPrototype job)
+    /// <summary>
+    /// Returns the list of requirements for a role, or null. May be altered by requirement overrides.
+    /// </summary>
+    public HashSet<JobRequirement>? GetRoleRequirements(JobPrototype job)
     {
         if (_requirementOverride != null && _requirementOverride.Jobs.TryGetValue(job.ID, out var req))
             return req;
@@ -678,31 +683,28 @@ public abstract class SharedRoleSystem : EntitySystem
         return job.Requirements;
     }
 
-    // TODO ROLES Change to readonly.
-    public HashSet<JobRequirement>? GetJobRequirement(ProtoId<JobPrototype> job)
+    // TODO ROLES Change to readonly?
+    /// <inheritdoc cref="GetRoleRequirements(JobPrototype)"/>
+    public HashSet<JobRequirement>? GetRoleRequirements(AntagPrototype antag)
     {
-        if (_requirementOverride != null && _requirementOverride.Jobs.TryGetValue(job, out var req))
-            return req;
-
-        return _prototypes.Index(job).Requirements;
-    }
-
-    // TODO ROLES Change to readonly.
-    public HashSet<JobRequirement>? GetAntagRequirement(ProtoId<AntagPrototype> antag)
-    {
-        if (_requirementOverride != null && _requirementOverride.Antags.TryGetValue(antag, out var req))
-            return req;
-
-        return _prototypes.Index(antag).Requirements;
-    }
-
-    // TODO ROLES Change to readonly.
-    public HashSet<JobRequirement>? GetAntagRequirement(AntagPrototype antag)
-    {
-        if (_requirementOverride != null && _requirementOverride.Antags.TryGetValue(antag.ID, out var req))
+        if (_requirementOverride != null && _requirementOverride.Jobs.TryGetValue(antag.ID, out var req))
             return req;
 
         return antag.Requirements;
+    }
+
+    // TODO ROLES Change to readonly?
+    /// <inheritdoc cref="GetRoleRequirements(JobPrototype)"/>
+    public HashSet<JobRequirement>? GetRoleRequirements(ProtoId<JobPrototype> jobId)
+    {
+        return _prototypes.TryIndex(jobId, out var job) ? GetRoleRequirements(job) : null;
+    }
+
+    // TODO ROLES Change to readonly?
+    /// <inheritdoc cref="GetRoleRequirements(JobPrototype)"/>
+    public HashSet<JobRequirement>? GetRoleRequirements(ProtoId<AntagPrototype> antagId)
+    {
+        return _prototypes.TryIndex(antagId, out var antag) ? GetRoleRequirements(antag) : null;
     }
 
     /// <summary>
