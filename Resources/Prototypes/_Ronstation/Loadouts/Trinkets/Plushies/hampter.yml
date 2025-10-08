@@ -5,37 +5,37 @@
     requirement:
       !type:RoleTimeRequirement
       role: JobCaptain
-      time: 9000 # 2.5 hrs
+      time: 2.5h
   - !type:JobRequirementLoadoutEffect
     requirement:
       !type:RoleTimeRequirement
       role: JobHeadOfPersonnel
-      time: 9000 # 2.5 hrs
+      time: 2.5h
   - !type:JobRequirementLoadoutEffect
     requirement:
       !type:RoleTimeRequirement
       role: JobChiefEngineer
-      time: 9000 # 2.5 hrs
+      time: 2.5h
   - !type:JobRequirementLoadoutEffect
     requirement:
       !type:RoleTimeRequirement
       role: JobHeadOfSecurity
-      time: 9000 # 2.5 hrs
+      time: 2.5h
   - !type:JobRequirementLoadoutEffect
     requirement:
       !type:RoleTimeRequirement
       role: JobQuartermaster
-      time: 9000 # 2.5 hrs
+      time: 2.5h
   - !type:JobRequirementLoadoutEffect
     requirement:
       !type:RoleTimeRequirement
       role: JobResearchDirector
-      time: 9000 # 2.5 hrs
+      time: 2.5h
   - !type:JobRequirementLoadoutEffect
     requirement:
       !type:RoleTimeRequirement
       role: JobChiefMedicalOfficer
-      time: 9000 # 2.5 hrs
+      time: 2.5h
 
 - type: loadout
   id: PlushieHampter

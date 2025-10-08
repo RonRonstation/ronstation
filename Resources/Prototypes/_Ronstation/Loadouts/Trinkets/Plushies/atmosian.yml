@@ -5,12 +5,12 @@
     requirement:
       !type:RoleTimeRequirement
       role: JobAtmosphericTechnician
-      time: 18000 # 5 hrs
+      time: 5h
   - !type:JobRequirementLoadoutEffect
     requirement:
       !type:DepartmentTimeRequirement
       department: Cargo
-      time: 18000 # 5 hrs
+      time: 5h
 
 - type: loadout
   id: PlushieAtmosian

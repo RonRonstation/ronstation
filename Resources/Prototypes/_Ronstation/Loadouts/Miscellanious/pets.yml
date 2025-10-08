@@ -22,7 +22,7 @@
   - !type:JobRequirementLoadoutEffect
     requirement:
       !type:OverallPlaytimeRequirement
-      time: 360000 # 100hr
+      time: 100h
   storage:
     back:
     - MobPetMothroach
