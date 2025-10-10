@@ -17,3 +17,7 @@
 - type: lobbyBackground
   id: FINALSWEEP
   background: /Textures/_Ronstation/LobbyScreens/FINALSWEEP.png
+
+- type: lobbyBackground
+  id: HalcyonDays
+  background: /Textures/_Ronstation/LobbyScreens/halcyondays.webp

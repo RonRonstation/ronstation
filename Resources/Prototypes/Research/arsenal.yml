@@ -30,6 +30,7 @@
   - MagazinePistolIncendiary
   - MagazinePistolSubMachineGunIncendiary
   - MagazineLightRifleIncendiary
+  - MagazineNegotiatorIncendiary # Ronstation
   - SpeedLoaderMagnumIncendiary
   - MagazineShotgunIncendiary
   - MagazineBoxPistolIncendiary
@@ -78,6 +79,7 @@
   - MagazinePistolUranium
   - MagazinePistolSubMachineGunUranium
   - MagazineLightRifleUranium
+  - MagazineNegotiatorUranium # Ronstation
   - SpeedLoaderMagnumUranium
   - MagazineBoxPistolUranium
   - MagazineBoxMagnumUranium

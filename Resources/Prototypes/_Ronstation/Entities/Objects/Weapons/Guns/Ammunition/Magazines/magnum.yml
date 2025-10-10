@@ -16,8 +16,61 @@
 - type: entity
   id: MagazineNegotiatorEmpty
   suffix: Empty
+  name: negotiator magazine (.45 magnum any)
   parent: MagazineNegotiator
   components:
   - type: BallisticAmmoProvider
     proto: null
     unspawnedCount: 0
+
+- type: entity
+  id: MagazineNegotiatorPractice
+  suffix: Practice
+  name: negotiator magazine (.45 magnum practice)
+  parent: MagazineNegotiator
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: stripe
+      color: "#dbdbdb"
+  - type: BallisticAmmoProvider
+    proto: CartridgeMagnumPractice
+
+- type: entity
+  id: MagazineNegotiatorIncendiary
+  suffix: Incendiary
+  name: negotiator magazine (.45 magnum incendiary)
+  parent: MagazineNegotiator
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: stripe
+      color: "#f65"
+  - type: BallisticAmmoProvider
+    proto: CartridgeMagnumIncendiary
+
+- type: entity
+  id: MagazineNegotiatorUranium
+  suffix: Uranium
+  name: negotiator magazine (.45 magnum uranium)
+  parent: MagazineNegotiator
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: stripe
+      color: "#0c4"
+  - type: BallisticAmmoProvider
+    proto: CartridgeMagnumUranium
+

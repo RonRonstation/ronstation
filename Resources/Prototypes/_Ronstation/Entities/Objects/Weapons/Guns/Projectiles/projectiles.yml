@@ -21,7 +21,7 @@
         mask:
         - Opaque
   - type: StaminaDamageOnCollide
-    damage: 22 # 11 less than a normal disabler
+    damage: 33
 
 - type: entity
   id: BulletLaserGendarme
@@ -49,4 +49,4 @@
       types:
         Heat: 20
   - type: StaminaDamageOnCollide
-    damage: 15
+    damage: 20

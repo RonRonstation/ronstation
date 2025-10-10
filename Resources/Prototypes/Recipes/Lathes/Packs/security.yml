@@ -50,6 +50,8 @@
   - MagazinePistolSubMachineGunTopMounted
   - MagazinePistolSubMachineGunTopMountedEmpty
   - MagazineNegotiatorEmpty # Ronstation
+  - MagazineNegotiator # Ronstation
+  - MagazineNegotiatorPractice # Ronstation
   - MagazineRifle
   - MagazineRifleEmpty
   - MagazineShotgun
@@ -65,11 +67,13 @@
   - Stunbaton
   - CombatKnife
   - RiotShield
+  # start of modifications
   # armor in the weapons pack? more likely than you think
   - ClothingHeadHelmetRiot
   - ClothingOuterArmorRiot
   - ClothingOuterArmorBulletproof
   - ClothingOuterArmorReflective
+  # end of modifications
 
 ## Dynamic recipes
 
@@ -124,6 +128,8 @@
   - MagazineBoxRifleUranium
   - MagazineLightRifleIncendiary
   - MagazineLightRifleUranium
+  - MagazineNegotiatorIncendiary # Ronstation
+  - MagazineNegotiatorUranium # Ronstation
   - MagazinePistolIncendiary
   - MagazinePistolUranium
   - MagazinePistolSubMachineGunIncendiary

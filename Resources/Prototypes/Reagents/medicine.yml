@@ -90,7 +90,6 @@
         effectProto: StatusEffectDrowsiness
         time: 1.5
         type: Add
-        refresh: false
       - !type:HealthChange
         damage:
           types:
@@ -368,12 +367,11 @@
           min: 1
         reagent: Histamine
         amount: 4
-      - !type:GenericStatusEffect
-        key: Stun
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectStunned
         time: 0.75
         type: Remove
-      - !type:GenericStatusEffect
-        key: KnockedDown
+      - !type:ModifyKnockdown
         time: 0.75
         type: Remove
       - !type:GenericStatusEffect
@@ -736,6 +734,33 @@
           min: 1
         reagent: Amatoxin
         amount: -3
+
+- type: reagent
+  id: Synaptizine
+  name: reagent-name-synaptizine
+  group: Medicine
+  desc: reagent-desc-synaptizine
+  physicalDesc: reagent-physical-desc-pungent
+  flavor: medicine
+  color: "#d49a2f"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 2
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectStunned
+        time: 3.0
+        type: Remove
+      - !type:ModifyKnockdown
+        time: 3.0
+        type: Remove
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectSeeingRainbow
+        time: 15.0
+        type: Remove
 
 - type: reagent
   id: TranexamicAcid
@@ -1360,7 +1385,6 @@
           min: 30
         type: Add
         time: 8
-        refresh: false
       - !type:GenericStatusEffect
         key: Jitter
         time: 2.0
@@ -1422,7 +1446,6 @@
         effectProto: StatusEffectDrowsiness
         time: 4
         type: Add
-        refresh: false
       - !type:GenericStatusEffect
         key: Jitter
         time: 4.0

@@ -3,3 +3,4 @@
   weights:
     CentComm: 1
   #  BudgetCentComm: 0.2 // Derotated
+    ChairComm: 0.2

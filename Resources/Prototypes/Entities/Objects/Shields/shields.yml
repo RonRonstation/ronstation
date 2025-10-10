@@ -570,6 +570,7 @@
           visible: false
           map: [ "shield" ]
     - type: Contraband # Ronstation
+      allowedDepartments: [Security] # Ronstation (seriously?)
       allowedJobs: [BlueshieldOfficer] # Ronstation
     - type: Item
       size: Small

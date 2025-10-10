@@ -45,7 +45,7 @@
     maxCharge: 1200
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 25
+    autoRechargeRate: 40
   - type: ProjectileBatteryAmmoProvider
     proto: BulletLaserGendarme
     fireCost: 200

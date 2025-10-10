@@ -12,7 +12,7 @@
   cost: 5000
   recipeUnlocks:
   - ProximitySensor
-  - AiRemoteBrain # Corvax-Next-AiRemoteControl
+  # - AiRemoteBrain # Corvax-Next-AiRemoteControl
 
 - type: technology
   id: BasicAnomalousResearch
