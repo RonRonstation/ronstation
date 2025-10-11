@@ -5,11 +5,11 @@
     requirement:
       !type:DepartmentTimeRequirement
       department: Civilian
-      time: 18000 # 5 hrs
+      time: 5h
   - !type:JobRequirementLoadoutEffect
     requirement:
       !type:OverallPlaytimeRequirement
-      time: 36000 # 10hr
+      time: 10h
 
 - type: loadout
   id: PlushieDiona

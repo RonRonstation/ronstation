@@ -8,4 +8,4 @@
   # guides: [ Vampire ]
   requirements:
   - !type:OverallPlaytimeRequirement
-    time: 3600 # 1h
+    time: 1h

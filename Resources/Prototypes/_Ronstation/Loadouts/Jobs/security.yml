@@ -5,6 +5,6 @@
     requirement:
       !type:RoleTimeRequirement
       role: JobDetective
-      time: 36000 #10 hrs
+      time: 10h
   equipment:
     eyes: ClothingEyesGlassesNoir
