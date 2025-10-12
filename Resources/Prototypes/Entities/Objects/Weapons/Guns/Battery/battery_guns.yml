@@ -887,8 +887,8 @@
   - type: Tag
     tags:
     - HighRiskItem
-  - type: StealTarget
-    stealGroup: WeaponEnergyMagnum
+  # - type: StealTarget
+  #   stealGroup: WeaponEnergyMagnum
   - type: Gun
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg

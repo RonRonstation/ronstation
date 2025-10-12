@@ -1,3 +1,4 @@
+# Modified by Ronstation contributor(s), therefore this file is licensed as MIT sublicensed with AGPL-v3.0.
 # Traitor single items
 steal-target-groups-hypospray = hypospray
 steal-target-groups-handheld-crew-monitor = handheld crew monitor
@@ -11,6 +12,9 @@ steal-target-groups-captain-id-card = captain ID card
 steal-target-groups-jetpack-captain-filled = captain's jetpack
 steal-target-groups-weapon-antique-laser = antique laser pistol
 steal-target-groups-nuke-disk = nuclear authentication disk
+# start of modifications
+steal-target-groups-weapon-energy-shot-gun = energy shotgun
+# end of modifications
 steal-target-groups-weapon-energy-magnum = energy magnum
 
 # Thief Collection

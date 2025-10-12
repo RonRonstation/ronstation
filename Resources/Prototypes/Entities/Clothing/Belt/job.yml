@@ -1,3 +1,4 @@
+# Modified by Ronstation contributor(s), therefore this file is licensed as MIT sublicensed with AGPL-v3.0.
 # Belts meant to be used by a specific job to hold their tools
 
 - type: entity
@@ -188,6 +189,7 @@
       - Injector
       - Pill
       - HandLabeler
+      - Defibrillator # Ronstation - modification
   - type: ItemMapper
     sprite: *BeltOverlay
     mapLayers:
@@ -209,6 +211,12 @@
         whitelist:
           tags:
           - Spray
+      # start of modifications
+      defib:
+        whitelist:
+          components:
+          - Defibrillator
+      # end of modifications
       # spray_med:
       #   whitelist:
       #     tags:
