@@ -10,10 +10,10 @@
       time: 1h
     - !type:RoleTimeRequirement
       role: JobDetective
-      time: 3600 #1 hr, knowing how to use the tools is important
+      time: 1h # knowing how to use the tools is important
     - !type:RoleTimeRequirement
       role: JobSecurityOfficer
-      time: 18000 #5 hrs
+      time: 5h
     - !type:DepartmentTimeRequirement
       department: Security
       time: 10h

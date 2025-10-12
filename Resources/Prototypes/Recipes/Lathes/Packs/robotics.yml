@@ -33,7 +33,7 @@
   id: Robotics
   recipes:
   - ProximitySensor
-  - AiRemoteBrain # Corvax-Next-AiRemoteControl
+  # - AiRemoteBrain # Corvax-Next-AiRemoteControl
 
 - type: latheRecipePack
   id: BorgModules

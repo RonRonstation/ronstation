@@ -26,6 +26,7 @@
   - BioGenLeft4Zed
   - BioGenEZNutrient
   - BioGenRobustHarvest
+  - BioGenDiseaseSwab
 
 - type: latheRecipePack
   id: BioGenMaterialsStatic
@@ -34,3 +35,8 @@
   - BioGenMaterialCardboard1
   - BioGenPaper
   - BioGenPaperRolling1
+
+- type: latheRecipePack
+  id: BioGenEmagStatic
+  recipes:
+  - BioGenUnstableMutagen
