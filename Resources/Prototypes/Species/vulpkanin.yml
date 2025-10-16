@@ -1,4 +1,3 @@
-# Contains modifications made by Ronstation contributors, therefore this file is subject to MIT sublicensed with AGPL v3.0.
 - type: species
   id: Vulpkanin
   name: species-name-vulpkanin
@@ -17,8 +16,8 @@
   id: MobVulpkaninSprites
   sprites:
     Head: MobVulpkaninHead
-    Hair: MobVulpMarkingFollowSkin # Ronstation - modification
-    FacialHair: MobVulpMarkingFollowSkin # Ronstation - modification
+    Hair: MobHumanoidAnyMarking
+    FacialHair: MobHumanoidAnyMarking
     Snout: MobHumanoidAnyMarking
     SnoutCover: MobHumanoidAnyMarking
     UndergarmentTop: MobHumanoidAnyMarking
@@ -77,13 +76,6 @@
     Legs:
       points: 6
       required: false
-
-# start of modifications
-- type: humanoidBaseSprite
-  id: MobVulpMarkingFollowSkin
-  markingsMatchSkin: true
-  layerAlpha: 0.9
-# end of modifications
 
 - type: humanoidBaseSprite
   id: MobVulpkaninEyes
