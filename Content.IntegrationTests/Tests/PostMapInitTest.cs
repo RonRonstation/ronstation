@@ -46,6 +46,7 @@ namespace Content.IntegrationTests.Tests
             AdminTestArenaSystem.ArenaMapPath,
             // Ronstation - start of modifications.
             "/Maps/_Ronstation/CentComm/budget.yml",
+			"/Maps/_Ronstation/CentComm/chaircomm.yml",
             // Ronstation - end of modifications.
         };
 
@@ -125,7 +126,8 @@ namespace Content.IntegrationTests.Tests
             "Atlas3",
             "Feint",
             // Centcomm maps
-            "BudgetCentComm"
+            "BudgetCentComm",
+            "ChairComm"
             // Ronstation - end of modifications.
         };
 

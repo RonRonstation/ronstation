@@ -1,0 +1,15 @@
+- type: gameMap
+  id: ChairComm
+  isGrid: true
+  mapName: 'Chair Command'
+  mapPath: /Maps/_Ronstation/CentComm/chaircomm.yml
+  minPlayers: 10
+  stations:
+    centcomm:
+      stationProto: NanotrasenCentralCommand
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: '{0} Chair Command {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: 'CHC'

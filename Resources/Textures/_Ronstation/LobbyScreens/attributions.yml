@@ -2,9 +2,13 @@
   license: "CC-BY-NC-SA-3.0"
   copyright: Art by Zmanprodigy
   source: "https://github.com/RonRonstation/ronstation/"
-  
+
 - files: ["FINALSWEEP.webp"]
   license: "CC-BY-NC-SA-3.0"
   copyright: Art by Zmanprodigy
   source: "https://github.com/RonRonstation/ronstation/"
-  
+
+- files: ["halcyondays.webp"]
+  license: "CC-BY-NC-SA-3.0"
+  copyright: "Art by Apricity."
+  source: "https://github.com/RonRonstation/ronstation/"

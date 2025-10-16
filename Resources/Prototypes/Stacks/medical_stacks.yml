@@ -1,4 +1,6 @@
 # Modified by Ronstation contributor(s), therefore this file is licensed as MIT sublicensed with AGPL-v3.0.
+# Topical medicines
+
 - type: stack
   id: Ointment
   name: stack-ointment

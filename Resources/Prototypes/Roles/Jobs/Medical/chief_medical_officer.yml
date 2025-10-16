@@ -9,13 +9,14 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobChemist
-      time: 18000 #5 hrs
+      time: 2.5h
     - !type:RoleTimeRequirement
       role: JobMedicalDoctor
-      time: 18000 #5 hrs
+      time: 5h
     - !type:DepartmentTimeRequirement
       department: Medical
-      time: 54000 # Ronstation - modification. 15 hours
+      time: 10h
+  weight: 10
   startingGear: CMOGear
   icon: "JobIconChiefMedicalOfficer"
   supervisors: job-supervisors-captain

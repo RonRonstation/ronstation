@@ -1,7 +1,38 @@
+# .45 Magnum
 - type: latheRecipe
   parent: BaseEmptyAmmoRecipe
   id: MagazineNegotiatorEmpty
   result: MagazineNegotiatorEmpty
   materials:
     Steel: 25
-    Gold: 10
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazineNegotiatorPractice
+  result: MagazineNegotiatorPractice
+  materials:
+    Steel: 70
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazineNegotiator
+  result: MagazineNegotiator
+  materials:
+    Steel: 165
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazineNegotiatorIncendiary
+  result: MagazineNegotiatorIncendiary
+  materials:
+    Steel: 25
+    Plastic: 140
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazineNegotiatorUranium
+  result: MagazineNegotiatorUranium
+  materials:
+    Steel: 25
+    Plastic: 140
+    Uranium: 105

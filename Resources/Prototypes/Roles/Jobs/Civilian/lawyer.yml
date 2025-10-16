@@ -6,12 +6,7 @@
   playTimeTracker: JobLawyer
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 9000 # 2.5 hrs
-    # start of modifications
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 9000 # 2.5 hrs
-    # end of modifications
+      time: 2.5h
   startingGear: LawyerGear
   icon: "JobIconLawyer"
   supervisors: job-supervisors-hop

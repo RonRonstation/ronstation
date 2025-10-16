@@ -29,6 +29,7 @@
     children:
     - id: FlashlightSeclite
     - id: WeaponEnergyShotgun # Ronstation - modification
+    - id: WeaponDisabler
     - id: ClothingBeltSecurityFilled
     - id: Flash
     - id: ClothingEyesGlassesSecurity

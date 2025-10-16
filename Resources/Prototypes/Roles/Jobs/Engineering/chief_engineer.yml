@@ -7,13 +7,13 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobAtmosphericTechnician
-      time: 18000 # Ronstation - modification. 5 hrs
+      time: 2.5h
     - !type:RoleTimeRequirement
       role: JobStationEngineer
-      time: 18000 # 5 hrs
+      time: 5h
     - !type:DepartmentTimeRequirement
       department: Engineering
-      time: 54000 # Ronstation - modification. 15 hours
+      time: 10h
   weight: 10
   startingGear: ChiefEngineerGear
   icon: "JobIconChiefEngineer"

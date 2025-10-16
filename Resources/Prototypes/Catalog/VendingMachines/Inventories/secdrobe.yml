@@ -1,3 +1,4 @@
+# Modified by Ronstation contributor(s), therefore this file is licensed as MIT sublicensed with AGPL-v3.0.
 - type: vendingMachineInventory
   id: SecDrobeInventory
   startingInventory:
@@ -22,6 +23,7 @@
     ClothingNeckScarfStripedRed: 3
     ClothingOuterArmorBasicSlim: 2
     ClothingEyesBlindfold: 1
+    ClothingMaskGasSecurity: 2 # Ronstation
     ClothingShoesBootsCombat: 1
     ClothingShoesBootsWinterSec: 2
     ClothingHeadHelmetJustice: 1

@@ -10,6 +10,9 @@
         {
             "name": "base"
         },
+	{
+	    "name": "stripe"
+	},
         {
             "name": "icon"
         },
