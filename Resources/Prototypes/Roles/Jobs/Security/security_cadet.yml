@@ -25,6 +25,11 @@
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
+  # Ronstation - start of modifications.
+  - !type:AddComponentSpecial
+    components:
+      - type: TraitorTargetImmune
+  # Ronstation - end of modifications.
 
 - type: startingGear
   id: SecurityCadetGear
