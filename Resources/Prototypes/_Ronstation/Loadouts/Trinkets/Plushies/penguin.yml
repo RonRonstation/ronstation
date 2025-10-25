@@ -5,12 +5,12 @@
     requirement:
       !type:RoleTimeRequirement
       role: JobMusician
-      time: 18000 # 5 hrs
+      time: 5h
   - !type:JobRequirementLoadoutEffect
     requirement:
       !type:RoleTimeRequirement
       role: JobReporter
-      time: 18000 # 5 hrs
+      time: 5h
 
 - type: loadout
   id: PlushiePenguin
