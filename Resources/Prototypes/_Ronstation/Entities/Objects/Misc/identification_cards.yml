@@ -6,7 +6,7 @@
   - type: Sprite
     layers:
     - state: default
-    - state: idcentcom
+    - state: centcom
   - type: PresetIdCard
     job: BlueshieldOfficer
 
