@@ -13,7 +13,7 @@
   playTimeTracker: AntagWizard # Ronstation - modification.
   color: '#40E0D0' # Ronstation - modification.
   antagonist: true
-  setPreference: true
+  # setPreference: true # Disabled as roundstart gamemode until reworked
   objective: roles-antag-wizard-objective # TODO: maybe give random objs and stationary ones from AntagObjectives and AntagRandomObjectives
   requirements: # I hate time locked roles but this should be enough time for someone to be acclimated
   - !type:OverallPlaytimeRequirement
