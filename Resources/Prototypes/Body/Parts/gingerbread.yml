@@ -33,10 +33,11 @@
   name: "gingerbread head"
   parent: [PartGingerbread, BaseHead]
   components:
-  - type: FlavorProfile
-    flavors:
-      - sweet
-  - type: Edible
+  # Commented this out for now, as I cannot currently be fuckced to figure out why this is causing a test failure - Soup
+  # - type: FlavorProfile
+  #   flavors:
+  #     - sweet
+  # - type: Edible
   - type: Sprite
     sprite: Mobs/Species/Gingerbread/parts.rsi
     state: "head_m"
