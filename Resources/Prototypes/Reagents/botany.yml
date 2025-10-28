@@ -243,9 +243,9 @@
           type: [ Rat, Vox ]
           inverted: true
         # start of modifications
-        - !type:OrganType
-          type: Avali
-          shouldHave: false
+        - !type:MetabolizerTypeCondition
+          type: [ Avali ]
+          inverted: true
         # end of modifications
         - !type:ReagentCondition
           reagent: Ammonia

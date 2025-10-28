@@ -36,7 +36,7 @@
   - type: FlavorProfile
     flavors:
       - sweet
-  - type: Food
+  - type: Edible
   - type: Sprite
     sprite: Mobs/Species/Gingerbread/parts.rsi
     state: "head_m"

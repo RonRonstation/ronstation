@@ -9,6 +9,8 @@ using Content.Shared.Body.Systems;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Damage;
+using Content.Shared.Damage.Components;
+using Content.Shared.Damage.Systems;
 using Content.Shared.Database;
 using Content.Shared.DoAfter;
 using Content.Shared.Forensics;
@@ -156,7 +158,7 @@ public sealed partial class VampireSystem
         _bloodstreamSystem.TryModifyBloodLevel(bloodstream.Owner, -ent.Comp.TransferAmount);
 
         // Target takes some damage, then the slurp sound playsF
-        _damageable.TryChangeDamage(args.Target, ent.Comp.DamagePerTick, true, true, damage, args.User);
+        _damageable.TryChangeDamage(args.Target.Value, ent.Comp.DamagePerTick, true, true, args.User);
         _audio.PlayPvs(ent.Comp.FeedNoise, args.Target.Value, AudioParams.Default.WithVolume(-2f).WithVariation(0.25f));
 
         // Vampire gets vitae
@@ -180,7 +182,7 @@ public sealed partial class VampireSystem
 
             DamageSpecifier dspec = new();
             dspec.DamageDict.Add("Piercing", threshold.Value - damage.TotalDamage);
-            _damageable.TryChangeDamage(args.Target, dspec, true, origin: args.Target);
+            _damageable.TryChangeDamage(args.Target.Value, dspec, true, origin: args.Target);
         }
 
         // Ow my neck

@@ -200,8 +200,8 @@
       # overworks the overworked avali organs
       - !type:HealthChange
         conditions:
-        - !type:OrganType
-          type: Avali
+        - !type:MetabolizerTypeCondition
+          type: [ Avali ]
         damage:
           types:
             Bloodloss: 0.5

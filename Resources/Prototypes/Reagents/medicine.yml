@@ -439,7 +439,8 @@
       effects:
       - !type:Vomit
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: Ipecac
           min: 2 # Ronstation
         probability: 0.7 # Ronstation
 
@@ -554,7 +555,8 @@
             Piercing: 0.2
       - !type:HealthChange
         conditions:
-          - !type:ReagentThreshold
+          - !type:ReagentCondition
+            reagent: Barozine
             min: 25
         damage:
           types:
@@ -971,9 +973,8 @@
     Medicine:
       effects:
       - !type:Jitter
-      - !type:GenericStatusEffect
-        key: Stutter
-        component: StutteringAccent
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectStutter
       - !type:ModifyStatusEffect
         effectProto: StatusEffectDrowsiness
         time: 10
@@ -1328,7 +1329,7 @@
 # start of modifications
         - !type:EvenHealthChange
           conditions:
-          - !type:Temperature
+          - !type:TemperatureCondition
             max: 150.0
           damage:
             Brute: -4.0
@@ -1377,7 +1378,7 @@
       effects:
       - !type:EvenHealthChange
         conditions:
-        - !type:Temperature
+        - !type:TemperatureCondition
           max: 213.0
         damage:
           Brute: -4
@@ -1540,7 +1541,7 @@
       effects:
       - !type:HealthChange
         conditions:
-        - !type:Temperature
+        - !type:TemperatureCondition
           max: 213.0
         damage:
           groups:

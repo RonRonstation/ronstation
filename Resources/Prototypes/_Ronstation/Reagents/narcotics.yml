@@ -10,10 +10,10 @@
   metabolisms:
     Narcotic:
       effects:
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         walkSpeedModifier: 1.15
         sprintSpeedModifier: 1.15
-      - !type:ChemVomit
+      - !type:Vomit
         probability: 0.02
       - !type:ModifyStatusEffect
         effectProto: StatusEffectStunned
@@ -45,12 +45,13 @@
     Narcotic:
       metabolismRate: 0.2
       effects:
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         walkSpeedModifier: 1.25
         sprintSpeedModifier: 1.25
       - !type:HealthChange
         conditions:
-          - !type:ReagentThreshold
+          - !type:ReagentCondition
+            reagent: Kronkaine
             min: 15
         damage:
           types:
@@ -58,7 +59,8 @@
             Asphyxiation: 1
       - !type:Jitter
         conditions:
-          - !type:ReagentThreshold
+          - !type:ReagentCondition
+            reagent: Kronkaine
             min: 8
       - !type:ModifyStatusEffect
         effectProto: StatusEffectStunned
@@ -72,8 +74,8 @@
         component: StaminaModifier
         time: 5
         type: Add
-      - !type:GenericStatusEffect
-        key: ForcedSleep
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectForcedSleeping
         time: 5
         type: Remove
       - !type:AdjustReagent

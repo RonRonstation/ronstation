@@ -14,21 +14,20 @@
     Narcotic:
       metabolismRate: 0.2
       effects:
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         walkSpeedModifier: 1.10
         sprintSpeedModifier: 1.10
-      - !type:GenericStatusEffect
-        key: Drowsiness
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDrowsiness
         time: 2
         type: Remove
         probability: 0.5
-      - !type:GenericStatusEffect
-        key: KnockedDown
+      - !type:ModifyKnockdown
         time: 2
         type: Remove
         probability: 0.5
-      - !type:GenericStatusEffect
-        key: Stun
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectStunned
         time: 2
         type: Remove
         probability: 0.5
@@ -37,7 +36,8 @@
       effects:
       - !type:HealthChange
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: Caffeine
           min: 15
         damage:
           types:
@@ -45,8 +45,8 @@
       - !type:HealthChange
         probability: 0.2
         conditions:
-        - !type:OrganType
-          type: Animal
+        - !type:MetabolizerTypeCondition
+          type: [ Animal ]
         damage:
           types:
             Poison: 0.5
@@ -67,7 +67,8 @@
       amount: 1
     - !type:PlantAdjustPotency
       conditions:
-      - !type:ReagentThreshold
+      - !type:ReagentCondition
+        reagent: Saltpetre
         min: 20
   metabolisms:
     Poison:

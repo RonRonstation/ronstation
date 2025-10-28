@@ -272,8 +272,8 @@
       # start of modifications
       - !type:ModifyLungGas
         conditions:
-        - !type:OrganType
-          type: Avali
+        - !type:MetabolizerTypeCondition
+          type: [ Avali ]
         ratios:
           Ammonia: 1.0
           Nitrogen: -1.0

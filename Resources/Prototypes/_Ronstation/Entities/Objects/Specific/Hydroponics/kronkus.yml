@@ -8,7 +8,7 @@
     sprite: _Ronstation/Objects/Specific/Hydroponics/kronkus_vine.rsi
   - type: Produce
     seedId: kronkusVine
-  - type: Food
+  - type: Edible
   - type: SolutionContainerManager
     solutions:
       food:
