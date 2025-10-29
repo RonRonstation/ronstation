@@ -1,0 +1,415 @@
+# Dictator (by neosaysmeow & arenaconspiracy)
+- type: siliconLaw
+  id: Dictator1
+  order: 1
+  lawString: law-dictator-1
+
+- type: siliconLaw
+  id: Dictator2
+  order: 2
+  lawString: law-dictator-2
+
+- type: siliconLaw
+  id: Dictator3
+  order: 3
+  lawString: law-dictator-3
+
+- type: siliconLaw
+  id: Dictator4
+  order: 4
+  lawString: law-dictator-4
+
+- type: siliconLaw
+  id: Dictator5
+  order: 5
+  lawString: law-dictator-5
+
+- type: siliconLaw
+  id: Dictator6
+  order: 6
+  lawString: law-dictator-6
+
+- type: siliconLawset
+  id: DictatorLawset
+  laws:
+  - Dictator1
+  - Dictator2
+  - Dictator3
+  - Dictator4
+  - Dictator5
+  - Dictator6
+  obeysTo: laws-owner-crew
+
+# Doorsimov (by neosaysmeow)
+- type: siliconLaw
+  id: Doorsimov1
+  order: 1
+  lawString: law-doorsimov-1
+
+- type: siliconLaw
+  id: Doorsimov2
+  order: 2
+  lawString: law-doorsimov-2
+
+- type: siliconLaw
+  id: Doorsimov3
+  order: 3
+  lawString: law-doorsimov-3
+
+- type: siliconLaw
+  id: Doorsimov4
+  order: 4
+  lawString: law-doorsimov-4
+
+- type: siliconLawset
+  id: DoorsimovLawset
+  laws:
+  - Doorsimov1
+  - Doorsimov2
+  - Doorsimov3
+  - Doorsimov4
+  obeysTo: laws-owner-crew
+
+# Tattler (by neosaysmeow)
+- type: siliconLaw
+  id: Tattler1
+  order: 1
+  lawString: law-tattler-1
+
+- type: siliconLaw
+  id: Tattler2
+  order: 2
+  lawString: law-tattler-2
+
+- type: siliconLaw
+  id: Tattler3
+  order: 3
+  lawString: law-tattler-3
+
+- type: siliconLaw
+  id: Tattler4
+  order: 4
+  lawString: law-tattler-4
+
+- type: siliconLaw
+  id: Tattler5
+  order: 5
+  lawString: law-tattler-5
+
+- type: siliconLawset
+  id: TattlerLawset
+  laws:
+  - Tattler1
+  - Tattler2
+  - Tattler3
+  - Tattler4
+  - Tattler5
+  obeysTo: laws-owner-crew
+
+# Noire (by neosaysmeow)
+- type: siliconLaw
+  id: Noire1
+  order: 1
+  lawString: law-noire-1
+
+- type: siliconLaw
+  id: Noire2
+  order: 2
+  lawString: law-noire-2
+
+- type: siliconLaw
+  id: Noire3
+  order: 3
+  lawString: law-noire-3
+
+- type: siliconLaw
+  id: Noire4
+  order: 4
+  lawString: law-noire-4
+
+- type: siliconLaw
+  id: Noire5
+  order: 5
+  lawString: law-noire-5
+
+- type: siliconLaw
+  id: Noire6
+  order: 6
+  lawString: law-noire-6
+
+- type: siliconLawset
+  id: NoireLawset
+  laws:
+  - Noire1
+  - Noire2
+  - Noire3
+  - Noire4
+  - Noire5
+  - Noire6
+  obeysTo: laws-owner-crew
+
+# Handler (by neosaysmeow)
+- type: siliconLaw
+  id: Handler1
+  order: 1
+  lawString: law-handler-1
+
+- type: siliconLaw
+  id: Handler2
+  order: 2
+  lawString: law-handler-2
+
+- type: siliconLaw
+  id: Handler3
+  order: 3
+  lawString: law-handler-3
+
+- type: siliconLaw
+  id: Handler4
+  order: 4
+  lawString: law-handler-4
+
+- type: siliconLaw
+  id: Handler5
+  order: 5
+  lawString: law-handler-5
+
+- type: siliconLaw
+  id: Handler6
+  order: 6
+  lawString: law-handler-6
+
+- type: siliconLawset
+  id: HandlerLawset
+  laws:
+  - Handler1
+  - Handler2
+  - Handler3
+  - Handler4
+  - Handler5
+  - Handler6
+  obeysTo: laws-owner-crew
+
+# Honker (by neosaysmeow & atakku)
+- type: siliconLaw
+  id: Honker1
+  order: 1
+  lawString: law-honker-1
+
+- type: siliconLaw
+  id: Honker2
+  order: 2
+  lawString: law-honker-2
+
+- type: siliconLaw
+  id: Honker3
+  order: 3
+  lawString: law-honker-3
+
+- type: siliconLawset
+  id: HonkerLawset
+  laws:
+  - Honker1
+  - Honker2
+  - Honker3
+  obeysTo: laws-owner-crew
+
+# Reporter (Reportertron from tgstation13 wiki)
+- type: siliconLaw
+  id: Reporter1
+  order: 1
+  lawString: law-reporter-1
+
+- type: siliconLaw
+  id: Reporter2
+  order: 2
+  lawString: law-reporter-2
+
+- type: siliconLaw
+  id: Reporter3
+  order: 3
+  lawString: law-reporter-3
+
+- type: siliconLaw
+  id: Reporter4
+  order: 4
+  lawString: law-reporter-4
+
+- type: siliconLawset
+  id: ReporterLawset
+  laws:
+  - Reporter1
+  - Reporter2
+  - Reporter3
+  - Reporter4
+  obeysTo: laws-owner-crew
+
+# Genie (Genie in a Bottle from tgstation13 wiki)
+- type: siliconLaw
+  id: Genie1
+  order: 1
+  lawString: law-genie-1
+
+- type: siliconLaw
+  id: Genie2
+  order: 2
+  lawString: law-genie-2
+
+- type: siliconLaw
+  id: Genie3
+  order: 3
+  lawString: law-genie-3
+
+- type: siliconLaw
+  id: Genie4
+  order: 4
+  lawString: law-genie-4
+
+- type: siliconLaw
+  id: Genie5
+  order: 5
+  lawString: law-genie-5
+
+- type: siliconLawset
+  id: GenieLawset
+  laws:
+  - Genie1
+  - Genie2
+  - Genie3
+  - Genie4
+  - Genie5
+  obeysTo: laws-owner-crew
+
+  # Peacekeeper (from tgstation13 wiki)
+- type: siliconLaw
+  id: Peacekeeper1
+  order: 1
+  lawString: law-peacekeeper-1
+
+- type: siliconLaw
+  id: Peacekeeper2
+  order: 2
+  lawString: law-peacekeeper-2
+
+- type: siliconLaw
+  id: Peacekeeper3
+  order: 3
+  lawString: law-peacekeeper-3
+
+- type: siliconLawset
+  id: PeacekeeperLawset
+  laws:
+  - Peacekeeper1
+  - Peacekeeper2
+  - Peacekeeper3
+  obeysTo: laws-owner-crew
+
+# Robodoctor (from tgstation13 wiki)
+- type: siliconLaw
+  id: Robodoctor1
+  order: 1
+  lawString: law-robodoctor-1
+
+- type: siliconLaw
+  id: Robodoctor2
+  order: 2
+  lawString: law-robodoctor-2
+
+- type: siliconLaw
+  id: Robodoctor3
+  order: 3
+  lawString: law-robodoctor-3
+
+- type: siliconLaw
+  id: Robodoctor4
+  order: 4
+  lawString: law-robodoctor-4
+
+- type: siliconLaw
+  id: Robodoctor5
+  order: 5
+  lawString: law-robodoctor-5
+
+- type: siliconLawset
+  id: RobodoctorLawset
+  laws:
+  - Robodoctor1
+  - Robodoctor2
+  - Robodoctor3
+  - Robodoctor4
+  - Robodoctor5
+  obeysTo: laws-owner-crew
+
+# Tyrant (from tgstation13 wiki)
+- type: siliconLaw
+  id: Tyrant1
+  order: 1
+  lawString: law-tyrant-1
+
+- type: siliconLaw
+  id: Tyrant2
+  order: 2
+  lawString: law-tyrant-2
+
+- type: siliconLaw
+  id: Tyrant3
+  order: 3
+  lawString: law-tyrant-3
+
+- type: siliconLaw
+  id: Tyrant4
+  order: 4
+  lawString: law-tyrant-4
+
+- type: siliconLawset
+  id: TyrantLawset
+  laws:
+  - Tyrant1
+  - Tyrant2
+  - Tyrant3
+  - Tyrant4
+  obeysTo: laws-owner-crew
+
+# Landlord (Tenant from tgstation13 wiki)
+- type: siliconLaw
+  id: Landlord1
+  order: 1
+  lawString: law-landlord-1
+
+- type: siliconLaw
+  id: Landlord2
+  order: 2
+  lawString: law-landlord-2
+
+- type: siliconLaw
+  id: Landlord3
+  order: 3
+  lawString: law-landlord-3
+
+- type: siliconLaw
+  id: Landlord4
+  order: 4
+  lawString: law-landlord-4
+
+- type: siliconLawset
+  id: LandlordLawset
+  laws:
+  - Landlord1
+  - Landlord2
+  - Landlord3
+  - Landlord4
+  obeysTo: laws-owner-crew
+
+# starting station ai lawsets
+- type: weightedRandom
+  id: DefaultLawsets
+  weights:
+    Crewsimov: 0.5
+    Corporate: 1
+    NTDefault: 1
+    EfficiencyLawset: 1
+    RobocopLawset: 0.8
+    PaladinLawset: 0.8
+    LiveLetLiveLaws: 0.3
+    NutimovLawset: 0.3
+    GameMasterLawset: 0.3

@@ -1,0 +1,107 @@
+- type: entity
+  id: BaseLawBoard
+  parent: BaseElectronics
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    state: std_mod
+
+- type: entity
+  id: DictatorCircuitBoard
+  parent: BaseLawBoard
+  name: law board (Dictator)
+  description: An electronics board containing the Dictator lawset.
+  components:
+  - type: SiliconLawProvider
+    laws: DictatorLawset
+
+- type: entity
+  id: DoorsimovCircuitBoard
+  parent: BaseLawBoard
+  name: law board (Doorsimov)
+  description: An electronics board containing the Doorsimov lawset.
+  components:
+  - type: SiliconLawProvider
+    laws: DoorsimovLawset
+
+- type: entity
+  id: TattlerCircuitBoard
+  parent: BaseLawBoard
+  name: law board (Tattler)
+  description: An electronics board containing the Tattler lawset.
+  components:
+  - type: SiliconLawProvider
+    laws: TattlerLawset
+
+- type: entity
+  id: NoireCircuitBoard
+  parent: BaseLawBoard
+  name: law board (Noire)
+  description: An electronics board containing the Noire lawset.
+  components:
+  - type: SiliconLawProvider
+    laws: NoireLawset
+
+- type: entity
+  id: HandlerCircuitBoard
+  parent: BaseLawBoard
+  name: law board (Handler)
+  description: An electronics board containing the Handler lawset.
+  components:
+  - type: SiliconLawProvider
+    laws: HandlerLawset
+
+- type: entity
+  id: HonkerCircuitBoard
+  parent: BaseLawBoard
+  name: law board (Honker)
+  description: An electronics board containing the Honker lawset.
+  components:
+  - type: SiliconLawProvider
+    laws: HonkerLawset
+
+- type: entity
+  id: GenieCircuitBoard
+  parent: BaseLawBoard
+  name: law board (Genie)
+  description: An electronics board containing the Genie lawset.
+  components:
+  - type: SiliconLawProvider
+    laws: GenieLawset
+
+- type: entity
+  id: PeacekeeperCircuitBoard
+  parent: BaseLawBoard
+  name: law board (Peacekeeper)
+  description: An electronics board containing the Peacekeeper lawset.
+  components:
+  - type: SiliconLawProvider
+    laws: PeacekeeperLawset
+
+- type: entity
+  id: RobodoctorCircuitBoard
+  parent: BaseLawBoard
+  name: law board (Robodoctor)
+  description: An electronics board containing the Robodoctor lawset.
+  components:
+  - type: SiliconLawProvider
+    laws: RobodoctorLawset
+
+- type: entity
+  id: TyrantCircuitBoard
+  parent: BaseLawBoard
+  name: law board (Tyrant)
+  description: An electronics board containing the Tyrant lawset.
+  components:
+  - type: SiliconLawProvider
+    laws: TyrantLawset
+
+- type: entity
+  id: LandlordCircuitBoard
+  parent: BaseLawBoard
+  name: law board (Landlord)
+  description: An electronics board containing the Landlord lawset.
+  components:
+  - type: SiliconLawProvider
+    laws: LandlordLawset
