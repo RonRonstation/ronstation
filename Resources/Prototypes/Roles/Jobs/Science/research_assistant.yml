@@ -16,6 +16,12 @@
   access:
   - Research
   - Maintenance
+  # Ronstation - start of modifications.
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: TraitorTargetImmune
+  # Ronstation - end of modifications.
 
 - type: startingGear
   id: ResearchAssistantGear
