@@ -2,8 +2,8 @@
   id: Feint
   mapName: 'Feint'
   mapPath: /Maps/_Ronstation/feint.yml
-  minPlayers: 15
-  maxPlayers: 35
+  minPlayers: 10
+  maxPlayers: 35 
   stations:
     Feint:
       stationProto: StandardNanotrasenStation
@@ -16,8 +16,8 @@
       - type: StationEmergencyShuttle
         emergencyShuttlePath: /Maps/_Ronstation/Shuttles/emergency_feint.yml
       - type: StationJobs
-        availableJobs: # 43 jobs total w/o latejoins & interns, 58 jobs total w/ latejoins & interns
-          # command (7)
+        availableJobs: # 45 jobs total w/o latejoins & interns, 60 jobs total w/ latejoins & interns
+          # command (8)
           Captain: [ 1, 1 ]
           BlueshieldOfficer: [ 1, 1 ]
           HeadOfPersonnel: [ 1, 1 ]
@@ -37,9 +37,10 @@
           Reporter: [ 1, 1 ]
           Clown: [ 1, 1 ]
           Mime: [ 1, 1 ]
-          # engineering (4 - 5)
+          Boxer: [1, 1]
+          # engineering (5 - 6)
           AtmosphericTechnician: [ 2, 2 ]
-          StationEngineer: [ 2, 3 ]
+          StationEngineer: [ 3, 4 ]
           TechnicalAssistant: [ 2, 2 ] # intern, not counted
           # medical (6 - 7)
           Chemist: [ 2, 2 ]
