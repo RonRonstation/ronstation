@@ -5,11 +5,11 @@
     requirement:
       !type:DepartmentTimeRequirement
       department: Science
-      time: 18000 # 5 hrs
+      time: 5h
   - !type:JobRequirementLoadoutEffect
     requirement:
       !type:OverallPlaytimeRequirement
-      time: 36000 # 10hr
+      time: 5h
 
 - type: loadout
   id: PlushieSlime

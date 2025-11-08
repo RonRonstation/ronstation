@@ -5,12 +5,12 @@
     requirement:
       !type:RoleTimeRequirement
       role: AntagDragon
-      time: 18000 # 5 hrs
+      time: 5h
   - !type:JobRequirementLoadoutEffect
     requirement:
       !type:RoleTimeRequirement
       role: JobCargoTechnician
-      time: 18000 # 5 hrs
+      time: 5h
 
 - type: loadout
   id: PlushieCarp

@@ -5,12 +5,12 @@
     requirement:
       !type:RoleTimeRequirement
       role: JobHeadOfPersonnel
-      time: 18000 # 5 hrs
+      time: 5h
   - !type:JobRequirementLoadoutEffect
     requirement:
       !type:RoleTimeRequirement
       role: JobLibrarian
-      time: 18000 # 5 hrs
+      time: 5h
 
 - type: loadout
   id: PlushieLamp

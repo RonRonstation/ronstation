@@ -5,12 +5,12 @@
     requirement:
       !type:RoleTimeRequirement
       role: AntagNukeops
-      time: 18000 # 5 hrs
+      time: 5h
   - !type:JobRequirementLoadoutEffect
     requirement:
       !type:DepartmentTimeRequirement
       department: Security
-      time: 18000 # 5 hrs
+      time: 5h
 
 - type: loadout
   id: PlushieNuke
