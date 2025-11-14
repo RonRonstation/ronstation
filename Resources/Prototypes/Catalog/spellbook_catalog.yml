@@ -41,7 +41,7 @@
 #   - !type:ListingLimitedStockCondition
 #     stock: 1
 
-# Ronstation - Smite fucks you up real bad, but doesn't remove you from the round.
+# Ronstation - Modified spells.
 - type: listing
   id: SpellbookCellularSmite
   name: spellbook-cellular-smite-name
@@ -54,13 +54,12 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-# end of modifications
 
 - type: listing
-  id: SpellbookCluwne
-  name: spellbook-cluwne-name
-  description: spellbook-cluwne-desc
-  productAction: ActionCluwne
+  id: SpellbookClown
+  name: spellbook-clown-name
+  description: spellbook-clown-desc
+  productAction: ActionClown
   cost:
     WizCoin: 3
   categories:
@@ -68,6 +67,20 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
+# end of modifications
+
+# - type: listing
+#   id: SpellbookCluwne
+#   name: spellbook-cluwne-name
+#   description: spellbook-cluwne-desc
+#   productAction: ActionCluwne
+#   cost:
+#     WizCoin: 3
+#   categories:
+#   - SpellbookOffensive
+#   conditions:
+#   - !type:ListingLimitedStockCondition
+#     stock: 1
 
 - type: listing
   id: SpellbookSlip
